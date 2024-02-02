@@ -17,10 +17,10 @@
 - Git init (git clone: när det redan har skapats)
   ENDAST första gången: gör hela mappen till ett repository (en git mapp) för att göra filen spårbar
 
-# ---------Detta nedanför återupprepas vid nya ändringar-----
+* Git clone (INTE GIT INIT)
+  Första gången vi HÄMTAR ett repo som NÅGON ANNAN har skapat
 
-- Git clone (INTE GIT INIT)
-  Varje gång vi hämtar ett arbete som vi ska jobba på
+# ---------Detta nedanför återupprepas vid nya ändringar-----
 
 - Git add (mellanslag) .
   För attlägga till nya filer/ändringar
