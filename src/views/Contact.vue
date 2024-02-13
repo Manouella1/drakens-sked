@@ -1,5 +1,7 @@
 <script></script>
 
-<template></template>
+<template>
+  <div>Hej Vigan!!! buhhhhhh</div>
+</template>
 
 <style></style>
