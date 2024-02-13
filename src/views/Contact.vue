@@ -1,5 +1,9 @@
-<script></script>
+<script>
 
-<template></template>
+</script>
+
+<template>
+sdasd
+</template>
 
 <style></style>
