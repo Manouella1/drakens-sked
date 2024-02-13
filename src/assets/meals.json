@@ -1,0 +1,16 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Pannkakor",
+      "ingredients": "['3 ägg', '2 dl vetemjöl', '6 dl mjölk']",
+      "instructions": "Blanda alla torra ingredienser. Häll i hälften av mjölken, vispa. Tillsätt resten av mjölken och äggen"
+    },
+    {
+      "id": 2,
+      "title": "Toast",
+      "ingredients": "['2 skivor bröd', '1 tomat', 'ost']",
+      "instructions": "Skiva tomaten och lägg på varsin brödskiva. Skiva ost och lägg på. Gratinera i ugnen"
+    }
+  ]
+}
