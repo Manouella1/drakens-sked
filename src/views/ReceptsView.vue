@@ -1,5 +1,5 @@
 <script></script>
 
-<template></template>
+<template><h1>ALL RECEPTS</h1></template>
 
 <style></style>

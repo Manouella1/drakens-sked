@@ -1,8 +1,7 @@
 <script></script>
 
 <template>
-  <div>Hej Vigan!!! buhhhhhh</div>
-  sdasd
+  <h1>Contact</h1>
 </template>
 
 <style></style>
