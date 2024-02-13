@@ -3,14 +3,504 @@
     {
       "id": 1,
       "title": "Pannkakor",
-      "ingredients": "['3 ägg', '2 dl vetemjöl', '6 dl mjölk']",
-      "instructions": "Blanda alla torra ingredienser. Häll i hälften av mjölken, vispa. Tillsätt resten av mjölken och äggen"
+      "image": "",
+      "ingredients": ["3 ägg", "2 dl vetemjöl", "6 dl mjölk"],
+      "instructions": [
+        "Blanda alla torra ingredienser",
+        "Häll i hälften av mjölken, vispa",
+        "Tillsätt resten av mjölken och äggen"
+      ],
+      "level": "Basic",
+      "prep-time": "10 min",
+      "cook-time": "20 min",
+      "portions": "4 personer",
+      "category": "Frukost",
+      "nutrients": ["Kolhydrater"]
     },
     {
       "id": 2,
-      "title": "Toast",
-      "ingredients": "['2 skivor bröd', '1 tomat', 'ost']",
-      "instructions": "Skiva tomaten och lägg på varsin brödskiva. Skiva ost och lägg på. Gratinera i ugnen"
+      "title": "Köttbullar med potatismos",
+      "image": "",
+      "ingredients": [
+        "500g köttfärs",
+        "1 ägg",
+        "1 dl ströbröd",
+        "1 dl mjölk",
+        "Salt och peppar",
+        "Potatis",
+        "Smör",
+        "Mjölk"
+      ],
+      "instructions": [
+        "Blanda köttfärs, ägg, ströbröd, mjölk, salt och peppar i en skål",
+        "Forma små bollar av smeten",
+        "Stek köttbullarna i smör tills de är genomstekta",
+        "Skala och koka potatisen",
+        "Mosa potatisen och blanda med mjölk och smör till önskad konsistens",
+        "Servera köttbullarna med potatismos"
+      ],
+      "level": "Basic",
+      "prep-time": "15 min",
+      "cook-time": "20 min",
+      "portions": "4 personer",
+      "category": "Lunch",
+      "nutrients": ["Protein", "Kolhydrater"]
+    },
+    {
+      "id": 3,
+      "title": "Kycklingnuggets med grönsaksdipp",
+      "image": "",
+      "ingredients": [
+        "400g kycklingfilé",
+        "2 dl ströbröd",
+        "1 tsk paprikapulver",
+        "1 tsk vitlökspulver",
+        "Salt och peppar",
+        "1 ägg",
+        "Morötter",
+        "Gurka",
+        "Selleri",
+        "Yoghurt"
+      ],
+      "instructions": [
+        "Skär kycklingfilén i bitar",
+        "Blanda ströbröd, paprikapulver, vitlökspulver, salt och peppar i en skål",
+        "Vispa ägget i en annan skål",
+        "Doppa kycklingbitarna i ägget och sedan i ströbrödsblandningen tills de är täckta",
+        "Stek kycklingnuggetsen i olja tills de är gyllenbruna och genomstekta",
+        "Skär morötter, gurka och selleri i stavar",
+        "Blanda yoghurt med önskade kryddor som dipp"
+      ],
+      "level": "Intermedium",
+      "prep-time": "20 min",
+      "cook-time": "15 min",
+      "portions": "4 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Fiber"]
+    },
+    {
+      "id": 4,
+      "title": "Pastagratäng med köttfärssås",
+      "image": "",
+      "ingredients": [
+        "300g pasta",
+        "400g köttfärs",
+        "1 lök",
+        "2 vitlöksklyftor",
+        "1 burk krossade tomater",
+        "1 dl grädde",
+        "Ost",
+        "Salt och peppar",
+        "Smör"
+      ],
+      "instructions": [
+        "Koka pastan enligt anvisningarna på förpackningen",
+        "Stek lök och vitlök i smör tills de är mjuka",
+        "Tillsätt köttfärsen och stek tills den är genomstekt",
+        "Tillsätt krossade tomater och grädde, låt sjuda i några minuter",
+        "Smaka av med salt och peppar",
+        "Blanda pastan med köttfärssåsen och lägg i en ugnsform",
+        "Strö över riven ost",
+        "Gratinera i ugnen tills osten är smält och gyllenbrun"
+      ],
+      "level": "Advanced",
+      "prep-time": "20 min",
+      "cook-time": "30 min",
+      "portions": "4 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"]
+    },
+    {
+      "id": 5,
+      "title": "Grillade ostsmörgåsar",
+      "image": "",
+      "ingredients": ["Brödskivor", "Ostskivor", "Smör"],
+      "instructions": [
+        "Bred smör på en sida av varje brödskiva",
+        "Lägg en ostskiva mellan två brödskivor, med smörsidan utåt",
+        "Grilla smörgåsarna i en stekpanna eller smörgåsjärn tills osten smälter och smörgåsarna är gyllenbruna"
+      ],
+      "level": "Basic",
+      "prep-time": "5 min",
+      "cook-time": "5 min",
+      "portions": "2 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Fett"]
+    },
+    {
+      "id": 6,
+      "title": "Smoothie med bär",
+      "image": "",
+      "ingredients": [
+        "1 dl frysta bär (ex. jordgubbar, blåbär, hallon)",
+        "1 banan",
+        "2 dl yoghurt",
+        "Honung (valfritt)"
+      ],
+      "instructions": [
+        "Lägg alla ingredienser i en mixer",
+        "Mixa tills smoothien är jämn och krämig",
+        "Tillsätt honung efter smak om önskas"
+      ],
+      "level": "Intermedium",
+      "prep-time": "5 min",
+      "cook-time": "0 min",
+      "portions": "2 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Kolhydrater", "Fiber"]
+    },
+    {
+      "id": 7,
+      "title": "Tacopaj",
+      "image": "",
+      "ingredients": [
+        "500g köttfärs",
+        "1 påse tacokryddmix",
+        "1 lök",
+        "1 paprika",
+        "1 burk majs",
+        "1 dl grädde",
+        "3 ägg",
+        "1 dl mjölk",
+        "Ost",
+        "Smör",
+        "Salt och peppar"
+      ],
+      "instructions": [
+        "Bryn köttfärsen tills den är genomstekt",
+        "Tillsätt tacokryddmix och vatten enligt förpackningen",
+        "Tillsätt lök, paprika och majs",
+        "Låt sjuda i några minuter",
+        "Vispa ägg, mjölk, grädde, salt och peppar i en skål",
+        "Smörj en pajform och lägg i köttfärsblandningen",
+        "Häll över äggstanningen",
+        "Strö över riven ost",
+        "Grädda i ugnen på 200°C i ca 25 minuter tills pajen stelnat och fått fin färg"
+      ],
+      "level": "Advanced",
+      "prep-time": "20 min",
+      "cook-time": "25 min",
+      "portions": "4 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"]
+    },
+    {
+      "id": 8,
+      "title": "Bananpannkaka",
+      "image": "",
+      "ingredients": [
+        "2 mogna bananer",
+        "2 ägg",
+        "1 dl havregryn",
+        "1 tsk kanel",
+        "Smör eller olja"
+      ],
+      "instructions": [
+        "Mosa bananerna i en skål",
+        "Tillsätt ägg, havregryn och kanel, och blanda väl",
+        "Värm upp smör eller olja i en stekpanna på medelhög värme",
+        "Häll i smeten och stek pannkakorna i ca 2-3 minuter på varje sida, tills de är gyllenbruna"
+      ],
+      "level": "Basic",
+      "prep-time": "10 min",
+      "cook-time": "5 min",
+      "portions": "2 personer",
+      "category": "Frukost",
+      "nutrients": ["Protein", "Kolhydrater"]
+    },
+    {
+      "id": 9,
+      "title": "Mini Pizza",
+      "image": "",
+      "ingredients": [
+        "Pizzadeg",
+        "Tomatsås",
+        "Ost",
+        "Valfria pålägg (ex. skinka, champinjoner, paprika)"
+      ],
+      "instructions": [
+        "Rulla ut pizzadegen och skär ut små rundlar",
+        "Bred tomatsås på varje rundel",
+        "Strö över riven ost och lägg på önskade pålägg",
+        "Grädda i ugnen enligt anvisningarna på pizzadegen tills pizzorna är gyllenbruna och osten smält"
+      ],
+      "level": "Intermedium",
+      "prep-time": "10 min",
+      "cook-time": "10 min",
+      "portions": "4 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Kolhydrater"]
+    },
+    {
+      "id": 10,
+      "title": "Kycklinggryta med ris",
+      "image": "",
+      "ingredients": [
+        "400g kycklingfilé",
+        "1 lök",
+        "2 vitlöksklyftor",
+        "1 paprika",
+        "1 zucchini",
+        "1 burk krossade tomater",
+        "1 dl grädde",
+        "Kryddor (ex. paprikapulver, oregano, salt och peppar)",
+        "Ris"
+      ],
+      "instructions": [
+        "Skär kycklingfilén i bitar",
+        "Stek kycklingen i smör tills den är genomstekt",
+        "Tillsätt hackad lök och vitlök och låt steka tills löken är mjuk",
+        "Tillsätt paprika och zucchini och låt steka i några minuter",
+        "Häll i krossade tomater och grädde",
+        "Krydda efter smak med paprikapulver, oregano, salt och peppar",
+        "Låt sjuda i ca 15-20 minuter",
+        "Koka ris enligt anvisningarna på förpackningen",
+        "Servera kycklinggrytan med ris"
+      ],
+      "level": "Advanced",
+      "prep-time": "20 min",
+      "cook-time": "30 min",
+      "portions": "4 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"]
+    },
+    {
+      "id": 11,
+      "title": "Omelett med grönsaker",
+      "image": "",
+      "ingredients": [
+        "3 ägg",
+        "1 tomat",
+        "1 paprika",
+        "1 lök",
+        "Ost",
+        "Smör",
+        "Salt och peppar"
+      ],
+      "instructions": [
+        "Hacka tomat, paprika och lök",
+        "Vispa äggen i en skål och blanda med salt och peppar",
+        "Smält smör i en stekpanna på medelvärme",
+        "Häll äggsmeten i stekpannan",
+        "Strö över hackade grönsaker och riven ost",
+        "Stek tills omeletten är genomstekt och osten smält",
+        "Vik omeletten dubbel och servera"
+      ],
+      "level": "Basic",
+      "prep-time": "10 min",
+      "cook-time": "10 min",
+      "portions": "2 personer",
+      "category": "Lunch",
+      "nutrients": ["Protein", "Fiber"]
+    },
+    {
+      "id": 12,
+      "title": "Yoghurtbollar med frukt",
+      "image": "",
+      "ingredients": [
+        "2 dl yoghurt",
+        "2 dl havregryn",
+        "1 dl mixad frukt (ex. banan, äpple, päron)",
+        "1 msk honung",
+        "Kokosflingor"
+      ],
+      "instructions": [
+        "Blanda yoghurt, havregryn, mixad frukt och honung i en skål",
+        "Forma små bollar av smeten",
+        "Rulla bollarna i kokosflingor",
+        "Förvara i kylskåp i minst 30 minuter innan servering"
+      ],
+      "level": "Intermedium",
+      "prep-time": "10 min",
+      "cook-time": "0 min",
+      "portions": "4 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Kolhydrater", "Fiber"]
+    },
+    {
+      "id": 13,
+      "title": "Korv med mos",
+      "image": "",
+      "ingredients": ["Korv", "Potatis", "Smör", "Mjölk", "Salt och peppar"],
+      "instructions": [
+        "Koka potatisen tills den är mjuk",
+        "Mosa potatisen och blanda med smör och mjölk till önskad konsistens",
+        "Koka korven enligt anvisningarna på förpackningen",
+        "Servera korven med mos"
+      ],
+      "level": "Basic",
+      "prep-time": "10 min",
+      "cook-time": "20 min",
+      "portions": "2 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"]
+    },
+    {
+      "id": 14,
+      "title": "Fruktsallad med vaniljsås",
+      "image": "",
+      "ingredients": [
+        "Frukt efter smak (ex. äpple, banan, apelsin, vindruvor)",
+        "Vaniljsås"
+      ],
+      "instructions": [
+        "Skär frukten i bitar och lägg i en skål",
+        "Häll vaniljsås över frukten"
+      ],
+      "level": "Basic",
+      "prep-time": "10 min",
+      "cook-time": "0 min",
+      "portions": "2 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Kolhydrater", "Vitaminer"]
+    },
+    {
+      "id": 15,
+      "title": "Korv Stroganoff med ris",
+      "image": "",
+      "ingredients": [
+        "400g falukorv",
+        "1 gul lök",
+        "1 burk krossade tomater",
+        "1 dl grädde",
+        "Paprikapulver",
+        "Salt och peppar",
+        "Ris"
+      ],
+      "instructions": [
+        "Skär falukorven i bitar",
+        "Hacka löken",
+        "Stek löken och korven i en stekpanna tills de är gyllenbruna",
+        "Tillsätt krossade tomater och låt sjuda i några minuter",
+        "Tillsätt grädde och kryddor, låt sjuda i ca 10 minuter",
+        "Koka ris enligt anvisningarna på förpackningen",
+        "Servera korv stroganoff med ris"
+      ],
+      "level": "Intermedium",
+      "prep-time": "15 min",
+      "cook-time": "20 min",
+      "portions": "4 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"]
+    },
+    {
+      "id": 16,
+      "title": "Smoothiebowl",
+      "image": "",
+      "ingredients": [
+        "1 fryst banan",
+        "1 dl frysta bär",
+        "1 dl yoghurt",
+        "Topping (ex. müsli, hackade nötter, frukt)"
+      ],
+      "instructions": [
+        "Mixa banan, bär och yoghurt till en slät konsistens",
+        "Häll smoothien i en skål",
+        "Toppa med valfria toppings"
+      ],
+      "level": "Intermedium",
+      "prep-time": "5 min",
+      "cook-time": "0 min",
+      "portions": "1 person",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Kolhydrater", "Fiber"]
+    },
+    {
+      "id": 17,
+      "title": "Köttfärssoppa med potatis",
+      "image": "",
+      "ingredients": [
+        "400g köttfärs",
+        "1 lök",
+        "2 morötter",
+        "5 potatisar",
+        "1 burk krossade tomater",
+        "1 l buljong",
+        "Salt och peppar"
+      ],
+      "instructions": [
+        "Hacka löken",
+        "Skär morötter och potatisar i bitar",
+        "Stek köttfärsen och löken i en kastrull tills köttfärsen är genomstekt",
+        "Tillsätt morötter, potatisar, krossade tomater och buljong",
+        "Låt koka under lock i ca 20 minuter eller tills grönsakerna är mjuka",
+        "Smaka av med salt och peppar"
+      ],
+      "level": "Advanced",
+      "prep-time": "15 min",
+      "cook-time": "25 min",
+      "portions": "4 personer",
+      "category": "Lunch",
+      "nutrients": ["Protein", "Kolhydrater", "Fiber"]
+    },
+    {
+      "id": 18,
+      "title": "Pasta med köttfärssås",
+      "image": "",
+      "ingredients": [
+        "300g pasta",
+        "400g köttfärs",
+        "1 lök",
+        "2 vitlöksklyftor",
+        "1 burk krossade tomater",
+        "Oregano",
+        "Salt och peppar",
+        "Ost"
+      ],
+      "instructions": [
+        "Koka pastan enligt anvisningarna på förpackningen",
+        "Stek lök och vitlök i olja tills de är mjuka",
+        "Tillsätt köttfärsen och stek tills den är genomstekt",
+        "Tillsätt krossade tomater och låt sjuda i några minuter",
+        "Krydda med oregano, salt och peppar",
+        "Servera köttfärssåsen över den kokta pastan och strö över riven ost"
+      ],
+      "level": "Basic",
+      "prep-time": "10 min",
+      "cook-time": "20 min",
+      "portions": "4 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"]
+    },
+    {
+      "id": 19,
+      "title": "Fiskpinnar med potatismos",
+      "image": "",
+      "ingredients": ["Fiskpinnar", "Potatis", "Smör", "Mjölk", "Ärtor"],
+      "instructions": [
+        "Koka potatisen tills den är mjuk",
+        "Mosa potatisen och blanda med smör och mjölk till önskad konsistens",
+        "Stek fiskpinnarna enligt anvisningarna på förpackningen",
+        "Servera fiskpinnarna med potatismos och ärtor"
+      ],
+      "level": "Basic",
+      "prep-time": "10 min",
+      "cook-time": "20 min",
+      "portions": "2 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"]
+    },
+    {
+      "id": 20,
+      "title": "Fruktsmoothie med spenat",
+      "image": "",
+      "ingredients": [
+        "1 dl frysta bär",
+        "1 banan",
+        "1 näve spenat",
+        "1 dl yoghurt",
+        "1 dl juice (valfri)"
+      ],
+      "instructions": [
+        "Lägg alla ingredienser i en mixer",
+        "Mixa tills smoothien är jämn och krämig"
+      ],
+      "level": "Intermedium",
+      "prep-time": "5 min",
+      "cook-time": "0 min",
+      "portions": "1 person",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Kolhydrater", "Vitaminer"]
     }
   ]
 }
