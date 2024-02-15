@@ -30,6 +30,7 @@ export default {
         <ul>
           <li><router-link to="/">HOME</router-link></li>
           <li><router-link to="/recepts">RECEPTS</router-link></li>
+          <li><router-link to="/myrecepts">FAVORITE RECEPTS</router-link></li>
           <li><router-link to="/games">GAMES</router-link></li>
           <li><router-link to="/contact">CONTACT</router-link></li>
           <li><router-link to="/about">ABOUT</router-link></li>
