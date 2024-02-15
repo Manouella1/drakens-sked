@@ -5,6 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
+  /* Why is not all the background green?  */
   background-color: rgba(136, 220, 52, 0.786);
 
   font-synthesis: none;
@@ -15,4 +16,9 @@
 
 h1 {
   text-align: center;
+}
+
+/* Why is not all the background green?  */
+body {
+  background-color: rgba(136, 220, 52, 0.786);
 }
