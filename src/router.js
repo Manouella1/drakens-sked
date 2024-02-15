@@ -3,9 +3,9 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import AboutView from './views/AboutView.vue'
 import InfoView from './views/InformationView.vue'
 import ContactView from './views/ContactView.vue'
-import ReceptsView from './views/AllReceptsView.vue'
-import MyFavoriteReceptsView from './views/MyFavoriteReceptsView.vue'
-import ReceptView from './views/ReceptsView.vue'
+import AllReceptsView from './views/AllReceptsView.vue'
+import FavoriteReceptsView from './views/MyFavoriteReceptsView.vue'
+import ReceptView from './views/ReceptView.vue'
 import GamesView from './views/GamesView.vue'
 import IntroView from './views/IntroView.vue'
 import HomeView from './views/HomeView.vue'
@@ -34,7 +34,7 @@ export default createRouter({
       name: 'Games',
     },
     {
-      component: MyFavoriteReceptsView,
+      component: FavoriteReceptsView,
       path: '/myrecepts',
       name: 'MyFavoriteRecepts',
     },
@@ -45,7 +45,7 @@ export default createRouter({
     },
 
     {
-      component: ReceptsView,
+      component: AllReceptsView,
       path: '/recepts',
       name: 'Recepts',
     },
