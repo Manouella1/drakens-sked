@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Pannkakor",
-      "image": "pankakor_ID_1.jpg",
+      "image": "../assets/foto1.jpg",
       "ingredients": ["3 ägg", "2 dl vetemjöl", "6 dl mjölk"],
       "instructions": [
         "Blanda alla torra ingredienser",
