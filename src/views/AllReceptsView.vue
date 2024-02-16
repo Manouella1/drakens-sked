@@ -1,10 +1,16 @@
 <script>
 import meals from '../assets/meals.json'
 
+// console.log(meals.recipes[1].title)
+console.log(meals)
+
 export default {
+  created() {
+    this.meals = meals.recipes
+  },
   data() {
     return {
-      meals: null,
+      meals: [],
     }
   },
 }
