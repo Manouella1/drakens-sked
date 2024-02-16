@@ -8,15 +8,7 @@
   </main>
 </template>
 
-<style>
-body {
-  background-color: #f8dfbf;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-</style>
+<style></style>
 
 <!-- <script>
 export default {

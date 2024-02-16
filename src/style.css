@@ -12,9 +12,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  text-align: center;
-}
 body {
-  background-color: #f8dfbf;
+  background-image: url("./assets/bilder/bakgrund.jpg");
+  margin: 0;
+  padding: 0;
+  /* background-repeat: repeat; */
 }
