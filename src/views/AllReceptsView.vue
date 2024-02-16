@@ -24,9 +24,15 @@ export default {
       <img :src="`../assets/${meal.image}`" alt="photo recept" />
     </li>
   </ol>
+
+  <!-- This is hard code to pass the foto  -->
   <img src="../assets/foto1.jpg" alt="photo recept" />
 
+  <!-- this is hard code from the json file  to see if print correct info: see DOM is printing correct-->
+
   <div>{{ meals[0].image }}</div>
+
+  <!-- this should place the info from the json that is the same as we hardcode before -->
   <img :src="meals[0].image" alt="photo recept" />
   <!-- <img :src="`../assets/${meals[0].image}`" alt="photo recept" /> -->
 </template>
