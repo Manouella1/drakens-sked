@@ -1,3 +1,4 @@
+src/views/AllReceptsView
 <script>
 import meals from '../assets/meals.json'
 
@@ -21,12 +22,12 @@ export default {
   <ol>
     <li v-for="meal in meals" :key="meal.id">
       <h2>{{ meal.title }}</h2>
-      <img :src="`../assets/${meal.image}`" alt="photo recept" />
+      <img :src="`src/assets/${meal.image}`" alt="photo recept" />
     </li>
   </ol>
 
   <!-- This is hard code to pass the foto  -->
-  <img src="../assets/foto1.jpg" alt="photo recept" />
+  <!-- <img :src="assets / foto1.jpg" alt="photo recept" /> -->
 
   <!-- this is hard code from the json file  to see if print correct info: see DOM is printing correct-->
 
