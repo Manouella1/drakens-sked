@@ -10,7 +10,7 @@
 
 <style>
 body {
-  background-image: url(../assets/bilder/bakgrund.png);
+  background-color: #f8dfbf;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
