@@ -31,4 +31,5 @@ export default {
   <!-- <img :src="`../assets/${meals[0].image}`" alt="photo recept" /> -->
 </template>
 
-<style></style>
+<style>
+</style>

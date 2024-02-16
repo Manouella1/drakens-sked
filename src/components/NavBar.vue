@@ -19,12 +19,7 @@ export default {
   <div class="nav-bar">
     <div>
       <p v-if="ifMenuClicked === false" @click="menuClick">MENU</p>
-      <img
-        class="icon-menu"
-        v-else
-        src="../assets/circle-xmark-solid.svg"
-        @click="menuClick"
-      />
+      <img class="icon-menu" v-else src="../assets/circle-xmark-solid.svg" @click="menuClick" />
 
       <nav v-show="ifMenuClicked">
         <ul>
@@ -62,10 +57,12 @@ p {
   font-weight: bold;
   font-size: 20px;
 }
+
 .icon-menu {
   height: 25px;
   margin: 10px 20px;
 }
+
 .nav-bar {
   background-color: black;
   height: 50px;
@@ -76,6 +73,7 @@ p {
   padding-top: 10px;
   margin: 0 20px;
 }
+
 .greeting {
   padding-top: 0.6em;
 }

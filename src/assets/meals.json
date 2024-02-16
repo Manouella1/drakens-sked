@@ -3,8 +3,12 @@
     {
       "id": 1,
       "title": "Pannkakor",
-      "image": "../assets/foto1.jpg",
-      "ingredients": ["3 ägg", "2 dl vetemjöl", "6 dl mjölk"],
+      "image": "foto1.jpg",
+      "ingredients": [
+        "3 ägg",
+        "2 dl vetemjöl",
+        "6 dl mjölk"
+      ],
       "instructions": [
         "Blanda alla torra ingredienser",
         "Häll i hälften av mjölken, vispa",
@@ -15,7 +19,10 @@
       "cook-time": "20 min",
       "portions": "4 personer",
       "category": "Frukost",
-      "nutrients": ["Kolhydrater"]
+      "nutrients": [
+        "Kolhydrater"
+      ],
+      "description": "Enkel och klassisk frukostfavorit som är snabb att göra och perfekt att toppa med favorittillbehör som sylt eller färsk frukt."
     },
     {
       "id": 2,
@@ -44,7 +51,11 @@
       "cook-time": "20 min",
       "portions": "4 personer",
       "category": "Lunch",
-      "nutrients": ["Protein", "Kolhydrater"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater"
+      ],
+      "description": "Hemlagade köttbullar serverade med krämigt potatismos är en populär och mättande lunchrätt som både barn och vuxna älskar."
     },
     {
       "id": 3,
@@ -76,7 +87,11 @@
       "cook-time": "15 min",
       "portions": "4 personer",
       "category": "Mellanmål",
-      "nutrients": ["Protein", "Fiber"]
+      "nutrients": [
+        "Protein",
+        "Fiber"
+      ],
+      "description": "Hemlagade kycklingnuggets är ett hälsosamt alternativ till traditionell snabbmat. Servera dem med en fräsch grönsaksdipp för extra smak."
     },
     {
       "id": 4,
@@ -108,13 +123,21 @@
       "cook-time": "30 min",
       "portions": "4 personer",
       "category": "Middag",
-      "nutrients": ["Protein", "Kolhydrater"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater"
+      ],
+      "description": "Denna krämiga pastagratäng med köttfärssås är perfekt för en läcker och mättande middag för hela familjen."
     },
     {
       "id": 5,
       "title": "Grillade ostsmörgåsar",
       "image": "",
-      "ingredients": ["Brödskivor", "Ostskivor", "Smör"],
+      "ingredients": [
+        "Brödskivor",
+        "Ostskivor",
+        "Smör"
+      ],
       "instructions": [
         "Bred smör på en sida av varje brödskiva",
         "Lägg en ostskiva mellan två brödskivor, med smörsidan utåt",
@@ -125,7 +148,11 @@
       "cook-time": "5 min",
       "portions": "2 personer",
       "category": "Mellanmål",
-      "nutrients": ["Protein", "Fett"]
+      "nutrients": [
+        "Protein",
+        "Fett"
+      ],
+      "description": "Grillade ostsmörgåsar är en snabb och läcker mellanmålsrätt som passar perfekt när du är sugen på något varmt och ostigt."
     },
     {
       "id": 6,
@@ -147,7 +174,12 @@
       "cook-time": "0 min",
       "portions": "2 personer",
       "category": "Mellanmål",
-      "nutrients": ["Protein", "Kolhydrater", "Fiber"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater",
+        "Fiber"
+      ],
+      "description": "En uppfriskande smoothie full av frukt och yoghurt, perfekt som mellanmål eller en snabb frukost på språng."
     },
     {
       "id": 7,
@@ -182,7 +214,11 @@
       "cook-time": "25 min",
       "portions": "4 personer",
       "category": "Middag",
-      "nutrients": ["Protein", "Kolhydrater"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater"
+      ],
+      "description": "Tacopaj är en härlig kombination av mexikanska smaker och paj, perfekt för en smakrik middag som är lätt att laga."
     },
     {
       "id": 8,
@@ -206,7 +242,11 @@
       "cook-time": "5 min",
       "portions": "2 personer",
       "category": "Frukost",
-      "nutrients": ["Protein", "Kolhydrater"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater"
+      ],
+      "description": "Dessa bananpannkakor är glutenfria och perfekta för en hälsosam och läcker frukost."
     },
     {
       "id": 9,
@@ -229,7 +269,11 @@
       "cook-time": "10 min",
       "portions": "4 personer",
       "category": "Mellanmål",
-      "nutrients": ["Protein", "Kolhydrater"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater"
+      ],
+      "description": "Mini Pizzas är en perfekt lösning för en snabb och läcker mellanmål eller som aptitretare vid fester."
     },
     {
       "id": 10,
@@ -262,7 +306,11 @@
       "cook-time": "30 min",
       "portions": "4 personer",
       "category": "Middag",
-      "nutrients": ["Protein", "Kolhydrater"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater"
+      ],
+      "description": "Kycklinggryta med ris är en smakrik och näringsrik måltid perfekt för middagar med familjen eller vänner."
     },
     {
       "id": 11,
@@ -291,7 +339,11 @@
       "cook-time": "10 min",
       "portions": "2 personer",
       "category": "Lunch",
-      "nutrients": ["Protein", "Fiber"]
+      "nutrients": [
+        "Protein",
+        "Fiber"
+      ],
+      "description": "En lättlagad och näringsrik omelett med färska grönsaker, perfekt för en snabb lunch eller middag."
     },
     {
       "id": 12,
@@ -315,13 +367,24 @@
       "cook-time": "0 min",
       "portions": "4 personer",
       "category": "Mellanmål",
-      "nutrients": ["Protein", "Kolhydrater", "Fiber"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater",
+        "Fiber"
+      ],
+      "description": "Yoghurtbollar med frukt är en hälsosam och energigivande mellanmål som är perfekt för att stilla hungern mellan måltiderna."
     },
     {
       "id": 13,
       "title": "Korv med mos",
       "image": "",
-      "ingredients": ["Korv", "Potatis", "Smör", "Mjölk", "Salt och peppar"],
+      "ingredients": [
+        "Korv",
+        "Potatis",
+        "Smör",
+        "Mjölk",
+        "Salt och peppar"
+      ],
       "instructions": [
         "Koka potatisen tills den är mjuk",
         "Mosa potatisen och blanda med smör och mjölk till önskad konsistens",
@@ -333,7 +396,11 @@
       "cook-time": "20 min",
       "portions": "2 personer",
       "category": "Middag",
-      "nutrients": ["Protein", "Kolhydrater"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater"
+      ],
+      "description": "Korv med mos är en klassisk och välsmakande middagsrätt som passar perfekt för en enkel och tillfredsställande måltid."
     },
     {
       "id": 14,
@@ -352,7 +419,11 @@
       "cook-time": "0 min",
       "portions": "2 personer",
       "category": "Mellanmål",
-      "nutrients": ["Kolhydrater", "Vitaminer"]
+      "nutrients": [
+        "Kolhydrater",
+        "Vitaminer"
+      ],
+      "description": "Fruktsallad med vaniljsås är en lätt och uppfriskande mellanmål som är rik på smak och hälsosamma näringsämnen."
     },
     {
       "id": 15,
@@ -381,7 +452,11 @@
       "cook-time": "20 min",
       "portions": "4 personer",
       "category": "Middag",
-      "nutrients": ["Protein", "Kolhydrater"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater"
+      ],
+      "description": "Korv Stroganoff med ris är en krämig och smakrik måltid som är enkel att tillaga och perfekt för en familjemiddag."
     },
     {
       "id": 16,
@@ -403,35 +478,12 @@
       "cook-time": "0 min",
       "portions": "1 person",
       "category": "Mellanmål",
-      "nutrients": ["Protein", "Kolhydrater", "Fiber"]
-    },
-    {
-      "id": 17,
-      "title": "Köttfärssoppa med potatis",
-      "image": "",
-      "ingredients": [
-        "400g köttfärs",
-        "1 lök",
-        "2 morötter",
-        "5 potatisar",
-        "1 burk krossade tomater",
-        "1 l buljong",
-        "Salt och peppar"
+      "nutrients": [
+        "Protein",
+        "Kolhydrater",
+        "Fiber"
       ],
-      "instructions": [
-        "Hacka löken",
-        "Skär morötter och potatisar i bitar",
-        "Stek köttfärsen och löken i en kastrull tills köttfärsen är genomstekt",
-        "Tillsätt morötter, potatisar, krossade tomater och buljong",
-        "Låt koka under lock i ca 20 minuter eller tills grönsakerna är mjuka",
-        "Smaka av med salt och peppar"
-      ],
-      "level": "Advanced",
-      "prep-time": "15 min",
-      "cook-time": "25 min",
-      "portions": "4 personer",
-      "category": "Lunch",
-      "nutrients": ["Protein", "Kolhydrater", "Fiber"]
+      "description": "Smoothiebowl är en näringsrik och färgglad mellanmål som är perfekt för att kickstarta dagen eller som en energigivande eftermiddagssnack."
     },
     {
       "id": 18,
@@ -460,13 +512,23 @@
       "cook-time": "20 min",
       "portions": "4 personer",
       "category": "Middag",
-      "nutrients": ["Protein", "Kolhydrater"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater"
+      ],
+      "description": "Pasta med köttfärssås är en populär och lättlagad middagsrätt som passar både vardag och fest, med en smakrik sås som gör den till en favorit hos både barn och vuxna."
     },
     {
       "id": 19,
       "title": "Fiskpinnar med potatismos",
       "image": "",
-      "ingredients": ["Fiskpinnar", "Potatis", "Smör", "Mjölk", "Ärtor"],
+      "ingredients": [
+        "Fiskpinnar",
+        "Potatis",
+        "Smör",
+        "Mjölk",
+        "Ärtor"
+      ],
       "instructions": [
         "Koka potatisen tills den är mjuk",
         "Mosa potatisen och blanda med smör och mjölk till önskad konsistens",
@@ -478,7 +540,11 @@
       "cook-time": "20 min",
       "portions": "2 personer",
       "category": "Middag",
-      "nutrients": ["Protein", "Kolhydrater"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater"
+      ],
+      "description": "Fiskpinnar med potatismos är en klassisk och omtyckt middagsrätt som passar både barn och vuxna, med en krämig mos och knapriga fiskpinnar som är enkla att tillaga och fulla av smak."
     },
     {
       "id": 20,
@@ -500,7 +566,12 @@
       "cook-time": "0 min",
       "portions": "1 person",
       "category": "Mellanmål",
-      "nutrients": ["Protein", "Kolhydrater", "Vitaminer"]
+      "nutrients": [
+        "Protein",
+        "Kolhydrater",
+        "Vitaminer"
+      ],
+      "description": "Fruktsmoothie med spenat är en näringsrik och uppfriskande mellanmålssmoothie som kombinerar söt frukt med frisk spenat för en hälsosam och läcker dryck som passar perfekt som en snabb energiboost när som helst på dagen."
     }
   ]
 }
