@@ -3,14 +3,18 @@ import Intro from "../components/Intro.vue";
 </script>
 
 <template>
-  <main></main>
-
-  <Intro />
+  <main>
+    <Intro />
+  </main>
 </template>
 
 <style>
 body {
   background-image: url(../assets/bilder/bakgrund.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 </style>
 
