@@ -1,13 +1,13 @@
 <script setup>
-import $ from "jquery";
+import $ from 'jquery'
 
 $(document).ready(function () {
-  $(".container").click(function () {
-    $(".stick").toggleClass(function () {
-      return $(this).is(".open, .close") ? "open close" : "open";
-    });
-  });
-});
+  $('.container').click(function () {
+    $('.stick').toggleClass(function () {
+      return $(this).is('.open, .close') ? 'open close' : 'open'
+    })
+  })
+})
 </script>
 
 <template>
@@ -46,7 +46,7 @@ $(document).ready(function () {
   align-items: center;
 }
 h1 {
-  font-family: "luckiest guy";
+  font-family: 'luckiest guy';
   flex-grow: 1;
 }
 .container {
