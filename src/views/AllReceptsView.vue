@@ -10,14 +10,14 @@ export default {
   components: {
     CardsRecepts,
   },
-  created() {
-    this.meals = meals.recipes
-  },
-  data() {
-    return {
-      meals: [],
-    }
-  },
+  // created() {
+  //   this.meals = meals.recipes
+  // },
+  // data() {
+  //   return {
+  //     meals: [],
+  //   }
+  // },
 }
 </script>
 
