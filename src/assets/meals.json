@@ -422,9 +422,37 @@
       "description": "Smoothiebowl är en näringsrik och färgglad mellanmål som är perfekt för att kickstarta dagen eller som en energigivande eftermiddagssnack."
     },
     {
+      "id": 17,
+      "title": "Köttfärssoppa med potatis",
+      "image": "köttfärssoppa_ID_17.jpg",
+      "ingredients": [
+        "400g köttfärs",
+        "1 lök",
+        "2 morötter",
+        "5 potatisar",
+        "1 burk krossade tomater",
+        "1 l buljong",
+        "Salt och peppar"
+      ],
+      "instructions": [
+        "Hacka löken",
+        "Skär morötter och potatisar i bitar",
+        "Stek köttfärsen och löken i en kastrull tills köttfärsen är genomstekt",
+        "Tillsätt morötter, potatisar, krossade tomater och buljong",
+        "Låt koka under lock i ca 20 minuter eller tills grönsakerna är mjuka",
+        "Smaka av med salt och peppar"
+      ],
+      "level": "Advanced",
+      "prep-time": "15 min",
+      "cook-time": "25 min",
+      "portions": "4 personer",
+      "category": "Lunch",
+      "nutrients": ["Protein", "Kolhydrater", "Fiber"]
+    },
+    {
       "id": 18,
       "title": "Pasta med köttfärssås",
-      "image": "",
+      "image": "Pasta-med-köttfärssås_ID_18.jpg",
       "ingredients": [
         "300g pasta",
         "400g köttfärs",
@@ -454,7 +482,7 @@
     {
       "id": 19,
       "title": "Fiskpinnar med potatismos",
-      "image": "",
+      "image": "Fiskpinnar_ID_19.jpg",
       "ingredients": ["Fiskpinnar", "Potatis", "Smör", "Mjölk", "Ärtor"],
       "instructions": [
         "Koka potatisen tills den är mjuk",
@@ -473,7 +501,7 @@
     {
       "id": 20,
       "title": "Fruktsmoothie med spenat",
-      "image": "",
+      "image": "spenat-smoothie_ID_20.jpg",
       "ingredients": [
         "1 dl frysta bär",
         "1 banan",
