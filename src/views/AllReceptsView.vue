@@ -22,8 +22,9 @@ export default {
 </script>
 
 <template>
-  <!-- Created to try get info direct in ReceptsView but we decide to implement to create a component to can re use it and clean code -->
-  <!-- <h1>ALL RECEPTS</h1>
+  <main class="container">
+    <!-- Created to try get info direct in ReceptsView but we decide to implement to create a component to can re use it and clean code -->
+    <!-- <h1>ALL RECEPTS</h1>
   <ol>
     <li v-for="meal in meals" :key="meal.id">
       <h2>{{ meal.title }}</h2>
@@ -31,8 +32,9 @@ export default {
     </li>
   </ol> -->
 
-  <!-- WE use here the component we create for the recepies -->
-  <CardsRecepts />
+    <!-- WE use here the component we create for the recepies -->
+    <CardsRecepts />
+  </main>
 </template>
 
 <style scoped>
