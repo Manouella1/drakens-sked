@@ -16,5 +16,5 @@ export default {
 
 <template>
   <h1>RECEPT</h1>
-  <p>recept ID: {{ $route.params.mealId }}</p>
+  <p>recept ID: {{ $route.params.receptId }}</p>
 </template>
