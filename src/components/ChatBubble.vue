@@ -5,6 +5,9 @@ const input = ref(false),
   name = ref(null)
 
 function sendName() {
+  if (name.value === null) {
+    name.value = 'kompis'
+  }
   input.value = true
 }
 
