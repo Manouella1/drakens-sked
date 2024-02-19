@@ -2,6 +2,10 @@
 import NavBarMenu from './components/NavBar.vue'
 import ScrollToTopButton from './components/ScrollToTopButton.vue' // kan tas bort
 import Footer from './components/Footer.vue'
+<<<<<<< HEAD
+=======
+
+>>>>>>> cbe80202a5f66fca60189ac8db3cdbf4f854ba05
 export default {
   components: {
     NavBarMenu,
@@ -27,5 +31,4 @@ export default {
   <router-view />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
