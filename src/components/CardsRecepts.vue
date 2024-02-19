@@ -17,9 +17,10 @@ export default {
     }
   },
   methods: {
-    selectRecept(meal) {
+    selectRecept(mealId) {
       // Emit an event with the selected meal ID
-      this.$emit('selectRecept', meal)
+      // this.$emit('selectRecept', meal)
+      console.log('Selected Meal ID:', mealId)
     },
   },
 }
@@ -38,7 +39,8 @@ export default {
         :category="meal.category"
         :level="meal.level"
         :image="meal.image"
-        @click="selectRecept(key)"
+        :id="meal.id"
+        @selectRecept="selectRecept"
       >
       </CardRecept>
     </div>

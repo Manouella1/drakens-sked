@@ -13,6 +13,10 @@ export default {
       event.currentTarget.style.transform = 'scale(1)'
       event.currentTarget.style.cursor = 'default'
     },
+    handleClick() {
+      // Emit the 'selectRecept' event with the meal ID
+      this.$emit('selectRecept', this.id)
+    },
   },
 }
 </script>
@@ -28,6 +32,7 @@ export default {
     style="max-width: 17rem"
     @mouseover="enlargeImage"
     @mouseout="resetImage"
+    @click="handleClick"
   >
     <BCardText>
       <div class="flex">
