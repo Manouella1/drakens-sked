@@ -23,16 +23,18 @@ export default {
   <div>
     <h1>ALL RECEPTS:</h1>
     <!-- Rendering CardRecept component for each meal -->
-    <CardRecept
-      v-for="meal in meals"
-      :key="meal.id"
-      :title="meal.title"
-      :prepTime="meal.prepTime"
-      :category="meal.category"
-      :level="meal.level"
-      :image="meal.image"
-    >
-    </CardRecept>
+    <div @click="selectRecept(meal.id)">
+      <CardRecept
+        v-for="meal in meals"
+        :key="meal.id"
+        :title="meal.title"
+        :prepTime="meal.prepTime"
+        :category="meal.category"
+        :level="meal.level"
+        :image="meal.image"
+      >
+      </CardRecept>
+    </div>
   </div>
 </template>
 
