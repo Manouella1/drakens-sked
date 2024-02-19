@@ -1,11 +1,15 @@
-src/views/AllReceptsView
+<!-- src/views/AllReceptsView -->
 <script>
+import CardsRecepts from '../components/CardsRecepts.vue'
 import meals from '../assets/meals.json'
 
-// console.log(meals.recipes[1].title)
-console.log(meals.recipes[0].image)
+console.log(meals.recipes)
+// console.log(meals.recipes[0].image)
 
 export default {
+  components: {
+    CardsRecepts,
+  },
   created() {
     this.meals = meals.recipes
   },
@@ -18,13 +22,17 @@ export default {
 </script>
 
 <template>
-  <h1>ALL RECEPTS</h1>
+  <!-- Created to try get info direct in ReceptsView but we decide to implement to create a component to can re use it and clean code -->
+  <!-- <h1>ALL RECEPTS</h1>
   <ol>
     <li v-for="meal in meals" :key="meal.id">
       <h2>{{ meal.title }}</h2>
       <img :src="`src/assets/${meal.image}`" alt="photo recept" />
     </li>
-  </ol>
+  </ol> -->
+
+  <!-- WE use here the component we create for the recepies -->
+  <CardsRecepts />
 </template>
 
 <style scoped>
