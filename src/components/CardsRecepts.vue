@@ -21,6 +21,8 @@ export default {
       // Emit an event with the selected meal ID
       // this.$emit('selectRecept', meal)
       console.log('Selected Meal ID:', mealId)
+      // Navigate to ReceptView with the selected mealId
+      this.$router.push({ name: 'Recept', params: { receptId: mealId } })
     },
   },
 }

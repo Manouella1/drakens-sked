@@ -7,19 +7,14 @@ export default {
   },
   data() {
     return {
-      mealID: null,
       selectedReceptId: '',
       meals: [],
     }
   },
-  // watch: {
-  //   selectedReceptId: this.meals.id,
-  // },
 }
 </script>
 
 <template>
   <h1>RECEPT</h1>
-
-  <p>recept ID: {{ $route.params.receptId }}</p>
+  <p>recept ID: {{ $route.params.mealId }}</p>
 </template>
