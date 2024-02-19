@@ -16,6 +16,12 @@ export default {
       // Initializing meals array
     }
   },
+  methods: {
+    selectRecept(meal) {
+      // Emit an event with the selected meal ID
+      this.$emit('selectRecept', meal)
+    },
+  },
 }
 </script>
 
@@ -23,7 +29,7 @@ export default {
   <div>
     <h1>ALL RECEPTS:</h1>
     <!-- Rendering CardRecept component for each meal -->
-    <div @click="selectRecept(meal.id)">
+    <div>
       <CardRecept
         v-for="meal in meals"
         :key="meal.id"
@@ -32,6 +38,7 @@ export default {
         :category="meal.category"
         :level="meal.level"
         :image="meal.image"
+        @click="selectRecept(key)"
       >
       </CardRecept>
     </div>

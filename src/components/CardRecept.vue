@@ -1,11 +1,7 @@
 <script>
 export default {
-  props: ['title', 'prepTime', 'category', 'level', 'image'],
+  props: ['title', 'prepTime', 'category', 'level', 'image', 'id'],
   methods: {
-    selectRecept(meal) {
-      // Emit an event with the selected meal ID
-      this.$emit('selectRecept', meal)
-    },
     enlargeImage(event) {
       // Enlarge the image when hovered
       event.currentTarget.style.transform = 'scale(1.2)'
