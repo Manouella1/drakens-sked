@@ -5,6 +5,7 @@ export default {
 </script>
 
 <template>
+  <!-- Receiving props from parent component -->
   <div>
     <img :src="`src/assets/${image}`" alt="photo recept" />
     <h2>{{ title }}</h2>

@@ -8,10 +8,12 @@ export default {
   },
   created() {
     this.meals = meals.recipes
+    // Assigning meals data to meals array
   },
   data() {
     return {
       meals: [],
+      // Initializing meals array
     }
   },
 }
@@ -20,17 +22,12 @@ export default {
 <template>
   <div>
     <h1>ALL RECEPTS:</h1>
-    <CardRecept
-      v-for="meal in meals"
-      :key="meal.id"
-      :title="meal.title"
-      :prepTime="meal.prepTime"
-      :category="meal.category"
-      :level="meal.level"
-      :image="meal.image"
-    >
+    <!-- Rendering CardRecept component for each meal -->
+    <CardRecept v-for="meal in meals" :key="meal.id" :title="meal.title" :prepTime="meal.prepTime"
+      :category="meal.category" :level="meal.level" :image="meal.image">
     </CardRecept>
   </div>
 </template>
 
-<style></style>
+<style>
+</style>
