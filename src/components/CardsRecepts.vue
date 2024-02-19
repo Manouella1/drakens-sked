@@ -16,6 +16,15 @@ export default {
       // Initializing meals array
     }
   },
+  methods: {
+    selectRecept(mealId) {
+      // Emit an event with the selected meal ID
+      // this.$emit('selectRecept', meal)
+      console.log('Selected Meal ID:', mealId)
+      // Navigate to ReceptView with the selected mealId
+      this.$router.push({ name: 'Recept', params: { receptId: mealId } })
+    },
+  },
 }
 </script>
 
@@ -23,11 +32,21 @@ export default {
   <div>
     <h1>ALL RECEPTS:</h1>
     <!-- Rendering CardRecept component for each meal -->
-    <CardRecept v-for="meal in meals" :key="meal.id" :title="meal.title" :prepTime="meal.prepTime"
-      :category="meal.category" :level="meal.level" :image="meal.image">
-    </CardRecept>
+    <div>
+      <CardRecept
+        v-for="meal in meals"
+        :key="meal.id"
+        :title="meal.title"
+        :prepTime="meal.prepTime"
+        :category="meal.category"
+        :level="meal.level"
+        :image="meal.image"
+        :id="meal.id"
+        @selectRecept="selectRecept"
+      >
+      </CardRecept>
+    </div>
   </div>
 </template>
 
-<style>
-</style>
+<style scoped></style>
