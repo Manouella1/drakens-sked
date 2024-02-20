@@ -38,15 +38,15 @@ export default {
 export default {
   data() {
     return {
-      footerText: "Copyright DrakensSked"
-    }
+      footerText: "Drakens sked ©",
+    };
   },
-}
+};
 </script>
 
 <template>
   <footer>
-    <p> {{ footerText }}</p>
+    <p>{{ footerText }}</p>
   </footer>
 </template>
 

@@ -13,7 +13,7 @@
 <template>
   <header>
     <!--Vill vi ha loggan som en del av nav?-->
-    <router-link to="/">
+    <router-link to="/recepts">
       <h1>Drakens sked</h1>
     </router-link>
     <nav class="menu--right" role="navigation">
@@ -24,12 +24,12 @@
         <span></span>
         <ul class="menuItem">
           <li>
-            <router-link to="/">
+            <router-link to="/recepts">
               <img class="logo" src="../assets/bilder/head.png" alt="logo" />
             </router-link>
           </li>
           <div class="divider"></div>
-          <li><router-link to="/">Hem</router-link></li>
+          <li><router-link to="/recepts">Hem</router-link></li>
           <li><router-link to="/myrecepts">Mina recept</router-link></li>
           <li><router-link to="/games">Spel</router-link></li>
           <li><router-link to="/contact">Kontakt</router-link></li>
@@ -67,9 +67,9 @@ a {
 }
 
 h1 {
-  color: #2ada76;
-  margin-left: 1em;
-  margin-top: 0.3em;
+  color: #219c56;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
   font-size: 3rem;
   /** Text shadowing */
   color: #219c56;
@@ -108,15 +108,18 @@ header {
   -webkit-user-select: none;
   user-select: none;
 }
+
 .menuToggle a {
   text-decoration: none;
   color: #fff;
   font-size: 1.7rem;
   transition: all 0.3s ease;
 }
+
 .menuToggle a:hover {
   color: tomato;
 }
+
 .menuToggle input {
   display: block;
   width: 40px;
@@ -124,8 +127,10 @@ header {
   position: absolute;
   top: -7px;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
 
@@ -144,26 +149,31 @@ header {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
+
 .menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
+
 .menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-.menuToggle input:checked ~ span {
+.menuToggle input:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
-.menuToggle input:checked ~ span:nth-last-child(3) {
+
+.menuToggle input:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-.menuToggle input:checked ~ span:nth-last-child(2) {
+
+.menuToggle input:checked~span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
-.menuToggle input:checked ~ .menuItem {
+
+.menuToggle input:checked~.menuItem {
   transform: none;
 }
 
@@ -180,6 +190,7 @@ header {
   transform-origin: 0% 0%;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
+
 .menuItem li {
   padding: 10px 0;
   font-size: 22px;
@@ -189,20 +200,25 @@ header {
   position: fixed;
   right: 0;
 }
+
 .menu--right .menuToggle input {
   right: 50px;
 }
+
 .menu--right .menuToggle span {
   right: 50px;
 }
+
 .menu--right .menuItem {
   right: 0;
   margin: -100px 0 0 0;
   transform: translate(100%, 0);
 }
+
 .menu--right .menuItem li a:hover {
   padding-left: 5px;
 }
+
 /* .nav {
   display: flex;
   align-items: center;
