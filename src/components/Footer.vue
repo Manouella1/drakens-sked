@@ -35,26 +35,26 @@ export default {
 <style scoped></style> -->
 <!-- Översta koden är en footer med lite stil och länkar om jag lyckas fixa -->
 <script>
-  export default {
+export default {
   data() {
     return {
-      footerText: "Copyright DrakensSked"
-    }
+      footerText: "Drakens sked ©",
+    };
   },
-}
+};
 </script>
 
 <template>
   <footer>
-    <p> {{ footerText }}</p>
+    <p>{{ footerText }}</p>
   </footer>
 </template>
 
 <style scoped>
-  footer {
-    background-color: green;
-    padding: 10px;
-    text-align: center;
-    margin-top: 10em;
-  }
+footer {
+  background-color: green;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10em;
+}
 </style>

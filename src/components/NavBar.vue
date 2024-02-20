@@ -65,11 +65,10 @@
 a {
   text-decoration: none;
 }
-
 h1 {
-  color: #2ada76;
+  color: #219c56;
   margin-left: 1em;
-  margin-top: 0.3em;
+  margin-top: 0.5em;
   font-size: 3rem;
   /** Text shadowing */
   color: #219c56;
