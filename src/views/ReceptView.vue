@@ -27,6 +27,13 @@ export default {
       nutrients: null,
     }
   },
+  methods: {
+    handleClick() {
+      // this.$router.push({ name: 'Recept', params: { :step } })
+      // this.$router.addRoute('recept'{ path: 'step', params: { step } })
+      // router.addRoute('admin', { path: 'settings', component: AdminSettings }) //
+    },
+  },
 }
 </script>
 
@@ -65,6 +72,13 @@ export default {
     <ol>
       <li v-for="instruction in instructions">{{ instruction }}</li>
     </ol>
+
+    <BButton
+      variant="outline-secondary"
+      @click="handleClick"
+      href="/recepts/:receptId/:step"
+      >Play Recept:</BButton
+    >
   </main>
 </template>
 
