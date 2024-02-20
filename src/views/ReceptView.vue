@@ -25,12 +25,20 @@ export default {
 
 <template>
   <h1>RECEPT</h1>
+  some icon?
+  {{ selectedMeal.level }}
+  {{ selectedMeal.category }}
+  {{ selectedMeal.prepTime }}
+  {{ selectedMeal.cookTime }}
+  {{ selectedMeal.nutrients }}
+  {{ selectedMeal.portions }}
   <p>recept ID: {{ $route.params.receptId }}</p>
   <img :src="`src/assets/${selectedMeal.image}`" />
   <h2>{{ selectedMeal.title }}</h2>
   <p>{{ selectedMeal.description }}</p>
 
   <h3>Ingredienser:</h3>
+  <ol></ol>
   <p>{{ selectedMeal.ingredients }}</p>
 
   <h3>Gör så här:</h3>
