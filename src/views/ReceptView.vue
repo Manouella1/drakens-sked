@@ -29,6 +29,13 @@ export default {
   <img :src="`src/assets/${selectedMeal.image}`" />
   <h2>{{ selectedMeal.title }}</h2>
   <p>{{ selectedMeal.description }}</p>
+
+  <h3>Ingredienser:</h3>
+  <p>{{ selectedMeal.ingredients }}</p>
+
+  <h3>Gör så här:</h3>
+
+  <p>{{ selectedMeal.instructions }}</p>
 </template>
 
 <style scoped>
