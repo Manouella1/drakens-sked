@@ -8,6 +8,7 @@ import FavoriteReceptsView from "./views/MyFavoriteReceptsView.vue";
 import ReceptView from "./views/ReceptView.vue";
 import GamesView from "./views/GamesView.vue";
 import HomeView from "./views/HomeView.vue";
+import MyFavoriteReceptsView from './views/MyFavoriteReceptsView.vue';
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -33,13 +34,13 @@ export default createRouter({
       name: "Games",
     },
     {
-      component: FavoriteReceptsView,
+      component: MyFavoriteReceptsView,
       path: "/myrecepts",
       name: "MyFavoriteRecepts",
     },
     {
       component: ReceptView,
-      path: "/recepts/:receptId", // Dynamic page ':characterId'
+      path: "/recepts/:receptId",
       name: "Recept",
     },
 
