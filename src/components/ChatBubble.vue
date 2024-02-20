@@ -4,6 +4,12 @@ import { ref, watch } from 'vue'
 const input = ref(false),
   name = ref(null)
 
+// if-sats som kollar om det finns ett värde lagrat i localStorage och sparar det i name.value
+if (localStorage.getItem('name') !== null) {
+  input.value = true
+  name.value = localStorage.getItem('name')
+}
+
 function sendName() {
   if (name.value === null) {
     name.value = 'kompis'
@@ -11,8 +17,9 @@ function sendName() {
   input.value = true
 }
 
+// när input-värdet ändras så lagras name.value i localStorage
 watch(input, () => {
-  console.log(`Namn har ändrats till ${name.value}`)
+  localStorage.setItem('name', name.value)
 })
 </script>
 
@@ -27,11 +34,22 @@ watch(input, () => {
     </div>
     <div v-else>
       Välkommen {{ name }}! Är du redo för en spännande dag i köket? Nu kör vi!
+      <div>
+        <input
+          @click="$router.push('recepts')"
+          type="button"
+          value="Gå till recepten!"
+        />
+      </div>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
+input {
+  margin-top: 0.5em;
+}
+
 .bubble {
   position: relative;
   font-family: sans-serif;
