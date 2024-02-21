@@ -26,6 +26,12 @@ export default {
   mounted() {
     console.log('mounted', this.receptId, this.step)
   },
+  methods: {
+    goBack() {
+      this.$router.go(-1) // uses the router to go back
+      this.$emit('play-recept-back') // Not working
+    },
+  },
 }
 </script>
 
@@ -39,6 +45,8 @@ export default {
       {{ instruction.text }}
     </li>
   </ul>
+
+  <BButton variant="outline-secondary" @click="goBack">Go back recept</BButton>
 </template>
 
 <style>
