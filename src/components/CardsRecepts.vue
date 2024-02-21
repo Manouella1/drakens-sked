@@ -1,7 +1,6 @@
 <script>
 import meals from '../assets/meals.json'
 import CardRecept from '../components/CardRecept.vue'
-import FilterSearch from '../components/FilterSearch.vue'
 
 export default {
   components: {
@@ -30,7 +29,6 @@ export default {
 </script>
 
 <template>
-  <FilterSearch></FilterSearch>
   <div>
     <h1>ALL RECEPTS:</h1>
     <!-- Rendering CardRecept component for each meal -->

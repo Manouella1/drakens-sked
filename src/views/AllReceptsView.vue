@@ -1,6 +1,7 @@
 <!-- src/views/AllReceptsView -->
 <script>
 import CardsRecepts from '../components/CardsRecepts.vue'
+import FilterSearch from '../components/FilterSearch.vue'
 import meals from '../assets/meals.json'
 
 console.log(meals.recipes)
@@ -9,6 +10,7 @@ console.log(meals.recipes)
 export default {
   components: {
     CardsRecepts,
+    FilterSearch,
   },
   // created() {
   //   this.meals = meals.recipes
@@ -33,6 +35,7 @@ export default {
   </ol> -->
 
     <!-- WE use here the component we create for the recepies -->
+    <FilterSearch />
     <CardsRecepts />
   </main>
 </template>
