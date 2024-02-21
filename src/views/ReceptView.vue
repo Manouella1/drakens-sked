@@ -7,8 +7,8 @@ export default {
 
     this.loadMealData()
 
-    console.log(this.showReceptView) //just to debugg
-    console.log('back?') //just to debugg
+    //console.log(this.showReceptView) //just to debugg
+    // console.log('back?') //just to debugg
   },
   data() {
     return {
@@ -63,7 +63,7 @@ export default {
       //  Verify is the preivious and actual route are tthe same
       if (from.fullPath !== to.fullPath) {
         this.loadMealData()
-        //this.showReceptView = true //need to review HERE !!!
+        this.showReceptView = true //need to review HERE !!!
       }
     },
   },
