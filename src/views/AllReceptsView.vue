@@ -3,7 +3,7 @@
 import CardsRecepts from '../components/CardsRecepts.vue'
 import meals from '../assets/meals.json'
 
-console.log(meals.recipes)
+// console.log(meals.recipes)
 // console.log(meals.recipes[0].image)
 
 export default {
