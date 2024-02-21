@@ -25,24 +25,19 @@ export default {
       ingredients: null,
       instructions: null,
       nutrients: null,
+      showReceptView: true, // to be able to hide div when nested element comes
     }
   },
   methods: {
     handleClick() {
       // this.$router.push({
-      //   name: 'Recept',
-      //   params: { receptId: this.selectedMeal.id, step: 'step1' },
+      //   name: 'PlayReceptView',
+      //   params: {
+      //     receptId: this.selectedReceptId,
+      //     step: this.selectedMeal.instructions[0].step,
+      //   },
       // })
-      this.$router.push({
-        name: 'PlayReceptView',
-        params: {
-          receptId: this.selectedMeal.id,
-          step: this.selectedMeal.instructions[0].step,
-        },
-      })
-
-      // this.$router.push({ name: 'Recept', params: { :step } })
-
+      this.showReceptView = false
       console.log('Button Clicked')
     },
   },
@@ -51,51 +46,62 @@ export default {
 
 <template>
   <main class="container">
-    <h1>RECEPT</h1>
+    <div v-if="showReceptView">
+      <h1>RECEPT</h1>
 
-    <div class="flex">
-      some icon?
-      <p>{{ selectedMeal.level }}</p>
-      <p>{{ selectedMeal.category }}</p>
-      <p>
-        PrepTime:{{ selectedMeal.prepTime }} CookTime:{{
-          selectedMeal.cookTime
-        }}
-      </p>
-      Nutrients:
+      <div class="flex">
+        some icon?
+        <p>{{ selectedMeal.level }}</p>
+        <p>{{ selectedMeal.category }}</p>
+        <p>
+          PrepTime:{{ selectedMeal.prepTime }} CookTime:{{
+            selectedMeal.cookTime
+          }}
+        </p>
+        Nutrients:
+        <ul>
+          <li v-for="nutrient in nutrients">{{ nutrient }}</li>
+        </ul>
+        <p>Portioner:{{ selectedMeal.portions }}</p>
+      </div>
+      <p>recept ID: {{ $route.params.receptId }}</p>
+      <img :src="`src/assets/${selectedMeal.image}`" />
+      <h2>{{ selectedMeal.title }}</h2>
+      <p>{{ selectedMeal.description }}</p>
+
+      <h3>Ingredienser:</h3>
       <ul>
-        <li v-for="nutrient in nutrients">{{ nutrient }}</li>
+        <li v-for="ingredient in ingredients">{{ ingredient }}</li>
       </ul>
-      <p>Portioner:{{ selectedMeal.portions }}</p>
-      <!-- Nutrients:{{ selectedMeal.nutrients }}  -->
-    </div>
-    <p>recept ID: {{ $route.params.receptId }}</p>
-    <img :src="`src/assets/${selectedMeal.image}`" />
-    <h2>{{ selectedMeal.title }}</h2>
-    <p>{{ selectedMeal.description }}</p>
 
-    <h3>Ingredienser:</h3>
-    <ul>
-      <li v-for="ingredient in ingredients">{{ ingredient }}</li>
-    </ul>
+      <h3>Gör så här:</h3>
 
-    <h3>Gör så här:</h3>
+      <ol>
+        <li v-for="instruction in instructions">{{ instruction }}</li>
+      </ol>
 
-    <ol>
-      <li v-for="instruction in instructions">{{ instruction }}</li>
-    </ol>
+      <!-- First Try using @click and router-link -->
+      <!-- <router-link :to="'/recepts/' + selectedReceptId + '/step1'">
+        <BButton variant="outline-secondary" @click="handleClick"
+          >Play Recept: 1</BButton
+        >
+      </router-link> -->
 
-    <!-- First Try using @click and router-link -->
-    <router-link :to="'/recepts/' + selectedMeal.id + '/step1'">
-      <BButton variant="outline-secondary" @click="handleClick"
-        >Play Recept: 1</BButton
+      <!-- without @click passing directvia route-link -->
+      <router-link
+        name="default"
+        :to="'/recepts/' + selectedReceptId + '/step1'"
       >
-    </router-link>
+        <BButton variant="outline-secondary" @click="handleClick"
+          >Play Recept:2</BButton
+        >
+      </router-link>
+    </div>
 
-    <!-- without @click passing directvia route-link -->
-    <router-link :to="'/recepts/' + selectedMeal.id + '/step1'">
-      <BButton variant="outline-secondary">Play Recept:2</BButton>
-    </router-link>
+    <router-view
+      name="default"
+      :instructions="selectedMeal.instructions"
+    ></router-view>
   </main>
 </template>
 
