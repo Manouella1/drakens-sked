@@ -37,14 +37,9 @@ export default createRouter({
       component: MyFavoriteReceptsView,
       path: '/myrecepts',
       name: 'MyFavoriteRecepts',
-      component: FavoriteReceptsView,
-      path: '/myrecepts',
-      name: 'MyFavoriteRecepts',
     },
     {
       component: ReceptView,
-      path: '/recepts/:receptId',
-      name: 'Recept',
       path: '/recepts/:receptId', // Dynamic page ':receptId'
       name: 'Recept',
       children: [
