@@ -1,24 +1,18 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 import AboutView from './views/AboutView.vue'
-import Intro from './components/intro.vue'
 import InfoView from './views/InformationView.vue'
 import ContactView from './views/ContactView.vue'
 import AllReceptsView from './views/AllReceptsView.vue'
+import FavoriteReceptsView from './views/MyFavoriteReceptsView.vue'
 import ReceptView from './views/ReceptView.vue'
 import GamesView from './views/GamesView.vue'
 import HomeView from './views/HomeView.vue'
 import PlayReceptView from './views/PlayReceptView.vue'
-import MyFavoriteReceptsView from './views/MyFavoriteReceptsView.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
-    {
-      component: Intro,
-      path: '/intro',
-      name: 'Intro',
-    },
     {
       component: InfoView,
       path: '/information',
@@ -40,7 +34,7 @@ export default createRouter({
       name: 'Games',
     },
     {
-      component: MyFavoriteReceptsView,
+      component: FavoriteReceptsView,
       path: '/myrecepts',
       name: 'MyFavoriteRecepts',
     },

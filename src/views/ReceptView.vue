@@ -7,12 +7,12 @@ export default {
     // We need to acces to this as a number if passed as astring do not work.
     const selectedMealId = Number(this.$route.params.receptId)
     this.selectedReceptId = selectedMealId
-    console.log('id:', selectedMealId)
+    // console.log('id:', selectedMealId)
 
     // search on the json file by the ID
 
     this.selectedMeal = meals.recipes.find((meal) => meal.id === selectedMealId)
-    console.log(this.selectedMeal)
+    // console.log(this.selectedMeal)
 
     this.ingredients = this.selectedMeal.ingredients
     this.instructions = this.selectedMeal.instructions
@@ -26,6 +26,25 @@ export default {
       instructions: null,
       nutrients: null,
     }
+  },
+  methods: {
+    handleClick() {
+      // this.$router.push({
+      //   name: 'Recept',
+      //   params: { receptId: this.selectedMeal.id, step: 'step1' },
+      // })
+      this.$router.push({
+        name: 'PlayReceptView',
+        params: {
+          receptId: this.selectedMeal.id,
+          step: this.selectedMeal.instructions[0].step,
+        },
+      })
+
+      // this.$router.push({ name: 'Recept', params: { :step } })
+
+      console.log('Button Clicked')
+    },
   },
 }
 </script>
@@ -65,6 +84,18 @@ export default {
     <ol>
       <li v-for="instruction in instructions">{{ instruction }}</li>
     </ol>
+
+    <!-- First Try using @click and router-link -->
+    <router-link :to="'/recepts/' + selectedMeal.id + '/step1'">
+      <BButton variant="outline-secondary" @click="handleClick"
+        >Play Recept: 1</BButton
+      >
+    </router-link>
+
+    <!-- without @click passing directvia route-link -->
+    <router-link :to="'/recepts/' + selectedMeal.id + '/step1'">
+      <BButton variant="outline-secondary">Play Recept:2</BButton>
+    </router-link>
   </main>
 </template>
 

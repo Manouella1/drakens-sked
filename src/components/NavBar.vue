@@ -158,22 +158,22 @@ header {
   transform-origin: 0% 100%;
 }
 
-.menuToggle input:checked~span {
+.menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-.menuToggle input:checked~span:nth-last-child(3) {
+.menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-.menuToggle input:checked~span:nth-last-child(2) {
+.menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-.menuToggle input:checked~.menuItem {
+.menuToggle input:checked ~ .menuItem {
   transform: none;
 }
 

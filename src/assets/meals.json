@@ -6,9 +6,32 @@
       "image": "pankakor_ID_1.jpg",
       "ingredients": ["3 ägg", "2 dl vetemjöl", "6 dl mjölk"],
       "instructions": [
-        "Blanda alla torra ingredienser",
-        "Häll i hälften av mjölken, vispa",
-        "Tillsätt resten av mjölken och äggen"
+        {
+          "step": 1,
+          "text": "Blanda alla torra ingredienser",
+          "image": "mixing-ingredients-step.jpg",
+          "video": "https://youtu.be/OsFJKioa_5c?si=Hj0xdSA0pFC6HBWC"
+        },
+        {
+          "step": 2,
+          "text": "Häll i hälften av mjölken, vispa",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Tillsätt resten av mjölken och äggen",
+          "image": "mixing-ingredients-for-dough.jpg"
+        },
+        {
+          "step": 4,
+          "text": "lägg en del av pannkakorna degiga i en panna tills de är genomstekta på ena sidan och vänd på den andra. Man ser när färgen blivit brunaktig",
+          "image": "showing-how-to-turn.jpg"
+        },
+        {
+          "step": 5,
+          "text": "Lägg på en tallrik och lägg honung eller lönnsirap och redo att ätas.",
+          "image": "mixed-berry-pancake.jpg"
+        }
       ],
       "level": "Basic",
       "prepTime": "20 min",
