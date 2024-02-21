@@ -33,20 +33,13 @@ export default {
     <h1>ALL RECEPTS:</h1>
     <!-- Rendering CardRecept component for each meal -->
     <div>
-      <CardRecept
-        v-for="meal in meals"
-        :key="meal.id"
-        :title="meal.title"
-        :prepTime="meal.prepTime"
-        :category="meal.category"
-        :level="meal.level"
-        :image="meal.image"
-        :id="meal.id"
-        @selectRecept="selectRecept"
-      >
+      <CardRecept v-for="meal in meals" :key="meal.id" :title="meal.title" :prepTime="meal.prepTime"
+        :category="meal.category" :level="meal.level" :image="meal.image" :id="meal.id" @selectRecept="selectRecept"
+        @addToFavorites="addToFavorites">
       </CardRecept>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>

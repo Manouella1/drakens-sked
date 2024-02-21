@@ -1,3 +1,10 @@
+<template>
+  <div>
+    <h1>Favorit Recipes</h1>
+    <favorite-recipes @addToFavorites="addToFavorites"></favorite-recipes>
+  </div>
+</template>
+
 <script>
 import FavoriteRecipes from '../components/FavoriteRecepts.vue'; // Importera komponenten
 
