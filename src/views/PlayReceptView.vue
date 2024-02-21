@@ -29,7 +29,7 @@ export default {
   methods: {
     goBack() {
       this.$router.go(-1) // uses the router to go back
-      this.$emit('play-recept-back') // Not working
+      //this.$emit('play-recept-back') // Not working
     },
   },
 }

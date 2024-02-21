@@ -52,10 +52,10 @@ export default {
       this.instructions = this.selectedMeal.instructions
       this.nutrients = this.selectedMeal.nutrients
     },
-    handlePlayReceptBack() {
-      // Not working
-      this.showReceptView = true
-    },
+    // handlePlayReceptBack() {
+    //   // Not working
+    //   this.showReceptView = true
+    // },
   },
   watch: {
     // to solve issue is t´not updating the information when i come back from PLayReceptView
