@@ -3,12 +3,7 @@ import meals from '../assets/meals.json'
 
 export default {
   created() {
-    // move all logic to a function and create a watch and in created i call it for update when comeback from PlatRecept
-
     this.loadMealData()
-
-    //console.log(this.showReceptView) //just to debugg
-    // console.log('back?') //just to debugg
   },
   data() {
     return {
@@ -22,48 +17,37 @@ export default {
   },
   methods: {
     handleClick() {
-      // this.$router.push({
-      //   name: 'PlayReceptView',
-      //   params: {
-      //     receptId: this.selectedReceptId,
-      //     step: this.selectedMeal.instructions[0].step,
-      //   },
-      // })
       this.showReceptView = false
       console.log('Button Clicked')
     },
-    // to solve issue is t´not updating the information when i come back from PLayReceptView create instead a function
+    // to solve issue is  not updating the information when i come back from PLayReceptView create instead a function
     loadMealData() {
       // Access the selected meal information from $route.params
-      // We need to acces to this as a number if passed as astring do not work.
+      // We need to acces to this as a number if passed as a string do not work.
       const selectedMealId = Number(this.$route.params.receptId)
       this.selectedReceptId = selectedMealId
 
-      // console.log('id:', selectedMealId)
-
       // search on the json file by the ID
-
       this.selectedMeal = meals.recipes.find(
         (meal) => meal.id === selectedMealId
       )
-      // console.log(this.selectedMeal)
 
       this.ingredients = this.selectedMeal.ingredients
       this.instructions = this.selectedMeal.instructions
       this.nutrients = this.selectedMeal.nutrients
     },
-    // handlePlayReceptBack() {
-    //   // Not working
-    //   this.showReceptView = true
-    // },
+    handlePlayReceptBack() {
+      // Communicate with the other component via router-view
+      this.showReceptView = true
+      console.log('receptback', this.showReceptView)
+    },
   },
   watch: {
     // to solve issue is t´not updating the information when i come back from PLayReceptView
     $route(to, from) {
-      //  Verify is the preivious and actual route are tthe same
+      //  Verify is the preivious and actual route are the same
       if (from.fullPath !== to.fullPath) {
         this.loadMealData()
-        this.showReceptView = true //need to review HERE !!!
       }
     },
   },
@@ -72,6 +56,7 @@ export default {
 
 <template>
   <main class="container">
+    hej
     <div v-if="showReceptView">
       <h1>RECEPT</h1>
 
@@ -106,17 +91,10 @@ export default {
         <li v-for="instruction in instructions">{{ instruction }}</li>
       </ol>
 
-      <!-- First Try using @click and router-link -->
-      <!-- <router-link :to="'/recepts/' + selectedReceptId + '/step1'">
-        <BButton variant="outline-secondary" @click="handleClick"
-          >Play Recept: 1</BButton
-        >
-      </router-link> -->
-
-      <!-- without @click passing directvia route-link -->
+      <!-- without @click passing direct via route-link -->
       <router-link
         name="default"
-        :to="'/recepts/' + selectedReceptId + '/step1'"
+        :to="'/recepts/' + selectedReceptId + '/steps'"
       >
         <BButton variant="outline-secondary" @click="handleClick"
           >Play Recept:2</BButton
@@ -124,7 +102,9 @@ export default {
       </router-link>
     </div>
 
+    <!-- Here we can send the information of the json and the event communicate between Recept and PlayRecept to activate the visibility of the v-if -->
     <router-view
+      @handlePlayReceptBack="handlePlayReceptBack()"
       name="default"
       :instructions="selectedMeal.instructions"
     ></router-view>

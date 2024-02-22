@@ -6,13 +6,14 @@ export default {
       required: true,
     },
   },
+  // emits
   data() {
     return {
       receptId: '1', // Hardcoded value for testing
       step: 'step1', // Hardcoded value for testing
     }
   },
-  beforeRouteUpdate(to, from, next) {
+  beforeRouteLeave(to, from, next) {
     this.receptId = to.params.receptId
     this.step = to.params.step
     console.log('beforeRouteUpdate', this.receptId, this.step)
@@ -24,12 +25,13 @@ export default {
   //   console.log('created', this.receptId, this.step)
   // },
   mounted() {
-    console.log('mounted', this.receptId, this.step)
+    console.log('mounted', this.receptId, this.step) // for testing
   },
   methods: {
     goBack() {
       this.$router.go(-1) // uses the router to go back
-      //this.$emit('play-recept-back') // Not working
+      // this.$emit('handlePlayReceptBack', (this.showReceptView = true))
+      this.$emit('handlePlayReceptBack') // Not working
     },
   },
 }
@@ -41,6 +43,10 @@ export default {
   {{ step }}
 
   <ul>
+    {{
+      instructions[1].text
+    }}
+
     <li v-for="instruction in instructions" :key="instruction.step">
       {{ instruction.text }}
     </li>
@@ -49,6 +55,4 @@ export default {
   <BButton variant="outline-secondary" @click="goBack">Go back recept</BButton>
 </template>
 
-<style>
-/* Your styles go here */
-</style>
+<style></style>
