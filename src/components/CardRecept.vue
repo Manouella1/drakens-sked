@@ -54,7 +54,7 @@ export default {
       this.isFavorite = !this.isFavorite;
 
       // Uppdatera bekräftelsemeddelande beroende på isFavorite-status
-      this.confirmationMessage = this.isFavorite ? 'Receptet har lagts till i dina favoriter!' : 'Receptet har tagits bort från dina favoriter!';
+      this.confirmationMessage = this.isFavorite ? ' Receptet har lagts till i dina favoriter!' : ' Receptet har tagits bort från dina favoriter!';
 
       // Emit the 'toggleFavorite' event with the recipe ID and its status
       this.$emit('toggleFavorite', { id: this.id, isFavorite: this.isFavorite });
