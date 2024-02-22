@@ -15,12 +15,12 @@
   <div class="advancedmeal">
     <h2>Avancerat</h2>
     <p>Avancerade recept kräver lite mer erfarenhet och kunskap i köket. Du behöver en vuxen som kan assistera! Dessa recept kan innehålla mer avancerade tekniker, längre tillagningstid eller mer avancerade ingredienser. Perfekt för dig som vill tillaga något godare men även ha kul tillsammans med någon annan äldre under tiden.
-      en kommentar bara för att se om vanja kan hjälpa mig och Maja. Test iggen
+      dfsdfdfs
     </p>
   </div>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 .basicmeal {
 
 }
@@ -30,4 +30,4 @@
 .advacedmeal {
 
 }
-</style>
+</style> -->

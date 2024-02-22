@@ -1,5 +1,4 @@
 <script>
-import CardsRecepts from '../components/CardsRecepts.vue'
 </script>
 
 <template>
@@ -10,7 +9,6 @@ import CardsRecepts from '../components/CardsRecepts.vue'
     Email:
     Meddelande:
   </form>
-  <CardsRecepts />
 </template>
 
 <style></style>
