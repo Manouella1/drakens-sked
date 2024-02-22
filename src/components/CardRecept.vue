@@ -18,7 +18,7 @@
 
     <!-- Lägg till knapp för att lägga till i favoriter -->
     <BButton pill @click.stop="addToFavorites" variant="outline-secondary">❤️</BButton>
-    <span v-if="showConfirmation" class="confirmation"> Receptet har lagts till i dina favoriter!</span>
+    <span v-if="showConfirmation" class="confirmation">{{ confirmationMessage }}</span>
   </BCard>
 </template>
 
@@ -28,7 +28,8 @@ export default {
   data() {
     return {
       showConfirmation: false,
-      isFavorite: false // Boolean för att spåra om receptet är en favorit
+      isFavorite: false, // Boolean för att spåra om receptet är en favorit
+      confirmationMessage: '', // Meddelande för bekräftelse
     };
   },
   methods: {
@@ -50,15 +51,23 @@ export default {
     addToFavorites() {
       // Toggle isFavorite status
       this.isFavorite = !this.isFavorite;
-      // Emit the 'addToFavorites' event with the recipe ID and its status
-      this.$emit('addToFavorites', { id: this.id, isFavorite: this.isFavorite });
-      this.showConfirmation = true; // Show confirmation message
+
+      // Uppdatera bekräftelsemeddelande beroende på isFavorite-status
+      this.confirmationMessage = this.isFavorite ? 'Receptet har lagts till i dina favoriter!' : 'Receptet har tagits bort från dina favoriter!';
+
+      // Emit the 'toggleFavorite' event with the recipe ID and its status
+      this.$emit('toggleFavorite', { id: this.id, isFavorite: this.isFavorite });
+
+      // Visa bekräftelsemeddelandet
+      this.showConfirmation = true;
+
+      // Dölj bekräftelsemeddelandet efter 3 sekunder
       setTimeout(() => {
-        this.showConfirmation = false; // Hide confirmation message after 3 seconds
+        this.showConfirmation = false;
       }, 3000);
     },
   },
-}
+};
 </script>
 
 <style scoped>
