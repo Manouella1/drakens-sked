@@ -4,7 +4,12 @@ import CardsRecepts from '../components/CardsRecepts.vue'
 
 <template>
   <h1>Contact</h1>
-  <p></p>
+  <form>
+    ---Exempel---
+    Namn:
+    Email:
+    Meddelande:
+  </form>
   <CardsRecepts />
 </template>
 

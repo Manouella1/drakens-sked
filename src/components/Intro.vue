@@ -17,13 +17,14 @@ import ChatBubble from "./ChatBubble.vue";
 
 <style scoped>
 .gloves {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   margin-bottom: 2em;
 }
 .kitchengloves {
-  max-width: 28vw;
+  max-width: 20vw;
+  margin-left: 2.5em;
 }
 .drake {
   border-image-repeat: no-repeat;

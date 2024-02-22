@@ -1,26 +1,35 @@
 <!-- Pratbubbla till draken på förstasidan (intro) -->
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch } from "vue";
 const input = ref(false),
-  name = ref(null)
+  name = ref(null);
 
 // if-sats som kollar om det finns ett värde lagrat i localStorage och sparar det i name.value
-if (localStorage.getItem('name') !== null) {
-  input.value = true
-  name.value = localStorage.getItem('name')
+if (localStorage.getItem("name") !== null) {
+  input.value = true;
+  name.value = localStorage.getItem("name");
 }
 
 function sendName() {
   if (name.value === null) {
-    name.value = 'kompis'
+    name.value = "kompis";
   }
-  input.value = true
+  input.value = true;
 }
 
 // när input-värdet ändras så lagras name.value i localStorage
 watch(input, () => {
-  localStorage.setItem('name', name.value)
-})
+  localStorage.setItem("name", name.value);
+});
+
+// Funktion för att starta tal-syntesen
+function speak(text) {
+  console.log("speaking text");
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "sv-SE"; // Ställer in språket till svenska
+  speechSynthesis.speak(utterance);
+}
+speak();
 </script>
 
 <template>
@@ -65,7 +74,7 @@ input {
 }
 
 .bubble-bottom-left:before {
-  content: '';
+  content: "";
   width: 0px;
   height: 0px;
   position: absolute;
