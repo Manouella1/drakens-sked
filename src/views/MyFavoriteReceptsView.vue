@@ -1,23 +1,21 @@
 <!-- /src/views/MyFavoriteReceptsView.vue  -->
 <template>
+  <!-- En vy som visar användarens favoritrecept -->
   <div>
+    <!-- Rubrik för favoritreceptsidan -->
     <h1>Favorit Recipes</h1>
-    <favorite-recipes @toggleFavorite="toggleFavorite"></favorite-recipes>
+    <!-- Användning av favoritreceptskomponenten -->
+    <favorite-recipes></favorite-recipes>
   </div>
 </template>
 
 <script>
+// Importera komponenten för favoritrecept
+import FavoriteRecipes from '../components/FavoriteRecepts.vue';
+
 export default {
-  methods: {
-    toggleFavorite(recipeId) {
-      let favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
-      if (!favorites.includes(recipeId)) {
-        favorites.push(recipeId);
-      } else {
-        favorites = favorites.filter(id => id !== recipeId);
-      }
-      localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
-    },
+  components: {
+    FavoriteRecipes, // Registrera komponenten
   },
 };
 </script>

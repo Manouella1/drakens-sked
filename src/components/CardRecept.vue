@@ -18,6 +18,7 @@
 
     <!-- Lägg till knapp för att lägga till i favoriter -->
     <BButton pill @click.stop="addToFavorites" variant="outline-secondary">❤️</BButton>
+    <!-- Visar bekräftelsemeddelande när receptet läggs till i favoriter -->
     <span v-if="showConfirmation" class="confirmation">{{ confirmationMessage }}</span>
   </BCard>
 </template>
