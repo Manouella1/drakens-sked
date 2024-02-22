@@ -34,6 +34,7 @@
         }
       ],
       "level": "Basic",
+      "icon": "🟢",
       "prepTime": "20 min",
       "cookTime": "10 min",
       "portions": "4 personer",
@@ -89,6 +90,7 @@
         }
       ],
       "level": "Basic",
+      "icon": "🟢",
       "prepTime": "15 min",
       "cookTime": "20 min",
       "portions": "4 personer",
@@ -151,6 +153,7 @@
         }
       ],
       "level": "Intermedium",
+      "icon": "🟡",
       "prepTime": "20 min",
       "cookTime": "15 min",
       "portions": "3 personer",
@@ -207,6 +210,7 @@
         }
       ],
       "level": "Advanced",
+      "icon": "🟠",
       "prepTime": "20 min",
       "cookTime": "30 min",
       "portions": "3-4 personer",
@@ -238,6 +242,7 @@
         }
       ],
       "level": "Basic",
+      "icon": "🟢",
       "prepTime": "5 min",
       "cookTime": "5 min",
       "portions": "2 personer",
@@ -274,6 +279,7 @@
         }
       ],
       "level": "Intermedium",
+      "icon": "🟡",
       "prepTime": "5 min",
       "cookTime": "0 min",
       "portions": "2 personer",
@@ -347,6 +353,7 @@
         }
       ],
       "level": "Advanced",
+      "icon": "🟠",
       "prepTime": "20 min",
       "cookTime": "25 min",
       "portions": "4 personer",
@@ -390,6 +397,7 @@
         }
       ],
       "level": "Basic",
+      "icon": "🟢",
       "prepTime": "10 min",
       "cookTime": "5 min",
       "portions": "2 personer",
@@ -501,6 +509,7 @@
         }
       ],
       "level": "Advanced",
+      "icon": "🟠",
       "prepTime": "20 min",
       "cookTime": "30 min",
       "portions": "4 personer",
@@ -559,6 +568,7 @@
         }
       ],
       "level": "Basic",
+      "icon": "🟢",
       "prepTime": "10 min",
       "cookTime": "10 min",
       "portions": "2 personer",
@@ -600,6 +610,7 @@
         }
       ],
       "level": "Intermedium",
+      "icon": "🟡",
       "prepTime": "10 min",
       "cookTime": "0 min",
       "portions": "4 personer",
@@ -635,6 +646,7 @@
         }
       ],
       "level": "Basic",
+      "icon": "🟢",
       "prepTime": "10 min",
       "cookTime": "20 min",
       "portions": "2 personer",
@@ -663,6 +675,7 @@
         }
       ],
       "level": "Basic",
+      "icon": "🟢",
       "prepTime": "10 min",
       "cookTime": "0 min",
       "portions": "2 personer",
@@ -721,6 +734,7 @@
         }
       ],
       "level": "Intermedium",
+      "icon": "🟡",
       "prepTime": "15 min",
       "cookTime": "20 min",
       "portions": "4 personer",
@@ -757,6 +771,7 @@
         }
       ],
       "level": "Intermediate",
+      "icon": "🟡",
       "prepTime": "5 min",
       "cookTime": "0 min",
       "portions": "1 person",
@@ -810,6 +825,7 @@
         }
       ],
       "level": "Advanced",
+      "icon": "🟠",
       "prepTime": "15 min",
       "cookTime": "25 min",
       "portions": "4 personer",
@@ -898,6 +914,7 @@
         }
       ],
       "level": "Basic",
+      "icon": "🟢",
       "prepTime": "10 min",
       "cookTime": "20 min",
       "portions": "2 personer",
@@ -928,7 +945,8 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Intermedium",
+      "level": "Intermedium 🟡",
+      "icon": "🟡",
       "prepTime": "5 min",
       "cookTime": "0 min",
       "portions": "1 person",
