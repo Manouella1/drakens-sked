@@ -37,7 +37,7 @@ export default {
   export default {
     data() {
       return {
-        footerText: 'Drakens sked ©'
+        footerText: 'Drakens sked'
       }
     },
 
@@ -48,17 +48,14 @@ export default {
 </script>
 
 <template>
-  <!-- <footer>
-    <p></p>
-  </footer> -->
   <!-- Footer BOOSTRAP-->
-  <footer
-    class="text-center text-white fixed-bottom"
+  <footer>
+  <!--  class="text-center text-white fixed-bottom"
     style="background-color: #242525d0"
   >
-    <!-- Grid container -->
+    //-- Grid container titel/komentar
     <div class="container pb-0">
-      <!-- Section: CTA -->
+      // Section: CTA titel/kommentar
       <section id="to-comments">
         <p class="d-flex justify-content-center align-items-center">
           <span class="me-3">Please if you have further questions...</span>
@@ -72,18 +69,27 @@ export default {
           </button>
         </p>
       </section>
-      <!-- Section: CTA -->
+      // Section: CTA titel/kommentar
     </div>
-    <!-- Grid container -->
+    Grid container -->
 
     <div
       class="text-center p-3"
       style="background-color: rgba(0, 128, 0, 0.906)"
     >
       <span v-html="footer"></span>
-      <a class="text-white" href="#" @click="navigateToContact" target="_blank">
-        &copy; Site created by {{ footerText }}</a
+      <a><b> &copy; Site created by{{ footerText }}</b></a
       >
+      <span class="me-3, text-white">        ||       Om ni har frågor eller funderingar?! </span>
+
+          <button
+            data-mdb-ripple-init
+            type="button"
+            class="btn btn-outline-light btn-rounded"
+            @click="toggleCommentsSection"
+          >
+            Kontakta oss!
+          </button>
     </div>
   </footer>
 </template>
@@ -91,6 +97,7 @@ export default {
 <style scoped>
   footer {
     margin-top: 10em;
+    color: white
   }
   /* footer {
   margin-top: 15em;
