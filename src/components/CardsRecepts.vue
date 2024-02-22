@@ -32,7 +32,7 @@
   <div>
     <h1>ALL RECEPTS:</h1>
     <!-- Rendering CardRecept component for each meal -->
-    <div>
+    <div class="flex">
       <CardRecept
         v-for="meal in meals"
         :key="meal.id"
@@ -42,7 +42,8 @@
         :level="meal.level"
         :image="meal.image"
         :id="meal.id"
-        :icon="meal.icon"
+        :iconColor="meal.iconColor"
+        :iconImage="meal.iconImage"
         @selectRecept="selectRecept"
       >
         <!-- THIS WAS INSIDE THE CARD RECEPT CAUSING ERROR IN TERMINAL: IS NOT DEFINED ON INSTANCE -->
@@ -52,4 +53,12 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+  @media (min-width: 600px) {
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+</style>

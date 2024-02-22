@@ -7,7 +7,7 @@
     img-alt="Image"
     img-top
     tag="article"
-    style="max-width: 17rem"
+    style="max-width: 20rem"
     @mouseover="enlargeImage"
     @mouseout="resetImage"
     @click="handleClick"
@@ -19,7 +19,9 @@
         <!-- Kategorier  -->
         <p>- {{ category }} -</p>
         <!-- we still need to add iton the json file -->
-        <p>{{ icon }}</p>
+        <p>
+          {{ iconColor }} <span>{{ iconImage }} </span>
+        </p>
         <!-- Nivå  -->
         <p>{{ level }}</p>
       </div>
@@ -37,7 +39,16 @@
 
 <script>
   export default {
-    props: ['title', 'prepTime', 'category', 'level', 'image', 'id', 'icon'],
+    props: [
+      'title',
+      'prepTime',
+      'category',
+      'level',
+      'image',
+      'id',
+      'iconColor',
+      'iconImage'
+    ],
     data() {
       return {
         showConfirmation: false,
