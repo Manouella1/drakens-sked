@@ -1,38 +1,40 @@
 <script>
-export default {
-  props: {
-    instructions: {
-      type: Array,
-      required: true,
+  export default {
+    props: {
+      instructions: {
+        type: Array,
+        required: true
+      }
     },
-  },
-  data() {
-    return {
-      receptId: '1', // Hardcoded value for testing
-      step: 'step1', // Hardcoded value for testing
-    }
-  },
-  beforeRouteUpdate(to, from, next) {
-    this.receptId = to.params.receptId
-    this.step = to.params.step
-    console.log('beforeRouteUpdate', this.receptId, this.step)
-    next()
-  },
+    emits: ['handlePlayReceptBack'],
+    data() {
+      return {
+        receptId: '1', // Hardcoded value for testing
+        step: 'step1' // Hardcoded value for testing
+      }
+    },
+    beforeRouteLeave(to, from, next) {
+      this.receptId = to.params.receptId
+      this.step = to.params.step
+      console.log('beforeRouteUpdate', this.receptId, this.step)
+      next()
+    },
 
-  // just to check if works
-  // created() {
-  //   console.log('created', this.receptId, this.step)
-  // },
-  mounted() {
-    console.log('mounted', this.receptId, this.step)
-  },
-  methods: {
-    goBack() {
-      this.$router.go(-1) // uses the router to go back
-      //this.$emit('play-recept-back') // Not working
+    // just to check if works
+    // created() {
+    //   console.log('created', this.receptId, this.step)
+    // },
+    mounted() {
+      console.log('mounted', this.receptId, this.step) // for testing
     },
-  },
-}
+    methods: {
+      goBack() {
+        this.$router.go(-1) // uses the router to go back
+        // this.$emit('handlePlayReceptBack', (this.showReceptView = true))
+        this.$emit('handlePlayReceptBack') // Not working
+      }
+    }
+  }
 </script>
 
 <template>
@@ -41,6 +43,10 @@ export default {
   {{ step }}
 
   <ul>
+    {{
+      instructions[1].text
+    }}
+
     <li v-for="instruction in instructions" :key="instruction.step">
       {{ instruction.text }}
     </li>
@@ -49,6 +55,4 @@ export default {
   <BButton variant="outline-secondary" @click="goBack">Go back recept</BButton>
 </template>
 
-<style>
-/* Your styles go here */
-</style>
+<style></style>
