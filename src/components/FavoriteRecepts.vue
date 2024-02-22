@@ -1,13 +1,10 @@
 <!-- src/components/FavoriteRecepts.vue -->
 <template>
   <div>
-    <!-- Visa en lista överr favoritrecept -->
     <ul>
-      <!-- Loopa genom favoritrecepten -->
-      <li v-for="recipe in favoriteRecipes" :key="recipe.Id">
+      <li v-for="recipe in favoriteRecipes" :key="recipe.id">
         {{ recipe.title }}
-        <!-- Skapa en knapp för att ta bort receptet från favoriter -->
-        <button @click="removeFromFavorites(recipe.Id)"> Remove </button>
+        <button @click="removeFromFavorites(recipe.id)"> Remove </button>
       </li>
     </ul>
   </div>
@@ -17,35 +14,21 @@
 export default {
   data() {
     return {
-      // Array för att lagra favoritrecept
       favoriteRecipes: [],
     };
   },
   created() {
-    // När komponenten skapas, ladda favoritrecept från lokal lagring
     this.loadFavoriteRecipes();
   },
   methods: {
-    // Metod för att ladda favoritrecept från lokal lagring
     loadFavoriteRecipes() {
-      // Hämta favoritrecept från lokal lagring om de finns
-      const favorites = localStorage.getItem('favoriteRecipes');
-      // Om favoritrecept finns => spara dem i data
-      if (favorites) {
-        this.favoriteRecipes = JSON.parse(favorites);
-      }
-    },
-    // Metod för att ta bort ett recept från favoriter
-    removeFromFavorites(recipeId) {
-      // Filtrera ut receptet med angivet ID från favoritrecepten
-      this.favoriteRecipes = this.favoriteRecipes.filter(recipe => recipe.Id !== recipeId);
-      // Uppdatera lokal lagring med nya favoritrecept efter borttagning
-      localStorage.setItem('favoriteRecipes', JSON.stringify(this.favoriteRecipes));
+      const favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
+      this.favoriteRecipes = favorites;
     },
   },
 };
 </script>
 
 <style>
-/* lägg till still här */
+/* lägg till stil här om det behövs */
 </style>

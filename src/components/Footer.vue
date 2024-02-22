@@ -5,7 +5,6 @@ export default {
       links: [
         'Home',
         'About Us',
-        'Team',
         'Contact Us',
       ],
     }),
