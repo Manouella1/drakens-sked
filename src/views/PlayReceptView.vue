@@ -39,20 +39,27 @@
 
 <template>
   <h1>Gör så här: PLAY INFO STEP BY STEP</h1>
-  {{ receptId }}
-  {{ step }}
 
   <ul>
-    {{
+    <!-- Reference for develop later -->
+    <!-- {{
       instructions[1].text
-    }}
+    }} -->
 
     <li v-for="instruction in instructions" :key="instruction.step">
-      {{ instruction.text }}
+      <h2>step: {{ instruction.step }}</h2>
+      <img :src="`src/assets/stepsBilder/${instruction.image}`" />
+      <p>{{ instruction.text }}</p>
+      <a :href="instruction.video" target="_blank">Watch Video</a>
+      <!-- {{ instruction.video }} -->
     </li>
   </ul>
 
   <BButton variant="outline-secondary" @click="goBack">Go back recept</BButton>
 </template>
 
-<style></style>
+<style scoped>
+  img {
+    max-height: 200px;
+  }
+</style>

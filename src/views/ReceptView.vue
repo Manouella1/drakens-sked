@@ -1,62 +1,63 @@
 <script>
-import meals from '../assets/meals.json'
+  import meals from '../assets/meals.json'
 
-export default {
-  created() {
-    this.loadMealData()
-  },
-  data() {
-    return {
-      selectedReceptId: '',
-      selectedMeal: {},
-      ingredients: null,
-      instructions: null,
-      nutrients: null,
-      showReceptView: true, // to be able to hide div when nested element comes
-    }
-  },
-  methods: {
-    handleClick() {
-      this.showReceptView = false
-      console.log('Button Clicked')
+  export default {
+    created() {
+      this.loadMealData()
     },
-    // to solve issue is  not updating the information when i come back from PLayReceptView create instead a function
-    loadMealData() {
-      // Access the selected meal information from $route.params
-      // We need to acces to this as a number if passed as a string do not work.
-      const selectedMealId = Number(this.$route.params.receptId)
-      this.selectedReceptId = selectedMealId
-
-      // search on the json file by the ID
-      this.selectedMeal = meals.recipes.find(
-        (meal) => meal.id === selectedMealId
-      )
-
-      this.ingredients = this.selectedMeal.ingredients
-      this.instructions = this.selectedMeal.instructions
-      this.nutrients = this.selectedMeal.nutrients
-    },
-    handlePlayReceptBack() {
-      // Communicate with the other component via router-view
-      this.showReceptView = true
-      console.log('receptback', this.showReceptView)
-    },
-  },
-  watch: {
-    // to solve issue is t´not updating the information when i come back from PLayReceptView
-    $route(to, from) {
-      //  Verify is the preivious and actual route are the same
-      if (from.fullPath !== to.fullPath) {
-        this.loadMealData()
+    data() {
+      return {
+        selectedReceptId: '',
+        selectedMeal: {},
+        ingredients: null,
+        instructions: null,
+        nutrients: null,
+        showReceptView: true // to be able to hide div when nested element comes
       }
     },
-  },
-}
+    methods: {
+      handleClick() {
+        this.showReceptView = false
+        console.log('Button Clicked')
+      },
+      // to solve issue is  not updating the information when i come back from PLayReceptView create instead a function
+      loadMealData() {
+        // Access the selected meal information from $route.params
+        // We need to acces to this as a number if passed as a string do not work.
+        const selectedMealId = Number(this.$route.params.receptId)
+        this.selectedReceptId = selectedMealId
+
+        // search on the json file by the ID
+        this.selectedMeal = meals.recipes.find(
+          (meal) => meal.id === selectedMealId
+        )
+
+        this.ingredients = this.selectedMeal.ingredients
+        this.instructions = this.selectedMeal.instructions
+        this.nutrients = this.selectedMeal.nutrients
+
+        console.log(this.selectedMeal.nutrients)
+      },
+      handlePlayReceptBack() {
+        // Communicate with the other component via router-view
+        this.showReceptView = true
+        console.log('receptback', this.showReceptView)
+      }
+    },
+    watch: {
+      // to solve issue is t´not updating the information when i come back from PLayReceptView
+      $route(to, from) {
+        //  Verify is the preivious and actual route are the same
+        if (from.fullPath !== to.fullPath) {
+          this.loadMealData()
+        }
+      }
+    }
+  }
 </script>
 
 <template>
   <main class="container">
-    hej
     <div v-if="showReceptView">
       <h1>RECEPT</h1>
 
@@ -82,13 +83,15 @@ export default {
 
       <h3>Ingredienser:</h3>
       <ul>
-        <li v-for="ingredient in ingredients">{{ ingredient }}</li>
+        <li v-for="ingredient in ingredients">
+          {{ ingredient }}
+        </li>
       </ul>
 
       <h3>Gör så här:</h3>
 
       <ol>
-        <li v-for="instruction in instructions">{{ instruction }}</li>
+        <li v-for="instruction in instructions">{{ instruction.text }}</li>
       </ol>
 
       <!-- without @click passing direct via route-link -->
@@ -97,7 +100,7 @@ export default {
         :to="'/recepts/' + selectedReceptId + '/steps'"
       >
         <BButton variant="outline-secondary" @click="handleClick"
-          >Play Recept:2</BButton
+          >Play Recept ▶️</BButton
         >
       </router-link>
     </div>
@@ -112,12 +115,12 @@ export default {
 </template>
 
 <style scoped>
-img {
-  max-height: 200px;
-}
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  img {
+    max-height: 200px;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 </style>
