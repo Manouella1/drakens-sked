@@ -59,6 +59,9 @@ export default {
       // Emit the 'toggleFavorite' event with the recipe ID and its status
       this.$emit('toggleFavorite', { id: this.id, isFavorite: this.isFavorite });
 
+      localStorage.setItem("id", this.id)
+      // ToDo set.item localstoreage
+      // "isFavorite": this.isFavorite
       // Visa bekräftelsemeddelandet
       this.showConfirmation = true;
 

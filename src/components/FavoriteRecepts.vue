@@ -23,6 +23,7 @@ export default {
   },
   created() {
     // Funktion som körs när komponenten sskapas för att ladda favoritrecept från localStorage
+    console.log("Hey.")
     this.loadFavoriteRecipes();
   },
   methods: {
