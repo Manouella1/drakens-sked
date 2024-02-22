@@ -34,26 +34,65 @@ export default {
 <style scoped></style> -->
 <!-- Översta koden är en footer med lite stil och länkar om jag lyckas fixa -->
 <script>
-export default {
-  data() {
-    return {
-      footerText: "Drakens sked ©",
-    };
-  },
-};
+  export default {
+    data() {
+      return {
+        footerText: 'Drakens sked ©'
+      }
+    },
+
+    methods: {
+      navigateToContact() {}
+    }
+  }
 </script>
 
 <template>
-  <footer>
-    <p>{{ footerText }}</p>
+  <!-- <footer>
+    <p></p>
+  </footer> -->
+  <!-- Footer BOOSTRAP-->
+  <footer
+    class="text-center text-white fixed-bottom"
+    style="background-color: #242525d0"
+  >
+    <!-- Grid container -->
+    <div class="container pb-0">
+      <!-- Section: CTA -->
+      <section id="to-comments">
+        <p class="d-flex justify-content-center align-items-center">
+          <span class="me-3">Please if you have further questions...</span>
+          <button
+            data-mdb-ripple-init
+            type="button"
+            class="btn btn-outline-light btn-rounded"
+            @click="toggleCommentsSection"
+          >
+            Contact Us!
+          </button>
+        </p>
+      </section>
+      <!-- Section: CTA -->
+    </div>
+    <!-- Grid container -->
+
+    <div
+      class="text-center p-3"
+      style="background-color: rgba(0, 128, 0, 0.906)"
+    >
+      <span v-html="footer"></span>
+      <a class="text-white" href="#" @click="navigateToContact" target="_blank">
+        &copy; Site created by {{ footerText }}</a
+      >
+    </div>
   </footer>
 </template>
 
 <style scoped>
-footer {
-  background-color: green;
-  padding: 10px;
-  text-align: center;
-  margin-top: 10em;
-}
+  footer {
+    margin-top: 10em;
+  }
+  /* footer {
+  margin-top: 15em;
+} */
 </style>
