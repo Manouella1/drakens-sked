@@ -30,11 +30,12 @@
           </li>
           <div class="divider"></div>
           <li><router-link to="/recepts">Hem</router-link></li>
+          <li><router-link to="/information">Information</router-link></li>
+          <li><router-link to="/intro">Intro</router-link></li>
           <li><router-link to="/myrecepts">Mina recept</router-link></li>
           <li><router-link to="/games">Spel</router-link></li>
           <li><router-link to="/contact">Kontakt</router-link></li>
           <li><router-link to="/about">Om oss</router-link></li>
-          <li><router-link to="/intro">Intro</router-link></li>
         </ul>
       </div>
     </nav>

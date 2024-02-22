@@ -1,26 +1,26 @@
 <!-- src/views/AllReceptsView -->
 <script>
-import CardsRecepts from '../components/CardsRecepts.vue'
-import FilterSearch from '../components/FilterSearch.vue'
-import meals from '../assets/meals.json'
+  import CardsRecepts from '../components/CardsRecepts.vue'
+  import FilterSearch from '../components/FilterSearch.vue'
+  import meals from '../assets/meals.json'
 
-// console.log(meals.recipes)
-// console.log(meals.recipes[0].image)
+  // console.log(meals.recipes)
+  // console.log(meals.recipes[0].image)
 
-export default {
-  components: {
-    CardsRecepts,
-    FilterSearch,
-  },
-  // created() {
-  //   this.meals = meals.recipes
-  // },
-  // data() {
-  //   return {
-  //     meals: [],
-  //   }
-  // },
-}
+  export default {
+    components: {
+      CardsRecepts,
+      FilterSearch
+    }
+    // created() {
+    //   this.meals = meals.recipes
+    // },
+    // data() {
+    //   return {
+    //     meals: [],
+    //   }
+    // },
+  }
 </script>
 
 <template>
@@ -41,8 +41,11 @@ export default {
 </template>
 
 <style scoped>
-img {
-  max-height: 200px;
-  width: auto;
-}
+  img {
+    max-height: 200px;
+    width: auto;
+  }
+  main {
+    margin-bottom: 10rem;
+  }
 </style>

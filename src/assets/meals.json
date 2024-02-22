@@ -33,7 +33,9 @@
           "image": "mixed-berry-pancake.jpg"
         }
       ],
-      "level": "Basic",
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
       "prepTime": "20 min",
       "cookTime": "10 min",
       "portions": "4 personer",
@@ -88,7 +90,9 @@
           "image": "showing-how-to-turn.jpg"
         }
       ],
-      "level": "Basic",
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
       "prepTime": "15 min",
       "cookTime": "20 min",
       "portions": "4 personer",
@@ -150,7 +154,9 @@
           "image": "mixed-berry-pancake.jpg"
         }
       ],
-      "level": "Intermedium",
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
       "prepTime": "20 min",
       "cookTime": "15 min",
       "portions": "3 personer",
@@ -206,7 +212,9 @@
           "image": "mixed-berry-pancake.jpg"
         }
       ],
-      "level": "Advanced",
+      "level": "Avancerad",
+      "iconColor": "🟠",
+      "iconImage": "🧑‍🍳",
       "prepTime": "20 min",
       "cookTime": "30 min",
       "portions": "3-4 personer",
@@ -237,7 +245,9 @@
           "image": "mixing-ingredients-for-dough.jpg"
         }
       ],
-      "level": "Basic",
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
       "prepTime": "5 min",
       "cookTime": "5 min",
       "portions": "2 personer",
@@ -273,7 +283,10 @@
           "image": "mixing-ingredients-for-dough.jpg"
         }
       ],
-      "level": "Intermedium",
+
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
       "prepTime": "5 min",
       "cookTime": "0 min",
       "portions": "2 personer",
@@ -346,7 +359,9 @@
           "image": "mixed-berry-pancake.jpg"
         }
       ],
-      "level": "Advanced",
+      "level": "Avancerad",
+      "iconColor": "🟠",
+      "iconImage": "🧑‍🍳",
       "prepTime": "20 min",
       "cookTime": "25 min",
       "portions": "4 personer",
@@ -358,7 +373,7 @@
     {
       "id": 8,
       "title": "Bananpannkaka",
-      "image": "bananpannkakor_ID_9.jpg",
+      "image": "bananpannkakor_ID_8.jpg",
       "ingredients": [
         "2 mogna bananer",
         "2 ägg",
@@ -389,7 +404,9 @@
           "image": "showing-how-to-turn.jpg"
         }
       ],
-      "level": "Basic",
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
       "prepTime": "10 min",
       "cookTime": "5 min",
       "portions": "2 personer",
@@ -430,7 +447,8 @@
           "image": "mixing-ingredients-for-dough.jpg"
         }
       ],
-      "level": "Intermediate",
+      "level": "Mellan",
+      "iconImage": "🔪",
       "prepTime": "10 min",
       "cookTime": "10 min",
       "portions": "4 personer",
@@ -500,7 +518,9 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Advanced",
+      "level": "Avancerad",
+      "iconImage": "🧑‍🍳",
+      "iconColor": "🟠",
       "prepTime": "20 min",
       "cookTime": "30 min",
       "portions": "4 personer",
@@ -558,7 +578,9 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Basic",
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
       "prepTime": "10 min",
       "cookTime": "10 min",
       "portions": "2 personer",
@@ -599,7 +621,9 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Intermedium",
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
       "prepTime": "10 min",
       "cookTime": "0 min",
       "portions": "4 personer",
@@ -634,7 +658,9 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Basic",
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
       "prepTime": "10 min",
       "cookTime": "20 min",
       "portions": "2 personer",
@@ -662,7 +688,9 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Basic",
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
       "prepTime": "10 min",
       "cookTime": "0 min",
       "portions": "2 personer",
@@ -720,7 +748,9 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Intermedium",
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
       "prepTime": "15 min",
       "cookTime": "20 min",
       "portions": "4 personer",
@@ -756,7 +786,9 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Intermediate",
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
       "prepTime": "5 min",
       "cookTime": "0 min",
       "portions": "1 person",
@@ -809,7 +841,9 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Advanced",
+      "level": "Avancerad",
+      "iconColor": "🟠",
+      "iconImage": "🧑‍🍳",
       "prepTime": "15 min",
       "cookTime": "25 min",
       "portions": "4 personer",
@@ -862,7 +896,8 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Basic",
+      "level": "Lätt",
+      "iconImage": "🥄",
       "prepTime": "10 min",
       "cookTime": "20 min",
       "portions": "4 personer",
@@ -897,7 +932,9 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Basic",
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
       "prepTime": "10 min",
       "cookTime": "20 min",
       "portions": "2 personer",
@@ -928,7 +965,9 @@
           "image": "pancakes-liquid-dough-preparing-hand.jpg"
         }
       ],
-      "level": "Intermedium",
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
       "prepTime": "5 min",
       "cookTime": "0 min",
       "portions": "1 person",
