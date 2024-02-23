@@ -47,7 +47,7 @@ export default {
   methods: {
     enlargeImage(event) {
       // Enlarge the image when hovered
-      event.currentTarget.style.transform = 'scale(1.2)'
+      event.currentTarget.style.transform = 'scale(1.04)'
       event.currentTarget.style.cursor = 'pointer'
     },
 
@@ -62,27 +62,40 @@ export default {
     },
     addToFavorites() {
       // Toggle isFavorite status
-      this.isFavorite = !this.isFavorite
+      this.isFavorite = !this.isFavorite;
 
-      // Uppdatera bekräftelsemeddelande beroende på isFavorite-status
+      // Hämta alla favoritrecept från localStorage
+      let favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
+
+      // Kontrollera om receptet redan finns i favoriter
+      const index = favorites.findIndex(recipe => recipe.id === this.id);
+
+      if (index !== -1) {
+        // Om receptet redan finns, ta bort det från favoritrecepten
+        favorites.splice(index, 1);
+      } else {
+        // Om receptet inte finns, lägg till det i favoritreceptenn
+        const recipeObject = {
+          id: this.id,
+          title: this.title,
+          image: this.image
+        };
+        favorites.push(recipeObject);
+      }
+
+      // Uppdatera  localStorage med de uppdaterade favoritrecepten
+      localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
+
+      // Uppdatera bekräftelsemeddelandet beroende på isFavorite-status
       this.confirmationMessage = this.isFavorite ? ' Receptet har lagts till i dina favoriter!' : ' Receptet har tagits bort från dina favoriter!';
 
-      // Emit the 'toggleFavorite' event with the recipe ID and its status
-      this.$emit('toggleFavorite', {
-        id: this.id,
-        isFavorite: this.isFavorite
-      })
-
-      localStorage.setItem("id", this.id)
-      // ToDo set.item localstoreage
-      // "isFavorite": this.isFavorite
       // Visa bekräftelsemeddelandet
       this.showConfirmation = true;
 
       // Dölj bekräftelsemeddelandet efter 3 sekunder
       setTimeout(() => {
-        this.showConfirmation = false
-      }, 3000)
+        this.showConfirmation = false;
+      }, 3000);
     }
   }
 }
