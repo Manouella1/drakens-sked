@@ -33,7 +33,6 @@ img {
   margin: 0 auto;
   /* Centrera bilden horisontellt */
   max-width: 200px;
-
 }
 
 @media (min-width: 576px) {
