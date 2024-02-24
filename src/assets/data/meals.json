@@ -1,0 +1,979 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Pannkakor",
+      "image": "pankakor_ID_1.jpg",
+      "ingredients": ["3 ägg", "2 dl vetemjöl", "6 dl mjölk"],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Blanda alla torra ingredienser",
+          "image": "mixing-ingredients-step.jpg",
+          "video": "https://youtu.be/OsFJKioa_5c?si=Hj0xdSA0pFC6HBWC"
+        },
+        {
+          "step": 2,
+          "text": "Häll i hälften av mjölken, vispa",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Tillsätt resten av mjölken och äggen",
+          "image": "mixing-ingredients-for-dough.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Lägg en del av pannkakorna degiga i en panna tills de är genomstekta på ena sidan och vänd på den andra. Man ser när färgen blivit brunaktig",
+          "image": "showing-how-to-turn.jpg"
+        },
+        {
+          "step": 5,
+          "text": "Lägg på en tallrik och lägg honung eller lönnsirap och redo att ätas.",
+          "image": "mixed-berry-pancake.jpg"
+        }
+      ],
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
+      "prepTime": "20 min",
+      "cookTime": "10 min",
+      "portions": "4 personer",
+      "category": "Frukost",
+      "nutrients": ["Kolhydrater"],
+      "description": "Enkel och klassisk frukostfavorit som är snabb att göra och perfekt att toppa med favorittillbehör som sylt eller färsk frukt."
+    },
+    {
+      "id": 2,
+      "title": "Köttbullar med potatismos",
+      "image": "meatBalls_ID_2.jpg",
+      "ingredients": [
+        "500g köttfärs",
+        "1 ägg",
+        "1 dl ströbröd",
+        "1 dl mjölk",
+        "Salt och peppar",
+        "Potatis",
+        "Smör",
+        "Mjölk"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Blanda köttfärs, ägg, ströbröd, mjölk, salt och peppar i en skål",
+          "image": "mixing-ingredients-step.jpg",
+          "video": "https://youtu.be/OsFJKioa_5c?si=Hj0xdSA0pFC6HBWC"
+        },
+        {
+          "step": 2,
+          "text": "Forma små bollar av smeten",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Stek köttbullarna i smör tills de är genomstekta",
+          "image": "mixing-ingredients-for-dough.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Skala och koka potatisen",
+          "image": "showing-how-to-turn.jpg"
+        },
+        {
+          "step": 5,
+          "text": "Mosa potatisen och blanda med mjölk och smör till önskad konsistens",
+          "image": "mixed-berry-pancake.jpg"
+        },
+        {
+          "step": 6,
+          "text": "Servera köttbullarna med potatismos",
+          "image": "showing-how-to-turn.jpg"
+        }
+      ],
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "portions": "4 personer",
+      "category": "Lunch",
+      "nutrients": ["Protein", "Kolhydrater"],
+      "description": "Hemlagade köttbullar serverade med krämigt potatismos är en populär och mättande lunchrätt som både barn och vuxna älskar."
+    },
+    {
+      "id": 3,
+      "title": "Kycklingnuggets med grönsaksdipp",
+      "image": "chickenNuggets_ID_3.jpg",
+      "ingredients": [
+        "400g kycklingfilé",
+        "2 dl ströbröd",
+        "1 tsk paprikapulver",
+        "1 tsk vitlökspulver",
+        "Salt och peppar",
+        "1 ägg",
+        "Morötter",
+        "Gurka",
+        "Selleri",
+        "Yoghurt"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Skär kycklingfilén i bitar",
+          "image": "mixing-ingredients-step.jpg",
+          "video": "https://youtu.be/OsFJKioa_5c?si=Hj0xdSA0pFC6HBWC"
+        },
+        {
+          "step": 2,
+          "text": "Blanda ströbröd, paprikapulver, vitlökspulver, salt och peppar i en skål",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Vispa ägget i en annan skål",
+          "image": "mixing-ingredients-for-dough.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Doppa kycklingbitarna i ägget och sedan i ströbrödsblandningen tills de är täckta",
+          "image": "showing-how-to-turn.jpg"
+        },
+        {
+          "step": 5,
+          "text": "Stek kycklingnuggetsen i olja tills de är gyllenbruna och genomstekta",
+          "image": "mixed-berry-pancake.jpg"
+        },
+        {
+          "step": 6,
+          "text": "Skär morötter, gurka och selleri i stavar",
+          "image": "mixed-berry-pancake.jpg"
+        },
+        {
+          "step": 7,
+          "text": "Blanda yoghurt med önskade kryddor som dipp",
+          "image": "mixed-berry-pancake.jpg"
+        }
+      ],
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
+      "prepTime": "20 min",
+      "cookTime": "15 min",
+      "portions": "3 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Fiber"],
+      "description": "Hemlagade kycklingnuggets är ett hälsosamt alternativ till traditionell snabbmat. Servera dem med en fräsch grönsaksdipp för extra smak."
+    },
+    {
+      "id": 4,
+      "title": "Pastagratäng med köttfärssås",
+      "image": "pastagratang_ID_4.jpg",
+      "ingredients": [
+        "300g pasta",
+        "400g köttfärs",
+        "1 lök",
+        "2 vitlöksklyftor",
+        "1 burk krossade tomater",
+        "1 dl grädde",
+        "Ost",
+        "Salt och peppar",
+        "Smör"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Koka pastan enligt anvisningarna på förpackningen",
+          "image": "mixing-ingredients-step.jpg",
+          "video": "https://youtu.be/OsFJKioa_5c?si=Hj0xdSA0pFC6HBWC"
+        },
+        {
+          "step": 2,
+          "text": "Stek lök och vitlök i smör tills de är mjuka",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Tillsätt köttfärsen och stek tills den är genomstekt",
+          "image": "mixing-ingredients-for-dough.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Tillsätt krossade tomater och grädde, låt sjuda i några minuter, Smaka av med salt och peppar",
+          "image": "showing-how-to-turn.jpg"
+        },
+        {
+          "step": 5,
+          "text": "Blanda pastan med köttfärssåsen och lägg i en ugnsform. Strö över riven ost",
+          "image": "mixed-berry-pancake.jpg"
+        },
+        {
+          "step": 6,
+          "text": "Gratinera i ugnen tills osten är smält och gyllenbrun",
+          "image": "mixed-berry-pancake.jpg"
+        }
+      ],
+      "level": "Avancerad",
+      "iconColor": "🟠",
+      "iconImage": "🧑‍🍳",
+      "prepTime": "20 min",
+      "cookTime": "30 min",
+      "portions": "3-4 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"],
+      "description": "Denna krämiga pastagratäng med köttfärssås är perfekt för en läcker och mättande middag för hela familjen."
+    },
+    {
+      "id": 5,
+      "title": "Grillade ostsmörgåsar",
+      "image": "ostsmörgåsar_ID_5.jpg",
+      "ingredients": ["Brödskivor", "Ostskivor", "Smör"],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Bred smör på en sida av varje brödskiva",
+          "image": "mixing-ingredients-step.jpg",
+          "video": "https://youtu.be/OsFJKioa_5c?si=Hj0xdSA0pFC6HBWC"
+        },
+        {
+          "step": 2,
+          "text": "Lägg en ostskiva mellan två brödskivor, med smörsidan utåt",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Grilla smörgåsarna i en stekpanna eller smörgåsjärn tills osten smälter och smörgåsarna är gyllenbruna",
+          "image": "mixing-ingredients-for-dough.jpg"
+        }
+      ],
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
+      "prepTime": "5 min",
+      "cookTime": "5 min",
+      "portions": "2 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Fett"],
+      "description": "Grillade ostsmörgåsar är en snabb och läcker mellanmålsrätt som passar perfekt när du är sugen på något varmt och ostigt."
+    },
+    {
+      "id": 6,
+      "title": "Smoothie med bär",
+      "image": "blueberry-smoothie_ID_6.jpg",
+      "ingredients": [
+        "1 dl frysta bär (ex. jordgubbar, blåbär, hallon)",
+        "1 banan",
+        "2 dl yoghurt",
+        "Honung (valfritt)"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Lägg alla ingredienser i en mixer",
+          "image": "mixing-ingredients-step.jpg",
+          "video": "https://youtu.be/OsFJKioa_5c?si=Hj0xdSA0pFC6HBWC"
+        },
+        {
+          "step": 2,
+          "text": "Mixa tills smoothien är jämn och krämig",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Tillsätt honung efter smak om önskas",
+          "image": "mixing-ingredients-for-dough.jpg"
+        }
+      ],
+
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "portions": "2 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Kolhydrater", "Fiber"],
+      "description": "En uppfriskande smoothie full av frukt och yoghurt, perfekt som mellanmål eller en snabb frukost på språng."
+    },
+    {
+      "id": 7,
+      "title": "Tacopaj",
+      "image": "tacopaj_ID_7.jpg",
+      "ingredients": [
+        "500g köttfärs",
+        "1 påse tacokryddmix",
+        "1 lök",
+        "1 paprika",
+        "1 burk majs",
+        "1 dl grädde",
+        "3 ägg",
+        "1 dl mjölk",
+        "Ost",
+        "Smör",
+        "Salt och peppar"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Bryn köttfärsen tills den är genomstekt",
+          "image": "mixing-ingredients-step.jpg",
+          "video": "https://youtu.be/OsFJKioa_5c?si=Hj0xdSA0pFC6HBWC"
+        },
+        {
+          "step": 2,
+          "text": "Tillsätt tacokryddmix och vatten enligt förpackningen",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Tillsätt lök, paprika och majs",
+          "image": "mixing-ingredients-for-dough.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Låt sjuda i några minuter",
+          "image": "showing-how-to-turn.jpg"
+        },
+        {
+          "step": 5,
+          "text": "Vispa ägg, mjölk, grädde, salt och peppar i en skål",
+          "image": "mixed-berry-pancake.jpg"
+        },
+        {
+          "step": 6,
+          "text": "Smörj en pajform och lägg i köttfärsblandningen",
+          "image": "mixed-berry-pancake.jpg"
+        },
+        {
+          "step": 7,
+          "text": "Häll över äggstanningen",
+          "image": "mixed-berry-pancake.jpg"
+        },
+        {
+          "step": 8,
+          "text": "Strö över riven ost",
+          "image": "mixed-berry-pancake.jpg"
+        },
+        {
+          "step": 9,
+          "text": "Grädda i ugnen på 200°C i ca 25 minuter tills pajen stelnat och fått fin färg",
+          "image": "mixed-berry-pancake.jpg"
+        }
+      ],
+      "level": "Avancerad",
+      "iconColor": "🟠",
+      "iconImage": "🧑‍🍳",
+      "prepTime": "20 min",
+      "cookTime": "25 min",
+      "portions": "4 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"],
+      "description": "Tacopaj är en härlig kombination av mexikanska smaker och paj, perfekt för en smakrik middag som är lätt att laga."
+    },
+
+    {
+      "id": 8,
+      "title": "Bananpannkaka",
+      "image": "bananpannkakor_ID_8.jpg",
+      "ingredients": [
+        "2 mogna bananer",
+        "2 ägg",
+        "1 dl havregryn",
+        "1 tsk kanel",
+        "Smör eller olja"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Mosa bananerna i en skål.",
+          "image": "mixing-ingredients-step.jpg",
+          "video": "https://youtu.be/OsFJKioa_5c?si=Hj0xdSA0pFC6HBWC"
+        },
+        {
+          "step": 2,
+          "text": "Tillsätt ägg, havregryn och kanel, och blanda väl.",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Värm upp smör eller olja i en stekpanna på medelhög värme.",
+          "image": "mixing-ingredients-for-dough.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Häll i smeten och stek pannkakorna i ca 2-3 minuter på varje sida, tills de är gyllenbruna.",
+          "image": "showing-how-to-turn.jpg"
+        }
+      ],
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
+      "prepTime": "10 min",
+      "cookTime": "5 min",
+      "portions": "2 personer",
+      "category": "Frukost",
+      "nutrients": ["Protein", "Kolhydrater"],
+      "description": "Dessa bananpannkakor är glutenfria och perfekta för en hälsosam och läcker frukost."
+    },
+    {
+      "id": 9,
+      "title": "Mini Pizza",
+      "image": "miniPizza_ID_9.jpg",
+      "ingredients": [
+        "Pizzadeg",
+        "Tomatsås",
+        "Ost",
+        "Valfria pålägg (ex. skinka, champinjoner, paprika)"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Rulla ut pizzadegen och skär ut små rundlar",
+          "image": "mixing-ingredients-step.jpg",
+          "video": "https://youtu.be/OsFJKioa_5c?si=Hj0xdSA0pFC6HBWC"
+        },
+        {
+          "step": 2,
+          "text": "Bred tomatsås på varje rundel",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Strö över riven ost och lägg på önskade pålägg",
+          "image": "mixing-ingredients-for-dough.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Grädda i ugnen enligt anvisningarna på pizzadegen tills pizzorna är gyllenbruna och osten smält",
+          "image": "mixing-ingredients-for-dough.jpg"
+        }
+      ],
+      "level": "Mellan",
+      "iconImage": "🔪",
+      "prepTime": "10 min",
+      "cookTime": "10 min",
+      "portions": "4 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Kolhydrater"],
+      "description": "Mini Pizzas är en perfekt lösning för en snabb och läcker mellanmål eller som aptitretare vid fester."
+    },
+    {
+      "id": 10,
+      "title": "Kycklinggryta med ris",
+      "image": "KycklinggrytaRis_ID_10.jpg",
+      "ingredients": [
+        "400g kycklingfilé",
+        "1 lök",
+        "2 vitlöksklyftor",
+        "1 paprika",
+        "1 zucchini",
+        "1 burk krossade tomater",
+        "1 dl grädde",
+        "Kryddor (ex. paprikapulver, oregano, salt och peppar)",
+        "Ris"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Skär kycklingfilén i bitar",
+          "image": "kycklinggryta_step1.jpg"
+        },
+        {
+          "step": 2,
+          "text": "Stek kycklingen i smör tills den är genomstekt",
+          "image": "kycklinggryta_step2.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Tillsätt hackad lök och vitlök och låt steka tills löken är mjuk",
+          "image": "kycklinggryta_step3.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Tillsätt paprika och zucchini och låt steka i några minuter",
+          "image": "kycklinggryta_step4.jpg"
+        },
+        {
+          "step": 5,
+          "text": "Häll i krossade tomater och grädde",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 6,
+          "text": "Krydda efter smak med paprikapulver, oregano, salt och peppar",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 7,
+          "text": "Låt sjuda i ca 15-20 minuter",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 8,
+          "text": "Koka ris enligt anvisningarna på förpackningen",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 9,
+          "text": "Servera kycklinggrytan med ris",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        }
+      ],
+      "level": "Avancerad",
+      "iconImage": "🧑‍🍳",
+      "iconColor": "🟠",
+      "prepTime": "20 min",
+      "cookTime": "30 min",
+      "portions": "4 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"],
+      "description": "Kycklinggryta med ris är en smakrik och näringsrik måltid perfekt för middagar med familjen eller vänner."
+    },
+    {
+      "id": 11,
+      "title": "Omelett med grönsaker",
+      "image": "OmelletGrönsaker_ID_11.jpg",
+      "ingredients": [
+        "3 ägg",
+        "1 tomat",
+        "1 paprika",
+        "1 lök",
+        "Ost",
+        "Smör",
+        "Salt och peppar"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Hacka tomat, paprika och lök",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 2,
+          "text": "Vispa äggen i en skål och blanda med salt och peppar",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Smält smör i en stekpanna på medelvärme",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Häll äggsmeten i stekpannan",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 5,
+          "text": "Strö över hackade grönsaker och riven ost",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 6,
+          "text": "Stek tills omeletten är genomstekt och osten smält",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 7,
+          "text": "Vik omeletten dubbel och servera",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        }
+      ],
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
+      "prepTime": "10 min",
+      "cookTime": "10 min",
+      "portions": "2 personer",
+      "category": "Lunch",
+      "nutrients": ["Protein", "Fiber"],
+      "description": "En lättlagad och näringsrik omelett med färska grönsaker, perfekt för en snabb lunch eller middag."
+    },
+    {
+      "id": 12,
+      "title": "Yoghurtbollar med frukt",
+      "image": "yogurthbollar_ID_12.jpg",
+      "ingredients": [
+        "2 dl yoghurt",
+        "2 dl havregryn",
+        "1 dl mixad frukt (ex. banan, äpple, päron)",
+        "1 msk honung",
+        "Kokosflingor"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Blanda yoghurt, havregryn, mixad frukt och honung i en skål",
+          "image": "pancakes-liquid-dough-preparing-hand.jpgg"
+        },
+        {
+          "step": 2,
+          "text": "Forma små bollar av smeten",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Rulla bollarna i kokosflingor",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Förvara i kylskåp i minst 30 minuter innan servering",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        }
+      ],
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
+      "prepTime": "10 min",
+      "cookTime": "0 min",
+      "portions": "4 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Kolhydrater", "Fiber"],
+      "description": "Yoghurtbollar med frukt är en hälsosam och energigivande mellanmål som är perfekt för att stilla hungern mellan måltiderna."
+    },
+    {
+      "id": 13,
+      "title": "Korv med mos",
+      "image": "korv_med_mos_ID_13.jpg",
+      "ingredients": ["Korv", "Potatis", "Smör", "Mjölk", "Salt och peppar"],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Koka potatisen tills den är mjuk",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 2,
+          "text": "Mosa potatisen och blanda med smör och mjölk till önskad konsistens",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Koka korven enligt anvisningarna på förpackningen",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Servera korven med mos",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        }
+      ],
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "portions": "2 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"],
+      "description": "Korv med mos är en klassisk och välsmakande middagsrätt som passar perfekt för en enkel och tillfredsställande måltid."
+    },
+    {
+      "id": 14,
+      "title": "Fruktsallad med vaniljsås",
+      "image": "FruktsalladVaniljSås_ID_14.jpg",
+      "ingredients": [
+        "Frukt efter smak (ex. äpple, banan, apelsin, vindruvor)",
+        "Vaniljsås"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Skär frukten i bitar och lägg i en skål",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 2,
+          "text": "Häll vaniljsås över frukten",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        }
+      ],
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
+      "prepTime": "10 min",
+      "cookTime": "0 min",
+      "portions": "2 personer",
+      "category": "Mellanmål",
+      "nutrients": ["Kolhydrater", "Vitaminer"],
+      "description": "Fruktsallad med vaniljsås är en lätt och uppfriskande mellanmål som är rik på smak och hälsosamma näringsämnen."
+    },
+    {
+      "id": 15,
+      "title": "Korv Stroganoff med ris",
+      "image": "korvstroganoff_ID_15.jpg",
+      "ingredients": [
+        "400g falukorv",
+        "1 gul lök",
+        "1 burk krossade tomater",
+        "1 dl grädde",
+        "Paprikapulver",
+        "Salt och peppar",
+        "Ris"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Skär falukorven i bitar",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 2,
+          "text": "Hacka löken",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Stek löken och korven i en stekpanna tills de är gyllenbruna",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Tillsätt krossade tomater och låt sjuda i några minuter",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 5,
+          "text": "Tillsätt grädde och kryddor, låt sjuda i ca 10 minuter",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 6,
+          "text": "Koka ris enligt anvisningarna på förpackningen",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 7,
+          "text": "Servera korv stroganoff med ris",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        }
+      ],
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
+      "prepTime": "15 min",
+      "cookTime": "20 min",
+      "portions": "4 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"],
+      "description": "Korv Stroganoff med ris är en krämig och smakrik måltid som är enkel att tillaga och perfekt för en familjemiddag."
+    },
+
+    {
+      "id": 16,
+      "title": "Smoothie Bowl",
+      "image": "smoothieBowl_ID_16.jpg",
+      "ingredients": [
+        "1 frozen banana",
+        "1 dl frozen berries",
+        "1 dl yogurt",
+        "Toppings (e.g., muesli, chopped nuts, fruit)"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Blend banana, berries, and yogurt until smooth.",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 2,
+          "text": "Pour the smoothie into a bowl.",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Top with your choice of toppings.",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        }
+      ],
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "portions": "1 person",
+      "category": "Snack",
+      "nutrients": ["Protein", "Carbohydrates", "Fiber"],
+      "description": "Smoothie Bowl is a nutritious and colorful snack, perfect for kickstarting the day or as an energizing afternoon treat."
+    },
+    {
+      "id": 17,
+      "title": "Köttfärssoppa med potatis",
+      "image": "köttfärssoppa_ID_17.jpg",
+      "ingredients": [
+        "400g köttfärs",
+        "1 lök",
+        "2 morötter",
+        "5 potatisar",
+        "1 burk krossade tomater",
+        "1 l buljong",
+        "Salt och peppar"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Hacka löken",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 2,
+          "text": "Skär morötter och potatisar i bitar",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Stek köttfärsen och löken i en kastrull tills köttfärsen är genomstekt",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Tillsätt morötter, potatisar, krossade tomater och buljong",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 5,
+          "text": "Låt koka under lock i ca 20 minuter eller tills grönsakerna är mjuka",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 6,
+          "text": "Smaka av med salt och peppar",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        }
+      ],
+      "level": "Avancerad",
+      "iconColor": "🟠",
+      "iconImage": "🧑‍🍳",
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "portions": "4 personer",
+      "category": "Lunch",
+      "nutrients": ["Protein", "Kolhydrater", "Fiber"]
+    },
+    {
+      "id": 18,
+      "title": "Pasta med köttfärssås",
+      "image": "Pasta-med-köttfärssås_ID_18.jpg",
+      "ingredients": [
+        "300g pasta",
+        "400g köttfärs",
+        "1 lök",
+        "2 vitlöksklyftor",
+        "1 burk krossade tomater",
+        "Oregano",
+        "Salt och peppar",
+        "Ost"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Koka pastan enligt anvisningarna på förpackningen",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 2,
+          "text": "Stek lök och vitlök i olja tills de är mjuka",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Tillsätt köttfärsen och stek tills den är genomstekt",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Tillsätt krossade tomater och låt sjuda i några minuter",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 5,
+          "text": "Krydda med oregano, salt och peppar",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 6,
+          "text": "Servera köttfärssåsen över den kokta pastan och strö över riven ost",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        }
+      ],
+      "level": "Lätt",
+      "iconImage": "🥄",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "portions": "4 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"],
+      "description": "Pasta med köttfärssås är en populär och lättlagad middagsrätt som passar både vardag och fest, med en smakrik sås som gör den till en favorit hos både barn och vuxna."
+    },
+    {
+      "id": 19,
+      "title": "Fiskpinnar med potatismos",
+      "image": "Fiskpinnar_ID_19.jpg",
+      "ingredients": ["Fiskpinnar", "Potatis", "Smör", "Mjölk", "Ärtor"],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Koka potatisen tills den är mjuk",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 2,
+          "text": "Mosa potatisen och blanda med smör och mjölk till önskad konsistens",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 3,
+          "text": "Stek fiskpinnarna enligt anvisningarna på förpackningen",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 4,
+          "text": "Servera fiskpinnarna med potatismos och ärtor",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        }
+      ],
+      "level": "Lätt",
+      "iconColor": "🟢",
+      "iconImage": "🥄",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "portions": "2 personer",
+      "category": "Middag",
+      "nutrients": ["Protein", "Kolhydrater"],
+      "description": "Fiskpinnar med potatismos är en klassisk och omtyckt middagsrätt som passar både barn och vuxna, med en krämig mos och knapriga fiskpinnar som är enkla att tillaga och fulla av smak."
+    },
+    {
+      "id": 20,
+      "title": "Fruktsmoothie med spenat",
+      "image": "spenat-smoothie_ID_20.jpg",
+      "ingredients": [
+        "1 dl frysta bär",
+        "1 banan",
+        "1 näve spenat",
+        "1 dl yoghurt",
+        "1 dl juice (valfri)"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Lägg alla ingredienser i en mixer",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        },
+        {
+          "step": 2,
+          "text": "Mixa tills smoothien är jämn och krämig",
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+        }
+      ],
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "portions": "1 person",
+      "category": "Mellanmål",
+      "nutrients": ["Protein", "Kolhydrater", "Vitaminer"],
+      "description": "Fruktsmoothie med spenat är en näringsrik och uppfriskande mellanmålssmoothie som kombinerar söt frukt med frisk spenat för en hälsosam och läcker dryck som passar perfekt som en snabb energiboost när som helst på dagen."
+    }
+  ]
+}

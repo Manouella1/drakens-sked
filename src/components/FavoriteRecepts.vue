@@ -62,7 +62,7 @@
           <h3>{{ recipe.title }}</h3>
           <!-- Visar receptets bild -->
           <img
-            :src="`src/assets/receptsbilder/${image}`"
+            :src="`src/assets/receptsBilder/${recipe.image}`"
             alt="Recipe Image"
             class="recipe-image"
           />
