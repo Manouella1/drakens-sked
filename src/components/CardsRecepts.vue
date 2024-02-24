@@ -29,7 +29,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="content">
     <h1>ALL RECEPTS:</h1>
     <!-- Rendering CardRecept component for each meal -->
     <div class="flex">
@@ -59,6 +59,14 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      justify-content: center;
+    }
+    .content {
+      text-align: center;
+    }
+
+    .content h1 {
+      margin: 1.5rem 0;
     }
   }
 </style>
