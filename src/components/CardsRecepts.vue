@@ -1,5 +1,5 @@
 <script>
-  import meals from '../assets/meals.json'
+  import meals from '../assets/data/meals.json'
   import CardRecept from '../components/CardRecept.vue'
 
   export default {

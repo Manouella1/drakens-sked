@@ -2,7 +2,7 @@
 <script>
   import CardsRecepts from '../components/CardsRecepts.vue'
   import FilterSearch from '../components/FilterSearch.vue'
-  import meals from '../assets/meals.json'
+  // import meals from '../assets/data/meals.json'
 
   // console.log(meals.recipes)
   // console.log(meals.recipes[0].image)

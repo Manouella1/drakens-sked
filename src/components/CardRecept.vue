@@ -131,7 +131,8 @@
     font-size: 14px;
   }
 
-  /* Jon suggested the use of deep to be abke to style teh image on Boostrap */
+  /* Jon suggested the use of deep to be abke to style teh image on Boostrap
+   */
   /* #my-card :deep(.custom-card img) {
     max-height: 50px !important;
     width: 100%;

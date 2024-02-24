@@ -3,7 +3,7 @@
   import { ref, watch } from 'vue'
   import { BButton } from 'bootstrap-vue-next'
   import CardRecept from '../components/CardRecept.vue'
-  import meals from '../assets/meals.json'
+  import meals from '../assets/data/meals.json'
 
   let allLevelRecipes = ref(null),
     allCategoryRecipes = ref(null),
