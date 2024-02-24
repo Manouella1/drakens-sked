@@ -83,7 +83,7 @@
   <!-- Receiving props from parent component -->
   <BCard
     :title="title"
-    :img-src="`src/assets/${image}`"
+    :img-src="`src/assets/receptsbilder/${image}`"
     img-alt="Image"
     img-top
     tag="article"
