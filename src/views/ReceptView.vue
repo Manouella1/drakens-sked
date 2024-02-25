@@ -18,7 +18,7 @@
     methods: {
       handleClick() {
         this.showReceptView = false
-        console.log('Button Clicked')
+        // console.log('Button Clicked')
       },
       // to solve issue is  not updating the information when i come back from PLayReceptView create instead a function
       loadMealData() {

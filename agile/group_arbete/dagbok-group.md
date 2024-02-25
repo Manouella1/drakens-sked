@@ -8,7 +8,7 @@
 
 ---
 
-## Fredagen 16/02
+## Mondagen 19/02
 
 #### Scrum role:
 
@@ -172,11 +172,9 @@ Vi är engagerade i att göra en framgångsrik presentation och att förmedla fr
 
 ---
 
-### Torsdag den 22/02
+### Fredag 23/02 Feb
 
 #### Scrum role:
-
-### Fredag 23/02 Feb
 
 #### Vigan
 
