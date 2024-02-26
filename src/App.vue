@@ -2,17 +2,20 @@
 import NavBarMenu from './components/NavBar.vue'
 import ScrollToTopButton from './components/ScrollToTopButton.vue' // kan tas bort
 import Footer from './components/Footer.vue'
+import ContactForm from '../src/views/ContactView.vue';
 export default {
   components: {
     NavBarMenu,
     ScrollToTopButton, //kan tas bort när man inte vill ha knapp på alla sidor
     Footer,
+    ContactForm,
   },
 }
 </script>
 <template>
   <NavBarMenu />
   <ScrollToTopButton />
+
   <!-- kan tas bort -->
   <!-- <v-footer>
     <Footer />
