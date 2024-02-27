@@ -62,8 +62,11 @@
       <h1>RECEPT</h1>
 
       <div class="flex">
-        some icon?
-        <p>{{ selectedMeal.level }}</p>
+        <p>
+          <span>{{ selectedMeal.iconColor }}</span>
+          <span>{{ selectedMeal.iconImage }}</span
+          >{{ selectedMeal.level }}
+        </p>
         <p>{{ selectedMeal.category }}</p>
         <p>
           PrepTime:{{ selectedMeal.prepTime }} CookTime:{{
