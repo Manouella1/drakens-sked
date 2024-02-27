@@ -1,4 +1,6 @@
 <script setup>
+  import { ref, watch } from 'vue'
+  import { useRoute } from 'vue-router'
   // import $ from 'jquery'
 
   // $(document).ready(function () {
@@ -8,6 +10,15 @@
   //     })
   //   })
   // })
+  const route = useRoute(),
+    isChecked = ref(false)
+  // watch som bevakar när params ändras och då stänger hamburgermenyn
+  watch(
+    () => route.params,
+    () => {
+      isChecked.value = false
+    }
+  )
 </script>
 
 <template>
@@ -18,7 +29,7 @@
     </router-link>
     <nav class="menu--right" role="navigation">
       <div class="menuToggle">
-        <input type="checkbox" />
+        <input type="checkbox" v-model="isChecked" />
         <span></span>
         <span></span>
         <span></span>
