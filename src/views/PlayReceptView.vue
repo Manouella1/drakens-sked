@@ -139,13 +139,31 @@
     transition: transform 2s;
   }
 
+  .page.left h2,
+  .page.left p {
+    color: transparent;
+  }
   .page.left {
     transform: rotateY(179deg) translateX(370px);
     /* background-image: url('./assets/bilder/drake-hej.png'); */
     /* color: transparent; */
   }
+  .page.left img,
+  .page.left a {
+    display: none;
+  }
   .page.right {
     transform: rotateY(0deg) translateX(0px);
+  }
+
+  .page.left::before {
+    content: '\2190'; /* arrow */
+    position: absolute;
+    top: 50%;
+    left: 1rem; /* position arrow*/
+    font-size: 40px; /* Size arrow */
+    transform: translateY(-50%);
+    z-index: 10;
   }
 
   /* Media query for screens smaller than 600px (adjust the value as needed) */
