@@ -60,34 +60,38 @@
 </script>
 
 <template>
-  <h1>
-    Gör så här: (Tap in to the text inside the step page to move the pages)
-  </h1>
+  <main class="container">
+    <h1>
+      Gör så här: (Tap in to the text inside the step page to move the pages)
+    </h1>
 
-  <div class="container-book">
-    <!-- div space to show the half of the book -->
-    <div class="half"></div>
+    <div class="container-book">
+      <!-- div space to show the half of the book -->
+      <div class="half"></div>
 
-    <ul>
-      <!-- Reference for develop later -->
-      <!-- {{
+      <ul>
+        <!-- Reference for develop later -->
+        <!-- {{
       instructions[1].text
     }} -->
-      <div class="half">
-        <li v-for="instruction in instructions" :key="instruction.step">
-          <div class="page right">
-            <h2>step: {{ instruction.step }}</h2>
-            <img :src="`src/assets/stepsBilder/${instruction.image}`" />
-            <p>{{ instruction.text }}</p>
-            <a :href="instruction.video" target="_blank">Watch Video</a>
-            <!-- {{ instruction.video }} -->
-          </div>
-        </li>
-      </div>
-    </ul>
-  </div>
+        <div class="half">
+          <li v-for="instruction in instructions" :key="instruction.step">
+            <div class="page right">
+              <h2>step: {{ instruction.step }}</h2>
+              <img :src="`src/assets/stepsBilder/${instruction.image}`" />
+              <p>{{ instruction.text }}</p>
+              <a :href="instruction.video" target="_blank">Watch Video</a>
+              <!-- {{ instruction.video }} -->
+            </div>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <!-- Button to turn the pages on mobile -->
+    <!-- <button class="turn-page-button" @click="turnPage">Previous Page</button> -->
 
-  <BButton variant="outline-primary" @click="goBack">Go back recept</BButton>
+    <BButton variant="outline-primary" @click="goBack">Go back recept</BButton>
+  </main>
 </template>
 
 <style scoped>
@@ -98,6 +102,11 @@
   ul {
     list-style: none;
   }
+
+  /* Style for the button to turn pages on mobile */
+  /* .turn-page-button {
+    display: none;
+  } */
 
   /* Book layout idea taken from CodePen : https://codepen.io/ml394/pen/LBjqBE */
 
@@ -132,10 +141,42 @@
 
   .page.left {
     transform: rotateY(179deg) translateX(370px);
-    background-image: url('../assets/bilder/drake-hej.png');
-    color: transparent;
+    /* background-image: url('./assets/bilder/drake-hej.png'); */
+    /* color: transparent; */
   }
   .page.right {
     transform: rotateY(0deg) translateX(0px);
+  }
+
+  /* Media query for screens smaller than 600px (adjust the value as needed) */
+  @media (max-width: 600px) {
+    .container-book {
+      grid-template-columns: 1fr;
+    }
+
+    /* .turn-page-button {
+      display: block;
+      margin-top: 10px;
+    } */
+
+    .page {
+      /* position on the dom */
+      top: 25rem;
+
+      left: 3.5rem;
+      /* size page */
+      width: 300px;
+      height: 480px;
+      border: 1px solid black;
+      padding: 24px;
+      transition: transform 2s;
+    }
+    .page.left {
+      /* adjust space between page rightand page left */
+      transform: rotateY(179deg) translateX(310px);
+    }
+    main {
+      margin-bottom: 40rem;
+    }
   }
 </style>
