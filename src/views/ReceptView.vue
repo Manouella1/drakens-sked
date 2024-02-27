@@ -107,10 +107,10 @@
 
     <!-- Here we can send the information of the json and the event communicate between Recept and PlayRecept to activate the visibility of the v-if -->
     <router-view
-      @handlePlayReceptBack="handlePlayReceptBack()"
+      @handle-play-recept-back="handlePlayReceptBack()"
       name="default"
       :instructions="selectedMeal.instructions"
-    ></router-view>
+    />
   </main>
 </template>
 
