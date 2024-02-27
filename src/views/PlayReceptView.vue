@@ -60,7 +60,9 @@
 </script>
 
 <template>
-  <h1>Gör så här: (Tap in to the step page to move the pages)</h1>
+  <h1>
+    Gör så här: (Tap in to the text inside the step page to move the pages)
+  </h1>
 
   <div class="container-book">
     <!-- div space to show the half of the book -->
