@@ -448,6 +448,7 @@
         }
       ],
       "level": "Mellan",
+      "iconColor": "🟡",
       "iconImage": "🔪",
       "prepTime": "10 min",
       "cookTime": "10 min",
@@ -897,6 +898,7 @@
         }
       ],
       "level": "Lätt",
+      "iconColor": "🟢",
       "iconImage": "🥄",
       "prepTime": "10 min",
       "cookTime": "20 min",
