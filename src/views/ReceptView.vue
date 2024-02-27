@@ -1,5 +1,6 @@
 <script>
   import EggTimer from '../components/EggTimer.vue'
+
   import meals from '../assets/data/meals.json'
 
   export default {
