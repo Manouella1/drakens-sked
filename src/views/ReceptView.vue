@@ -77,7 +77,7 @@
         <p>Portioner:{{ selectedMeal.portions }}</p>
       </div>
       <p>recept ID: {{ $route.params.receptId }}</p>
-      <img :src="`src/assets/${selectedMeal.image}`" />
+      <img :src="`src/assets/receptsBilder/${selectedMeal.image}`" />
       <h2>{{ selectedMeal.title }}</h2>
       <p>{{ selectedMeal.description }}</p>
 
