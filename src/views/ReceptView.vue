@@ -1,7 +1,11 @@
 <script>
+  import EggTimer from '../components/EggTimer.vue'
   import meals from '../assets/data/meals.json'
 
   export default {
+    components: {
+      EggTimer
+    },
     created() {
       this.loadMealData()
     },
@@ -116,6 +120,7 @@
           >View All Recepts
         </BButton>
       </router-link>
+      <EggTimer />
     </div>
 
     <!-- Here we can send the information of the json and the event communicate between Recept and PlayRecept to activate the visibility of the v-if -->
