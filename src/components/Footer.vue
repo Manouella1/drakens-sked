@@ -37,7 +37,8 @@ export default {
   export default {
     data() {
       return {
-        footerText: 'Drakens sked'
+        footerText: 'Drakens sked',
+        footer: null
       }
     },
 
@@ -50,7 +51,7 @@ export default {
 <template>
   <!-- Footer BOOSTRAP-->
   <footer>
-  <!--  class="text-center text-white fixed-bottom"
+    <!--  class="text-center text-white fixed-bottom"
     style="background-color: #242525d0"
   >
     //-- Grid container titel/komentar
@@ -78,18 +79,21 @@ export default {
       style="background-color: rgba(0, 128, 0, 0.906)"
     >
       <span v-html="footer"></span>
-      <a><b> &copy; Site created by{{ footerText }}</b></a
+      <a
+        ><b> &copy; Site created by{{ footerText }}</b></a
       >
-      <span class="me-3, text-white">        ||       Om ni har frågor eller funderingar?! </span>
+      <span class="me-3, text-white">
+               ||       Om ni har frågor eller funderingar?! </span
+      >
 
-          <button
-            data-mdb-ripple-init
-            type="button"
-            class="btn btn-outline-light btn-rounded"
-            @click="toggleCommentsSection"
-          >
-            Kontakta oss!
-          </button>
+      <button
+        data-mdb-ripple-init
+        type="button"
+        class="btn btn-outline-light btn-rounded"
+        @click="toggleCommentsSection"
+      >
+        Kontakta oss!
+      </button>
     </div>
   </footer>
 </template>
@@ -97,7 +101,7 @@ export default {
 <style scoped>
   footer {
     margin-top: 10em;
-    color: white
+    color: white;
   }
   /* footer {
   margin-top: 15em;
