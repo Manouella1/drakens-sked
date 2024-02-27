@@ -72,7 +72,9 @@
         </p>
         Nutrients:
         <ul>
-          <li v-for="nutrient in nutrients">{{ nutrient }}</li>
+          <li v-for="nutrient in nutrients" :key="nutrient.id">
+            {{ nutrient }}
+          </li>
         </ul>
         <p>Portioner:{{ selectedMeal.portions }}</p>
       </div>
@@ -83,7 +85,7 @@
 
       <h3>Ingredienser:</h3>
       <ul>
-        <li v-for="ingredient in ingredients">
+        <li v-for="ingredient in ingredients" :key="ingredient.id">
           {{ ingredient }}
         </li>
       </ul>
@@ -91,7 +93,9 @@
       <h3>Gör så här:</h3>
 
       <ol>
-        <li v-for="instruction in instructions">{{ instruction.text }}</li>
+        <li v-for="instruction in instructions" :key="instruction.id">
+          {{ instruction.text }}
+        </li>
       </ol>
 
       <!-- without @click passing direct via route-link -->
