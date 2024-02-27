@@ -85,15 +85,23 @@
     :title="title"
     :img-src="`src/assets/receptsbilder/${image}`"
     img-alt="Image"
+    img-height="250px"
+    img-width="auto"
     img-top
     tag="article"
-    style="max-width: 20rem"
+    style="max-width: 20rem; min-width: 15rem"
     @mouseover="enlargeImage"
     @mouseout="resetImage"
     @click="handleClick"
-    class="custom-card"
-    id="my-card"
+    class="mb-3 text-center position-relative"
   >
+    <!-- In other Boostrap refences mention Img-fluid and embed but do not see how theywork seem not do anything:  -->
+    <!-- class="cimg-fluid img-responsive" -->
+    <!-- class="mb-3 text-center position-relative embed-responsive embed-responsive-4by3 embed-responsive-item" -->
+
+    <!-- This is direct on  the CSS / See stules.css but is not working to style -->
+    <!-- class="custom-card " -->
+    <!-- id="my-card" -->
     <BCardText>
       <div class="flex">
         <!-- time -->
