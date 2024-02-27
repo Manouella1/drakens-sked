@@ -26,40 +26,114 @@
     // },
     mounted() {
       console.log('mounted', this.receptId, this.step) // for testing
+      this.setupPageInteraction()
     },
     methods: {
       goBack() {
         this.$router.go(-1) // uses the router to go back
         // this.$emit('handlePlayReceptBack', (this.showReceptView = true))
         this.$emit('handlePlayReceptBack') // Not working
+      },
+      setupPageInteraction() {
+        let $index = 0
+        let pages = document.getElementsByClassName('page')
+        let zIndex = pages.length
+
+        for (let i = 0; i < pages.length; i++) {
+          pages[i].style['z-index'] = zIndex
+          zIndex -= 1
+          pages[i].addEventListener('click', function () {
+            $index++
+            this.setAttribute('style', 'z-index:' + $index.toString())
+            if (this.classList.contains('right')) {
+              this.classList.remove('right')
+              this.classList.add('left')
+            } else {
+              this.classList.remove('left')
+              this.classList.add('right')
+            }
+          })
+        }
       }
     }
   }
 </script>
 
 <template>
-  <h1>Gör så här: PLAY INFO STEP BY STEP</h1>
+  <h1>Gör så här: (Tap in to the step page to move the pages)</h1>
 
-  <ul>
-    <!-- Reference for develop later -->
-    <!-- {{
+  <div class="container-book">
+    <!-- div space to show the half of the book -->
+    <div class="half"></div>
+
+    <ul>
+      <!-- Reference for develop later -->
+      <!-- {{
       instructions[1].text
     }} -->
+      <div class="half">
+        <li v-for="instruction in instructions" :key="instruction.step">
+          <div class="page right">
+            <h2>step: {{ instruction.step }}</h2>
+            <img :src="`src/assets/stepsBilder/${instruction.image}`" />
+            <p>{{ instruction.text }}</p>
+            <a :href="instruction.video" target="_blank">Watch Video</a>
+            <!-- {{ instruction.video }} -->
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
 
-    <li v-for="instruction in instructions" :key="instruction.step">
-      <h2>step: {{ instruction.step }}</h2>
-      <img :src="`src/assets/stepsBilder/${instruction.image}`" />
-      <p>{{ instruction.text }}</p>
-      <a :href="instruction.video" target="_blank">Watch Video</a>
-      <!-- {{ instruction.video }} -->
-    </li>
-  </ul>
-
-  <BButton variant="outline-secondary" @click="goBack">Go back recept</BButton>
+  <BButton variant="outline-primary" @click="goBack">Go back recept</BButton>
 </template>
 
 <style scoped>
   img {
     max-height: 200px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  /* Book layout idea taken from CodePen : https://codepen.io/ml394/pen/LBjqBE */
+
+  .container-book {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .half:nth-child(1) {
+    justify-self: right;
+  }
+  .half:nth-child(2) {
+    justify-self: left;
+  }
+
+  .page {
+    background: white;
+    cursor: pointer;
+    margin: auto;
+    position: absolute;
+    /* position on the dom */
+    top: 17rem;
+    left: 50%;
+    /* size page */
+    width: 320px;
+    height: 480px;
+    border: 1px solid black;
+    padding: 24px;
+    transition: transform 2s;
+  }
+
+  .page.left {
+    transform: rotateY(179deg) translateX(370px);
+    background-image: url('../assets/bilder/drake-hej.png');
+    color: transparent;
+  }
+  .page.right {
+    transform: rotateY(0deg) translateX(0px);
   }
 </style>

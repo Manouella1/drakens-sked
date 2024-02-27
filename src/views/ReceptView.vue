@@ -110,6 +110,12 @@
           >Play Recept ▶️</BButton
         >
       </router-link>
+
+      <router-link name="default" :to="'/recepts/'">
+        <BButton variant="outline-primary" @click="handleClick"
+          >View All Recepts
+        </BButton>
+      </router-link>
     </div>
 
     <!-- Here we can send the information of the json and the event communicate between Recept and PlayRecept to activate the visibility of the v-if -->

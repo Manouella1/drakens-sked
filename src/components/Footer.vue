@@ -75,7 +75,7 @@ export default {
     Grid container -->
 
     <div
-      class="text-center p-3"
+      class="text-center p-3 fixed-bottom"
       style="background-color: rgba(0, 128, 0, 0.906)"
     >
       <span v-html="footer"></span>
