@@ -40,14 +40,14 @@ export default {
 <style scoped>
 .scroll-to-top-button {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 25px;
+  right: 25px;
   z-index: 999;
   background-color: #1c994a46;
   color: #fff;
   border: none;
   border-radius: 30px;
-  padding: 5px 12px;
+  padding: 15px 20px;
   cursor: pointer;
 }
 
