@@ -80,8 +80,59 @@
 </script>
 
 <template>
+  <article
+    class="container-notepad"
+    @mouseover="enlargeImage"
+    @mouseout="resetImage"
+    @click="handleClick"
+  >
+    <div class="notepad-heading">
+      <h1>
+        <!-- Kategorier  -->
+        {{ category }}
+      </h1>
+    </div>
+
+    <div class="img-container">
+      <img class="cover-image" :src="`src/assets/receptsbilder/${image}`" />
+    </div>
+
+    <div class="flex">
+      <!-- time -->
+      <p>{{ prepTime }}</p>
+
+      <!-- we still need to add iton the json file -->
+      <p>
+        {{ iconColor }} <span>{{ iconImage }} </span>
+      </p>
+      <!-- Nivå  -->
+      <p>{{ level }}</p>
+    </div>
+
+    <div>
+      <h1>{{ title }}</h1>
+      <!-- <p>
+        Darkness cannot drive out darkness; only light can do that. Hate cannot
+        drive out hate; only love can do that.<br />— Martin Luther King Jr.
+      </p>
+      <p>
+        Coincidence is God's way of remaining anonymous.<br />— Albert Einstein
+      </p> -->
+      <!-- Lägg till knapp för att lägga till i favoriter -->
+      <BButton pill @click.stop="addToFavorites" variant="outline-secondary"
+        >❤️</BButton
+      >
+      <!-- Visar bekräftelsemeddelande när receptet läggs till i favoriter -->
+      <span v-if="showConfirmation" class="confirmation">{{
+        confirmationMessage
+      }}</span>
+    </div>
+  </article>
+
+  <!-- WE NEED TO DELETE THIS AFTER!!  JUST LEAVE IT AS REFERNCE IN CASE SOMETHING IS NOT WORKING FOR YOU VANESSA -->
+
   <!-- Receiving props from parent component -->
-  <BCard
+  <!-- <BCard
     :title="title"
     :img-src="`src/assets/receptsbilder/${image}`"
     img-alt="Image"
@@ -94,38 +145,38 @@
     @mouseout="resetImage"
     @click="handleClick"
     class="mb-3 text-center position-relative"
-  >
-    <!-- In other Boostrap refences mention Img-fluid and embed but do not see how theywork seem not do anything:  -->
-    <!-- class="cimg-fluid img-responsive" -->
-    <!-- class="mb-3 text-center position-relative embed-responsive embed-responsive-4by3 embed-responsive-item" -->
+  > -->
+  <!-- In other Boostrap refences mention Img-fluid and embed but do not see how theywork seem not do anything:  -->
+  <!-- class="cimg-fluid img-responsive" -->
+  <!-- class="mb-3 text-center position-relative embed-responsive embed-responsive-4by3 embed-responsive-item" -->
 
-    <!-- This is direct on  the CSS / See stules.css but is not working to style -->
-    <!-- class="custom-card " -->
-    <!-- id="my-card" -->
-    <BCardText>
+  <!-- This is direct on  the CSS / See stules.css but is not working to style -->
+  <!-- class="custom-card " -->
+  <!-- id="my-card" -->
+  <!-- <BCardText>
       <div class="flex">
-        <!-- time -->
+
         <p>{{ prepTime }}</p>
-        <!-- Kategorier  -->
+
         <p>- {{ category }} -</p>
-        <!-- we still need to add iton the json file -->
+
         <p>
           {{ iconColor }} <span>{{ iconImage }} </span>
         </p>
-        <!-- Nivå  -->
+
         <p>{{ level }}</p>
       </div>
-    </BCardText>
+    </BCardText> -->
 
-    <!-- Lägg till knapp för att lägga till i favoriter -->
-    <BButton pill @click.stop="addToFavorites" variant="outline-secondary"
+  <!-- Lägg till knapp för att lägga till i favoriter -->
+  <!-- <BButton pill @click.stop="addToFavorites" variant="outline-secondary"
       >❤️</BButton
-    >
-    <!-- Visar bekräftelsemeddelande när receptet läggs till i favoriter -->
-    <span v-if="showConfirmation" class="confirmation">{{
+    > -->
+  <!-- Visar bekräftelsemeddelande när receptet läggs till i favoriter -->
+  <!-- <span v-if="showConfirmation" class="confirmation">{{
       confirmationMessage
     }}</span>
-  </BCard>
+  </BCard> -->
 </template>
 
 <style scoped>
@@ -139,11 +190,129 @@
     font-size: 14px;
   }
 
-  /* Jon suggested the use of deep to be abke to style teh image on Boostrap
-   */
-  /* #my-card :deep(.custom-card img) {
-    max-height: 50px !important;
+  /* Originally from www.webinterfacelab.com/snippets/notepad */
+  h1 {
+    font-size: 20px;
+  }
+
+  .cover-image {
+    min-height: 210px;
     width: 100%;
     object-fit: cover;
-  } */
+    border-radius: 20px;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+  }
+
+  .container-notepad,
+  .container-notepad:before,
+  .container-notepad:after {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(#f6abca 1px, transparent 1px),
+      -webkit-linear-gradient(#f6abca 1px, transparent 1px),
+      -webkit-linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-image: -moz-linear-gradient(#f6abca 1px, transparent 1px),
+      -moz-linear-gradient(#f6abca 1px, transparent 1px),
+      -moz-linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-image: -o-linear-gradient(#f6abca 1px, transparent 1px),
+      -o-linear-gradient(#f6abca 1px, transparent 1px),
+      -o-linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-image: linear-gradient(#f6abca 1px, transparent 1px),
+      linear-gradient(#f6abca 1px, transparent 1px),
+      linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-size: 1px 1px, 1px 1px, 23px 23px;
+    background-repeat: repeat-y, repeat-y, repeat;
+    background-position: 22px 0, 24px 0, 0 50px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15),
+      0 0 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .container-notepad {
+    position: relative;
+    margin: 60px auto;
+    padding: 0 23px 14px 35px;
+    width: 300px;
+    line-height: 23px;
+    font-size: 16px;
+    font-family: 'Allura', cursive;
+    color: #333;
+    text-align: center;
+  }
+
+  .container-notepad p,
+  .container-notepad blockquote {
+    margin-bottom: 25px;
+  }
+  .container-notepad :last-child {
+    margin-bottom: 0;
+  }
+  .container-notepad:before,
+  .container-notepad:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    left: 3px;
+    right: 3px;
+    margin-top: -2px;
+    height: 4px;
+    background-size: 1px 1px, 1px 1px, 0 0;
+  }
+  .container-notepad:before {
+    z-index: -2;
+    left: 6px;
+    right: 6px;
+    height: 6px;
+    background-color: #eee;
+  }
+
+  .notepad-heading {
+    position: relative;
+    margin: 0 -23px 14px -35px;
+    height: 38px;
+    background: #14466a;
+    border-radius: 2px 2px 0 0;
+    background-image: -webkit-linear-gradient(top, #226797, #0c3452);
+    background-image: -moz-linear-gradient(top, #226797, #0c3452);
+    background-image: -o-linear-gradient(top, #226797, #0c3452);
+    background-image: linear-gradient(to bottom, #226797, #0c3452);
+    -webkit-box-shadow: inset 0 1px #2f81ad, 0 2px 1px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
+    box-shadow: inset 0 1px #2f81ad, 0 2px 1px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
+  }
+  .notepad-heading > h1 {
+    font-family: 'Aladin', cursive;
+    line-height: 36px;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.7);
+  }
+  .notepad-heading:before,
+  .notepad-heading:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 1px;
+    right: 1px;
+    height: 0;
+    border-top: 1px dashed #617c90;
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+  .notepad-heading:after {
+    bottom: 3px;
+    border-color: #071c2c;
+    border-color: rgba(0, 0, 0, 0.5);
+  }
 </style>
