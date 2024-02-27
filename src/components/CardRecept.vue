@@ -199,7 +199,6 @@
     min-height: 210px;
     width: 100%;
     object-fit: cover;
-    border-radius: 20px;
   }
 
   .img-container {
@@ -208,7 +207,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    border-radius: 20px;
     overflow: hidden;
   }
 
