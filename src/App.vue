@@ -13,6 +13,7 @@ export default {
 }
 </script>
 <template>
+  <div class="appContainer">
   <NavBarMenu />
   <ScrollToTopButton />
 
@@ -23,11 +24,22 @@ export default {
   <!-- Denna utkommenterade tillhör footern med länkar som inte fungerar -->
 
   <!-- Here print the content of the pages on the DOM -the routes -->
-  <router-view />
+  <router-view class="test" />
 
   <!-- Footer is after the router view as this one print the content of the pages -->
   <!-- but if we moved after is not showing!! ?? CHECK THIS! -->
   <Footer />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.test {
+  flex-grow: 1;
+}
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+}
+
+</style>
