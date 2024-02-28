@@ -7,8 +7,17 @@
     components: {
       EggTimer
     },
+
     created() {
       this.loadMealData()
+      // this.$watch(
+      //   () => this.id,
+      //   () => {
+      //     this.loadMealData()
+      //     this.handlePlayReceptBack()
+      //   },
+      //   { immediate: true }
+      // )
     },
     data() {
       return {
@@ -42,6 +51,7 @@
         this.nutrients = this.selectedMeal.nutrients
 
         console.log(this.selectedMeal.nutrients)
+        // this.showReceptView = true
       },
       handlePlayReceptBack() {
         // Communicate with the other component via router-view
@@ -50,11 +60,22 @@
       }
     },
     watch: {
-      // to solve issue is t´not updating the information when i come back from PLayReceptView
+      // to solve issue is not updating the information when I come back from PlayReceptView
       $route(to, from) {
-        //  Verify is the preivious and actual route are the same
+        // Verify if the previous and actual route are the same
         if (from.fullPath !== to.fullPath) {
           this.loadMealData()
+
+          // Check if the current route corresponds to Recept/id
+          if (to.name === 'Recept' && to.params.receptId) {
+            this.handlePlayReceptBack()
+            console.log('inside back browser')
+          }
+          // Check if the current route corresponds to steps
+          if (to.name === 'PlayReceptView') {
+            this.handleClick()
+            console.log('inside fwd browser')
+          }
         }
       }
     }
