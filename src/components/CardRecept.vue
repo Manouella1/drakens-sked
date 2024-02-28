@@ -111,13 +111,7 @@
 
     <div>
       <h1>{{ title }}</h1>
-      <!-- <p>
-        Darkness cannot drive out darkness; only light can do that. Hate cannot
-        drive out hate; only love can do that.<br />— Martin Luther King Jr.
-      </p>
-      <p>
-        Coincidence is God's way of remaining anonymous.<br />— Albert Einstein
-      </p> -->
+
       <!-- Lägg till knapp för att lägga till i favoriter -->
       <BButton pill @click.stop="addToFavorites" variant="outline-secondary"
         >❤️</BButton
