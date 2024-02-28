@@ -128,9 +128,10 @@
 <template>
   <div id="filterBox">
     <div class="filter">
-      <h2>Svårighetsgrader:</h2>
+      <h2 class="title">Svårighetsgrader:</h2>
       <b-form-group>
         <b-form-checkbox-group
+          class="filter-checkboxes"
           v-model="selectedLevels"
           :options="levelOptions"
           size="lg"
@@ -141,9 +142,10 @@
       </b-form-group>
     </div>
     <div class="filter">
-      <h2>Kategorier:</h2>
+      <h2 class="title">Kategorier:</h2>
       <b-form-group>
         <b-form-checkbox-group
+          class="filter-checkboxes"
           v-model="selectedCategories"
           :options="categoryOptions"
           size="lg"
@@ -225,6 +227,12 @@
     padding: 0.5em;
   }
 
+  .title {
+    font-family: 'Aladin', cursive;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
   #results {
     margin: 2em 0;
   }
@@ -234,5 +242,17 @@
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+  }
+
+  @media (max-width: 770px) {
+    .title {
+      font-size: 1em;
+      font-weight: normal;
+    }
+
+    .filter {
+      flex-direction: column;
+      margin: 0;
+    }
   }
 </style>
