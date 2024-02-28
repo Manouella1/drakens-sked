@@ -50,7 +50,6 @@ h2 {
   display: inline-block;
   margin-bottom: 40px;
   font-size: 20px;
-  /* text-align: center; */
   border: 30px;
   background-color: #219c56;
   color: white;
