@@ -237,7 +237,7 @@
     width: 300px;
     line-height: 23px;
     font-size: 16px;
-    font-family: 'Allura', cursive;
+    /* font-family: 'Allura', cursive; */
     color: #333;
     text-align: center;
   }
@@ -269,11 +269,12 @@
     background-color: #eee;
   }
 
-  .notepad-heading {
+  /* Blue  */
+  /* .notepad-heading {
     position: relative;
     margin: 0 -23px 14px -35px;
     height: 38px;
-    background: #14466a;
+    background: #08f233;
     border-radius: 2px 2px 0 0;
     background-image: -webkit-linear-gradient(top, #226797, #0c3452);
     background-image: -moz-linear-gradient(top, #226797, #0c3452);
@@ -283,7 +284,42 @@
       0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
     box-shadow: inset 0 1px #2f81ad, 0 2px 1px rgba(0, 0, 0, 0.4),
       0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
+  } */
+
+  /* Green dark */
+  .notepad-heading {
+    position: relative;
+    margin: 0 -23px 14px -35px;
+    height: 38px;
+    background: #2a8332; /* green */
+    border-radius: 2px 2px 0 0;
+    background-image: -webkit-linear-gradient(top, #2a8332, #0b4220);
+    background-image: -moz-linear-gradient(top, #2a8332, #0b4220);
+    background-image: -o-linear-gradient(top, #2a8332, #0b4220);
+    background-image: linear-gradient(to bottom, #2a8332, #0b4220);
+    -webkit-box-shadow: inset 0 1px #1e5e28, 0 2px 1px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
+    box-shadow: inset 0 1px #1e5e28, 0 2px 1px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
   }
+
+  /* Green lighter */
+  .notepad-heading {
+    position: relative;
+    margin: 0 -23px 14px -35px;
+    height: 38px;
+    background: #5eba4b;
+    border-radius: 2px 2px 0 0;
+    background-image: -webkit-linear-gradient(top, #5eba4b, #1f6526);
+    background-image: -moz-linear-gradient(top, #5eba4b, #1f6526);
+    background-image: -o-linear-gradient(top, #5eba4b, #1f6526);
+    background-image: linear-gradient(to bottom, #5eba4b, #1f6526);
+    -webkit-box-shadow: inset 0 1px #3b7f3d, 0 2px 1px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
+    box-shadow: inset 0 1px #3b7f3d, 0 2px 1px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
+  }
+
   .notepad-heading > h1 {
     font-family: 'Aladin', cursive;
     line-height: 36px;
