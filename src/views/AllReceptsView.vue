@@ -2,6 +2,7 @@
 <script>
   import CardsRecepts from '../components/CardsRecepts.vue'
   import FilterSearch from '../components/FilterSearch.vue'
+  import WelcomeUser from '../components/WelcomeUser.vue'
   // import meals from '../assets/data/meals.json'
 
   // console.log(meals.recipes)
@@ -10,7 +11,8 @@
   export default {
     components: {
       CardsRecepts,
-      FilterSearch
+      FilterSearch,
+      WelcomeUser
     }
     // created() {
     //   this.meals = meals.recipes
@@ -35,6 +37,7 @@
   </ol> -->
 
     <!-- WE use here the component we create for the recepies -->
+    <WelcomeUser />
     <FilterSearch />
     <CardsRecepts />
   </main>
