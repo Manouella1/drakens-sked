@@ -2,36 +2,34 @@
   export default {
     data() {
       return {
-        footerText: 'Drakens sked',
-        footer: null
+        footerText: 'Drakens sked'
       }
-    },
-    methods: {
-    navigateToContact() {
     }
   }
-}
 </script>
 <template>
   <footer>
-    <div class="text-center" style="background-color: rgba(0, 128, 0, 0.906)">
-      <span v-html="footer" />
-      <a><b> &copy; Site created by{{ footerText }}</b></a>
-      <span class="me-3, text-white"> || Om ni har frågor eller funderingar - </span>
-      <button
-        data-mdb-ripple-init
-        type="button"
-        class="btn btn-outline-light btn-rounded"
-        @click="toggleCommentsSection"
-      >
-        <router-link class="link" to="/contact">Kontakta oss!</router-link>
-      </button>
+    <div class="text-center">
+      <b> &copy; Site created by {{ footerText }}</b>
+      || Om ni har frågor eller funderingar -
+      <router-link class="link" to="/contact">
+        <BButton id="button" variant="success"> Kontakta oss! </BButton>
+      </router-link>
     </div>
   </footer>
 </template>
 <style>
   footer {
-    margin-top: 10em;
+    align-items: center;
+    background-color: #219c56;
     color: white;
+    display: flex;
+    min-height: 100px;
+    justify-content: space-evenly;
+    padding: 1em;
+  }
+
+  #button {
+    margin: 0.5em;
   }
 </style>

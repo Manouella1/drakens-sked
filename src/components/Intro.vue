@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from "vue";
-import ChatBubble from "./ChatBubble.vue";
+  import { ref } from 'vue'
+  import ChatBubble from './ChatBubble.vue'
 </script>
 
 <template>
@@ -16,18 +16,19 @@ import ChatBubble from "./ChatBubble.vue";
 </template>
 
 <style scoped>
-.gloves {
-  /* display: flex;
+  .gloves {
+    /* display: flex;
   justify-content: center;
   align-items: center; */
-  margin-bottom: 2em;
-}
-.kitchengloves {
-  max-width: 20vw;
-  margin-left: 2.5em;
-}
-.drake {
-  border-image-repeat: no-repeat;
-  max-width: 100vw;
-}
+    margin-bottom: 2em;
+  }
+  .kitchengloves {
+    max-width: 20vw;
+    margin-left: 2.5em;
+  }
+  .drake {
+    border-image-repeat: no-repeat;
+    margin: 0;
+    max-width: 100vw;
+  }
 </style>
