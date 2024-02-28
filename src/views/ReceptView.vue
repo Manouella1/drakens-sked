@@ -10,14 +10,6 @@
 
     created() {
       this.loadMealData()
-      // this.$watch(
-      //   () => this.id,
-      //   () => {
-      //     this.loadMealData()
-      //     this.handlePlayReceptBack()
-      //   },
-      //   { immediate: true }
-      // )
     },
     data() {
       return {
@@ -51,7 +43,6 @@
         this.nutrients = this.selectedMeal.nutrients
 
         console.log(this.selectedMeal.nutrients)
-        // this.showReceptView = true
       },
       handlePlayReceptBack() {
         // Communicate with the other component via router-view
