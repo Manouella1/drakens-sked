@@ -14,7 +14,13 @@
     levelOptions = ref([]), // Alla svårighetsgrader som finns att välja på
     categoryOptions = ref([]), // Alla kategorier som finns att välja på
     properties = ref(['level', 'category']), // De nycklar i json-filen som filtreras på
-    router = useRouter() // Gör vue-router tillgänglig
+    router = useRouter(), // Gör vue-router tillgänglig
+    checkboxSize = ref(null), // Anger storlek på checkbox
+    screenWidth = ref(null) // Mäter av skärmens storlek
+
+  // Genererar alla svårighetsgrader och kategorier direkt
+  generateLevels()
+  generateCategories()
 
   // funktion som hämtar alla recept med vald svårighetsgrad och lägger dem i allRecipes
   function filterLevel(x) {
@@ -35,9 +41,6 @@
     }
     pushedButton.value = true
   }
-
-  generateLevels()
-  generateCategories()
 
   // funktion som hämtar alla svårighetsgrader som finns i json-filen
   function generateLevels() {
@@ -123,6 +126,28 @@
   function selectRecept(mealId) {
     router.push({ name: 'Recept', params: { receptId: mealId } })
   }
+
+  // Mäter skärmens storlek och ger checkboxSize en storlek baserat på det
+  screenWidth.value = window.innerWidth
+  if (screen.width > 770) {
+    checkboxSize.value = 'lg'
+  } else {
+    checkboxSize.value = 'sm'
+  }
+
+  // addEventListener som lyssnar efter när skärmen ändrar storlek
+  window.addEventListener('resize', () => {
+    screenWidth.value = window.innerWidth
+  })
+
+  // watch som håller koll på när skrämens storlek ändrar sig
+  watch(screenWidth, () => {
+    if (screen.width > 770) {
+      checkboxSize.value = 'lg'
+    } else {
+      checkboxSize.value = 'sm'
+    }
+  })
 </script>
 
 <template>
@@ -134,7 +159,7 @@
           class="filter-checkboxes"
           v-model="selectedLevels"
           :options="levelOptions"
-          size="lg"
+          :size="checkboxSize"
           buttons
           button-variant="success"
           name="checkbox-buttons"
@@ -148,7 +173,7 @@
           class="filter-checkboxes"
           v-model="selectedCategories"
           :options="categoryOptions"
-          size="lg"
+          :size="checkboxSize"
           buttons
           button-variant="success"
           name="checkbox-buttons"
