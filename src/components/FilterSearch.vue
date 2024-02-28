@@ -1,102 +1,81 @@
 <!-- Filter-komponent -->
 <script setup>
   import { ref, watch } from 'vue'
-  import { BButton } from 'bootstrap-vue-next'
+  import { useRouter } from 'vue-router'
   import CardRecept from '../components/CardRecept.vue'
   import meals from '../assets/data/meals.json'
 
-  let allLevelRecipes = ref(null),
-    allCategoryRecipes = ref(null),
-    pushedButton = ref(false),
-    allCategories = ref([]),
-    levelOptions = ref([]),
-    selectedLevels = ref([]),
-    selectedCategories = ref([]),
-    allSelectedOptions = ref([]),
-    categoryOptions = ref([]),
-    properties = ref(['level', 'category']),
-    allRecipes = ref(null)
+  let allRecipes = ref(null), // Alla recept efter filtrering
+    pushedButton = ref(false), // Om filtrering vald eller inte
+    allPropertiesValue = ref([]), // Alla värden inom svårighetsgrad + kategori som filtrering ska ske på
+    selectedLevels = ref([]), // Alla svårighetsgrader användaren valt
+    selectedCategories = ref([]), // Alla kategorier användaren valt
+    allSelectedOptions = ref([]), // Samtliga valda alternativ (svårighetsgrad + kategori)
+    levelOptions = ref([]), // Alla svårighetsgrader som finns att välja på
+    categoryOptions = ref([]), // Alla kategorier som finns att välja på
+    properties = ref(['level', 'category']), // De nycklar i json-filen som filtreras på
+    router = useRouter() // Gör vue-router tillgänglig
 
+  // funktion som hämtar alla recept med vald svårighetsgrad och lägger dem i allRecipes
   function filterLevel(x) {
     for (let i = 0; i < meals.recipes.length; i++) {
       if (x === meals.recipes[i].level) {
-        allLevelRecipes.value.push(meals.recipes[i])
+        allRecipes.value.push(meals.recipes[i])
       }
     }
     pushedButton.value = true
-    console.log(allLevelRecipes.value)
   }
 
+  // funktion som hämtar alla recept med vald kategori och lägger dem i allRecipes
   function filterCategory(x) {
     for (let i = 0; i < meals.recipes.length; i++) {
       if (x === meals.recipes[i].category) {
-        allLevelRecipes.value.push(meals.recipes[i])
+        allRecipes.value.push(meals.recipes[i])
       }
     }
     pushedButton.value = true
-    console.log(allLevelRecipes.value)
   }
 
-  // function filterCategory() {
-  //   let x = allLevelRecipes.value.filter(function (y) {
-  //     for (let i = 0; i < meals.recipes.length; i++) {
-  //       if (y === meals.recipes[i].category) {
-  //         allCategoryRecipes.value.push(meals.recipes[i])
-  //       }
-  //     }
-  //     console.log(x)
-  //   })
-  // }
-
-  // function onLevelRecipe(x) {
-  //   allLevelRecipes.value = []
-  //   for (let i = 0; i < meals.recipes.length; i++) {
-  //     if (x === meals.recipes[i].level) {
-  //       allLevelRecipes.value.push(meals.recipes[i])
-  //     }
-  //   }
-  //   pushedButton.value = true
-  // }
-
-  function onCancel() {
-    pushedButton.value = false
-  }
-
-  generateAllCategories()
   generateLevels()
+  generateCategories()
 
-  function generateAllCategories() {
-    for (let i = 0; i < meals.recipes.length; i++) {
-      let x = meals.recipes[i].category
-      if (allCategories.value.includes(x) !== true) {
-        allCategories.value.push(meals.recipes[i].category)
-        categoryOptions.value.push(meals.recipes[i].category)
-      }
-    }
-  }
-
+  // funktion som hämtar alla svårighetsgrader som finns i json-filen
   function generateLevels() {
     for (let i = 0; i < meals.recipes.length; i++) {
       let x = meals.recipes[i].level
-      if (allCategories.value.includes(x) !== true) {
-        allCategories.value.push(meals.recipes[i].level)
+      if (allPropertiesValue.value.includes(x) !== true) {
+        allPropertiesValue.value.push(meals.recipes[i].level)
         levelOptions.value.push(meals.recipes[i].level)
       }
     }
   }
 
+  // funktion som hämtar alla kategorier som finns i json-filen
+  function generateCategories() {
+    for (let i = 0; i < meals.recipes.length; i++) {
+      let x = meals.recipes[i].category
+      if (allPropertiesValue.value.includes(x) !== true) {
+        allPropertiesValue.value.push(meals.recipes[i].category)
+        categoryOptions.value.push(meals.recipes[i].category)
+      }
+    }
+  }
+
+  // watchers som håller koll på när ny svårighetsgrad och kategori är vald.
+  // valda svårighetsgrader och kategorier är i separata listor och sammanslås i allSelectedOptions
   watch(selectedLevels, () => {
     allSelectedOptions.value = selectedLevels.value.concat(
       selectedCategories.value
     )
   })
-
   watch(selectedCategories, () => {
     allSelectedOptions.value = selectedCategories.value.concat(
       selectedLevels.value
     )
   })
 
+  // watcher för när allSelectedOptions ändras. Hanterar om båda arrayerna är tomma, om en är
+  // innehåller värden eller om båda arrayerna innehåller värden
   watch(allSelectedOptions, () => {
     // Båda filterna är tomma
     if (
@@ -110,7 +89,7 @@
       selectedCategories.value.length === 0 &&
       selectedLevels.value.length !== 0
     ) {
-      allLevelRecipes.value = []
+      allRecipes.value = []
       for (let i = 0; i < allSelectedOptions.value.length; i++) {
         filterLevel(allSelectedOptions.value[i])
       }
@@ -120,7 +99,7 @@
       selectedCategories.value.length !== 0 &&
       selectedLevels.value.length === 0
     ) {
-      allLevelRecipes.value = []
+      allRecipes.value = []
       for (let i = 0; i < allSelectedOptions.value.length; i++) {
         filterCategory(allSelectedOptions.value[i])
       }
@@ -135,101 +114,125 @@
           return allSelectedOptions.value.includes(values[properties])
         })
       })
-      allLevelRecipes.value = []
-      allLevelRecipes.value = filter
+      allRecipes.value = []
+      allRecipes.value = filter
     }
   })
 
-  // let filter = meals.recipes.filter((values) => {
-  //       return properties.value.every((properties) => {
-  //         return allSelectedOptions.value.includes(values[properties])
-  //       })
-  //     })
-
-  // watch(allSelectedOptions, () => {
-  //   let filter = meals.recipes.filter((values) => {
-  //     return properties.value.every((properties) => {
-  //       return allSelectedOptions.value.includes(values[properties])
-  //     })
-  //   })
-  //   console.log(filter)
-  // })
-
-  // function generateAllCategories(category, array) {
-  //   for (let i = 0; i < meals.recipes.length; i++) {
-  //     let x = meals.recipes[i][category]
-  //     if ([array].includes(x) !== true) {
-  //       ;[array].push(x)
-  //     }
-  //   }
-  // }
+  // funktion för att navigera till valt recept
+  function selectRecept(mealId) {
+    router.push({ name: 'Recept', params: { receptId: mealId } })
+  }
 </script>
 
 <template>
-  <div>
-    <b-form-group label="Välj svårighetsgrad">
-      <b-form-checkbox-group
-        v-model="selectedLevels"
-        :options="levelOptions"
-        buttons
-        button-variant="secondary"
-        name="buttons-2"
-      ></b-form-checkbox-group>
-    </b-form-group>
+  <div id="filterBox">
+    <div class="filter">
+      <h2>Svårighetsgrader:</h2>
+      <b-form-group>
+        <b-form-checkbox-group
+          v-model="selectedLevels"
+          :options="levelOptions"
+          size="lg"
+          buttons
+          button-variant="success"
+          name="checkbox-buttons"
+        />
+      </b-form-group>
+    </div>
+    <div class="filter">
+      <h2>Kategorier:</h2>
+      <b-form-group>
+        <b-form-checkbox-group
+          v-model="selectedCategories"
+          :options="categoryOptions"
+          size="lg"
+          buttons
+          button-variant="success"
+          name="checkbox-buttons"
+        />
+      </b-form-group>
+    </div>
   </div>
-  <div>
-    <b-form-group label="Välj kategori">
-      <b-form-checkbox-group
-        v-model="selectedCategories"
-        :options="categoryOptions"
-        buttons
-        button-variant="secondary"
-        name="buttons-2"
-      ></b-form-checkbox-group>
-    </b-form-group>
-  </div>
-  <!-- =============================================================================== -->
-  <!-- <div>
-    <BButton @click="onLevelRecipe('Basic')" pill variant="outline-secondary"
-      >Lätt</BButton
-    >
-    <BButton
-      @click="onLevelRecipe('Intermedium')"
-      pill
-      variant="outline-secondary"
-      >Mellan</BButton
-    >
-    <BButton @click="onLevelRecipe('Advanced')" pill variant="outline-secondary"
-      >Avancerad</BButton
-    >
-    <BButton @click="onCancel" pill variant="outline-secondary">X</BButton>
-  </div>
-  <div>
-    <span v-for="category in allCategories">
-      <BButton @click="test(category)" pill variant="outline-secondary">{{
-        category
-      }}</BButton></span
-    >
-  </div> -->
-  <div v-if="pushedButton === true">
-    <h1>Resultat för {{ allSelectedOptions }}</h1>
-    <h2>{{ allLevelRecipes.length }} resultat</h2>
-    <CardRecept
-      v-for="recipe in allLevelRecipes"
-      :key="recipe.id"
-      :title="recipe.title"
-      :prepTime="recipe.prepTime"
-      :category="recipe.category"
-      :level="recipe.level"
-      :image="recipe.image"
-      :id="recipe.id"
-    >
-    </CardRecept>
+  <div id="results" v-if="pushedButton === true">
+    <h2>Resultat för</h2>
+    <h1>
+      <span v-for="(option, index) in allSelectedOptions" :key="index">
+        {{ option }}
+        <span v-if="index !== allSelectedOptions.length - 1"> + </span>
+      </span>
+    </h1>
+    <h2>{{ allRecipes.length }} resultat</h2>
+    <div class="flex">
+      <CardRecept
+        v-for="recipe in allRecipes"
+        :key="recipe.id"
+        :title="recipe.title"
+        :prep-time="recipe.prepTime"
+        :category="recipe.category"
+        :level="recipe.level"
+        :image="recipe.image"
+        :id="recipe.id"
+        :icon-color="recipe.iconColor"
+        :icon-image="recipe.iconImage"
+        @select-recept="selectRecept"
+      />
+    </div>
   </div>
 </template>
 
 <style scoped>
-  div {
-    background-color: white;
+  @font-face {
+    font-family: 'Luckiest Guy';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf')
+      format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/Inter/static/Inter-Regular.ttf') format('truetype');
+  }
+
+  h1 {
+    font-family: 'Luckiest Guy', sans-serif;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.7em;
+    margin: 0.5em;
+    text-align: center;
+  }
+
+  #filterBox {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.493);
+    box-shadow: 0px 0px 5px rgb(133, 103, 75);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .filter {
+    align-items: center;
+    display: flex;
+    margin: 0.5em;
+    padding: 0.5em;
+  }
+
+  #results {
+    margin: 2em 0;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
   }
 </style>
