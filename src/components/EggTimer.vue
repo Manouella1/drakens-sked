@@ -26,6 +26,24 @@
       }, 1000)
     }
   }
+
+  const pauseTimer = () => {
+    clearInterval(intervalId)
+    isRunning.value = false
+  }
+
+  const resumeTimer = () => {
+    isRunning.value = true
+    intervalId = setInterval(() => {
+      if (timeLeft.value > 0) {
+        timeLeft.value--
+      } else {
+        stopTimer()
+        playSound() // Spela upp ljud
+      }
+    }, 1000)
+  }
+
   const stopTimer = () => {
     clearInterval(intervalId)
     isRunning.value = false
@@ -52,7 +70,12 @@
 </script>
 <template>
   <h1>hellooo</h1>
-  <img @click="modal = true" src="../assets/bilder/klocka.png" alt="" />
+  <img
+    @click="modal = true"
+    src="../assets/bilder/klocka.png"
+    alt=""
+    class="klocka"
+  />
   <div v-if="modal" v-on-click-outside="closeModal" class="klocka">
     <div v-if="!isRunning && !timeLeft">
       <input type="number" v-model="minutes" placeholder="Minuter" min="0" />
@@ -60,7 +83,10 @@
     </div>
     <div v-else>
       <p>Tid kvar: {{ timeLeft }} sekunder</p>
-      <button @click="stopTimer">Stoppa</button>
+      <button @click="isRunning ? pauseTimer() : resumeTimer()">
+        {{ isRunning ? 'Stoppa' : 'Fortsätt' }}
+      </button>
+
       <button @click="resetTimer">Återställ timer</button>
       <button class="button small" title="Close" @click="modal = false">
         𝖷
@@ -71,5 +97,6 @@
 <style>
   .klocka {
     width: 8rem;
+    cursor: pointer;
   }
 </style>
