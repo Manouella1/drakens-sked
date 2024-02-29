@@ -18,6 +18,8 @@ export default {
 </script>
 
 <template>
+<div>
+  <h1>KONTAKTA OSS</h1>
 <div class="contact-form">
     <form @submit.prevent="handleSubmit">
       <div class="form-group">
@@ -35,12 +37,20 @@ export default {
       <button type="submit">Submit</button>
     </form>
   </div>
+</div>
 </template>
 
 <style scoped>
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
 .contact-form {
   width: 400px;
   margin: 0 auto;
+  display: flex;
+    flex-direction: column;
 }
 
 .form-group {

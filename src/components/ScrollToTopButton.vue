@@ -43,18 +43,21 @@ export default {
   bottom: 25px;
   right: 25px;
   z-index: 999;
-  background-color: #1c994a46;
+  background-color: #1c994a82;
   color: #fff;
-  border: none;
+  border: 2px solid #ffffffa7;
+  /* Adding border to the button */
   border-radius: 30px;
   padding: 12px 20px;
   cursor: pointer;
+  font-weight: bold;
+  /* Making the text bold */
 }
 
 /* Efter hover */
 .scroll-to-top-button:hover {
   background-color: rgba(24, 160, 67, 0.976);
-  padding: 20px 20px;
+  padding: 15px 20px;
 }
 
 .scroll-to-top-button:hover::before {

@@ -3,12 +3,18 @@
 <template>
   <div class="container">
     <h1>Favorit Recept</h1>
-    <!-- Loopa igenom favoritrecept och visa varje recept med CardRecept-komponenten -->
-    <div v-for="recipe in favoriteRecipes" :key="recipe.id">
-      <!-- Skicka props till CardRecept för att visa receptinformation -->
+    <!-- <div v-for="recipe in favoriteRecipes" :key="recipe.id">
+      Skicka props till CardRecept för att visa receptinformation
       <CardRecept :title="recipe.title" :prepTime="recipe.prepTime" :category="recipe.category" :level="recipe.level"
-        :image="recipe.image" :id="recipe.id" :isFavorite="true" :iconColor="recipe.iconColor"
-        :iconImage="recipe.iconImage" @removeFromFavorites="removeFromFavorites(recipe.id)" />
+      :image="recipe.image" :id="recipe.id" :isFavorite="true" :iconColor="recipe.iconColor"
+      :iconImage="recipe.iconImage" @removeFromFavorites="removeFromFavorites(recipe.id)" />
+    </div> -->
+
+    <!-- Loopa igenom favoritrecept och visa varje recept med CardRecept-komponenten -->
+    <div class="flex">
+      <CardRecept v-for="recipe in favoriteRecipes" :key="recipe.id" :title="recipe.title" :prep-time="recipe.prepTime"
+        :category="recipe.category" :level="recipe.level" :image="recipe.image" :id="recipe.id"
+        :icon-color="recipe.iconColor" :icon-image="recipe.iconImage" @select-recept="selectRecept" />
     </div>
     <!-- Visa bekräftelsemeddelande när ett recept tas bort från favoriter -->
     <span v-if="showConfirmation" class="confirmation">{{ confirmationMessage }}</span>
@@ -27,39 +33,31 @@ export default {
   data() {
     return {
       favoriteRecipes: [], // En array som håller favoritrecept
-      showConfirmation: false, // Variabel för att visa bekräftelsemeddelande
-      confirmationMessage: '' // Meddelandet som ska visas
     }
   },
   created() {
     this.loadFavoriteRecipes() // Ladda favoritrecept när komponenten skapas
   },
   methods: {
+    // länkar till recepten
+    selectRecept(mealId) {
+      // Emit an event with the selected meal ID
+      // this.$emit('selectRecept', meal)
+      console.log('Selected Meal ID:', mealId)
+      // Navigate to ReceptView with the selected mealId
+      this.$router.push({ name: 'Recept', params: { receptId: mealId } })
+    },
     loadFavoriteRecipes() {
       // Läs favoritrecept från localStorage och uppdatera favoriteRecipes
       const favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || []
       this.favoriteRecipes = favorites
     },
     removeFromFavorites(recipeId) {
-      // Filtrera bort receptet med det angivna ID:t från favoritrecepten
-      this.favoriteRecipes = this.favoriteRecipes.filter(
-        (recipe) => recipe.id !== recipeId
-      )
-      // Uppdatera localStorage med de uppdaterade favoritrecepten efter borttagning
-      localStorage.setItem(
-        'favoriteRecipes',
-        JSON.stringify(this.favoriteRecipes)
-      )
+      // Remove the recipe from the favoriteRecipes array
+      this.favoriteRecipes = this.favoriteRecipes.filter(recipe => recipe.id !== recipeId);
 
-      // Uppdatera bekräftelsemeddelandet
-      this.confirmationMessage = 'Receptet har tagits bort från dina favoriter!'
-      // Visa bekräftelsemeddelandet
-      this.showConfirmation = true
-
-      // Dölj bekräftelsemeddelandet efter 3 sekunder
-      setTimeout(() => {
-        this.showConfirmation = false
-      }, 3000)
+      // Update localStorage in the background
+      localStorage.setItem('favoriteRecipes', JSON.stringify(this.favoriteRecipes));
     }
   }
 }
@@ -68,6 +66,7 @@ export default {
 <style scoped>
 p {
   font-weight: bold;
+  text-align: center;
 }
 
 img {
@@ -94,5 +93,14 @@ img {
 
 .remove-button:hover {
   background-color: rgb(134, 60, 60);
+}
+
+@media (min-width: 600px) {
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
 }
 </style>
