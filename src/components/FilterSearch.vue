@@ -130,7 +130,7 @@
   // Mäter skärmens storlek och ger checkboxSize en storlek baserat på det
   screenWidth.value = window.innerWidth
   if (screen.width > 770) {
-    checkboxSize.value = 'lg'
+    checkboxSize.value = 'md'
   } else {
     checkboxSize.value = 'sm'
   }
@@ -143,7 +143,7 @@
   // watch som håller koll på när skrämens storlek ändrar sig
   watch(screenWidth, () => {
     if (screen.width > 770) {
-      checkboxSize.value = 'lg'
+      checkboxSize.value = 'md'
     } else {
       checkboxSize.value = 'sm'
     }

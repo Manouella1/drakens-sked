@@ -30,7 +30,7 @@
 
 <template>
   <div class="content">
-    <h1>ALL RECEPTS:</h1>
+    <h1>Alla recept</h1>
     <!-- Rendering CardRecept component for each meal -->
     <div class="flex">
       <CardRecept
