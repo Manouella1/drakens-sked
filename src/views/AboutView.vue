@@ -1,5 +1,6 @@
 <template>
   <div class="about-us">
+    <span class="redpin">📌</span>
     <div class="about-container">
       <h1>Om Oss</h1>
       <div class="about-content">
@@ -47,6 +48,29 @@
 </template>
 
 <style scoped>
+.redpin {
+  position: absolute;
+  font-size: 60px;
+  /* Uppdaterat värde för font-size för att göra redpin större */
+  width: 29px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+}
+
+.container {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 20px;
+  background-color: #219c56;
+  border-radius: 50px;
+  padding: 20px;
+}
+
 .logo {
   width: 30%;
   max-height: 800px;
@@ -61,11 +85,14 @@
 }
 
 .about-container {
-  background-color: #fff9e790;
+  background-color: #219c56;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 8px 17px rgba(0, 0, 0, 0.1);
-  margin: 50px 20%;
+  margin: 50px 15%;
+  color: white;
+  font-weight: bolder;
+
 }
 
 .about-content {
@@ -89,8 +116,8 @@
 
 .last-paragraph {
   font-weight: bold;
-  font-size: 18px;
-  margin-top: 30px;
+  font-size: 30px;
+  margin-top: 60px;
 }
 
 @media (max-width: 768px) {
@@ -102,6 +129,16 @@
 
 /* Media Query for Mobile Devices */
 @media (max-width: 576px) {
+
+  .redpin {
+    position: absolute;
+    font-size: 40px;
+    /* Uppdaterat värde för font-size för att göra redpin större */
+    width: 29px;
+    margin-top: 20px;
+
+  }
+
   .logo {
     width: 80%;
     /* Adjust logo size for smaller screens */
