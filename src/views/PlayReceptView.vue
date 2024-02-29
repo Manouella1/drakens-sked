@@ -103,11 +103,6 @@
     list-style: none;
   }
 
-  /* Style for the button to turn pages on mobile */
-  /* .turn-page-button {
-    display: none;
-  } */
-
   /* Book layout idea taken from CodePen : https://codepen.io/ml394/pen/LBjqBE */
 
   .container-book {
