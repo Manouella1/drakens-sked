@@ -114,59 +114,12 @@ export default {
       <!-- Lägg till knapp för att lägga till i favoriter -->
       <BButton pill @click.stop="addToFavorites" :variant="isFavorite ? 'secondary' : 'outline-secondary'"
         :class="{ 'favorited': isFavorite }">❤️</BButton>
+
       <span v-if="showConfirmation" class="confirmation">{{ confirmationMessage }}</span>
     </div>
   </article>
-
-  <!-- WE NEED TO DELETE THIS AFTER!!  JUST LEAVE IT AS REFERNCE IN CASE SOMETHING IS NOT WORKING FOR YOU VANESSA -->
-
-  <!-- Receiving props from parent component -->
-  <!-- <BCard
-    :title="title"
-    :img-src="`src/assets/receptsbilder/${image}`"
-    img-alt="Image"
-    img-height="250px"
-    img-width="auto"
-    img-top
-    tag="article"
-    style="max-width: 20rem; min-width: 15rem"
-    @mouseover="enlargeImage"
-    @mouseout="resetImage"
-    @click="handleClick"
-    class="mb-3 text-center position-relative"
-  > -->
-  <!-- In other Boostrap refences mention Img-fluid and embed but do not see how theywork seem not do anything:  -->
-  <!-- class="cimg-fluid img-responsive" -->
-  <!-- class="mb-3 text-center position-relative embed-responsive embed-responsive-4by3 embed-responsive-item" -->
-
-  <!-- This is direct on  the CSS / See stules.css but is not working to style -->
-  <!-- class="custom-card " -->
-  <!-- id="my-card" -->
-  <!-- <BCardText>
-      <div class="flex">
-
-        <p>{{ prepTime }}</p>
-
-        <p>- {{ category }} -</p>
-
-        <p>
-          {{ iconColor }} <span>{{ iconImage }} </span>
-        </p>
-
-        <p>{{ level }}</p>
-      </div>
-    </BCardText> -->
-
-  <!-- Lägg till knapp för att lägga till i favoriter -->
-  <!-- <BButton pill @click.stop="addToFavorites" variant="outline-secondary"
-      >❤️</BButton
-    > -->
-  <!-- Visar bekräftelsemeddelande när receptet läggs till i favoriter -->
-  <!-- <span v-if="showConfirmation" class="confirmation">{{
-      confirmationMessage
-    }}</span>
-  </BCard> -->
 </template>
+
 
 <style scoped>
 /* färg för gillat favortrecept */
@@ -272,23 +225,6 @@ h1 {
   height: 6px;
   background-color: #eee;
 }
-
-/* Blue  */
-/* .notepad-heading {
-    position: relative;
-    margin: 0 -23px 14px -35px;
-    height: 38px;
-    background: #08f233;
-    border-radius: 2px 2px 0 0;
-    background-image: -webkit-linear-gradient(top, #226797, #0c3452);
-    background-image: -moz-linear-gradient(top, #226797, #0c3452);
-    background-image: -o-linear-gradient(top, #226797, #0c3452);
-    background-image: linear-gradient(to bottom, #226797, #0c3452);
-    -webkit-box-shadow: inset 0 1px #2f81ad, 0 2px 1px rgba(0, 0, 0, 0.4),
-      0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
-    box-shadow: inset 0 1px #2f81ad, 0 2px 1px rgba(0, 0, 0, 0.4),
-      0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
-  } */
 
 /* Green dark */
 .notepad-heading {
