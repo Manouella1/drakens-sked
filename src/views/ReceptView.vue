@@ -1,11 +1,13 @@
 <script>
   import EggTimer from '../components/EggTimer.vue'
+  import WelcomeUser from '../components/WelcomeUser.vue'
 
   import meals from '../assets/data/meals.json'
 
   export default {
     components: {
-      EggTimer
+      EggTimer,
+      WelcomeUser
     },
 
     created() {
@@ -67,6 +69,8 @@
             this.handleClick()
             console.log('inside fwd browser')
           }
+
+          // if on step always is v-if is always false
         }
       }
     }
@@ -75,64 +79,82 @@
 
 <template>
   <main class="container">
+    <WelcomeUser class="container-drake" />
     <div v-if="showReceptView">
-      <h1>RECEPT</h1>
+      <article class="container-notepad">
+        <div class="img-container">
+          <img
+            class="cover-image"
+            :src="`src/assets/receptsBilder/${selectedMeal.image}`"
+          />
+        </div>
+        <div class="recept-info">
+          <div class="flex">
+            <div class="flex">
+              <p>
+                <span>{{ selectedMeal.iconColor }}</span>
+                <span>{{ selectedMeal.iconImage }}</span
+                >{{ selectedMeal.level }}
+              </p>
+              <p class="spaceText">{{ selectedMeal.category }}</p>
+            </div>
+            <div>
+              <p>
+                PrepTime:{{ selectedMeal.prepTime
+                }}<span class="spaceText"
+                  >CookTime:{{ selectedMeal.cookTime }}</span
+                >
+              </p>
+            </div>
+            <div>
+              Nutrients:
+              <ul class="listNutrient">
+                <li v-for="nutrient in nutrients" :key="nutrient.id">
+                  {{ nutrient }}
+                </li>
+              </ul>
+            </div>
+            <p>Portioner:{{ selectedMeal.portions }}</p>
+          </div>
+        </div>
+        <div class="content-text">
+          <h1 class="receptTitle">{{ selectedMeal.title }}</h1>
+          <p>{{ selectedMeal.description }}</p>
 
-      <div class="flex">
-        <p>
-          <span>{{ selectedMeal.iconColor }}</span>
-          <span>{{ selectedMeal.iconImage }}</span
-          >{{ selectedMeal.level }}
-        </p>
-        <p>{{ selectedMeal.category }}</p>
-        <p>
-          PrepTime:{{ selectedMeal.prepTime }} CookTime:{{
-            selectedMeal.cookTime
-          }}
-        </p>
-        Nutrients:
-        <ul>
-          <li v-for="nutrient in nutrients" :key="nutrient.id">
-            {{ nutrient }}
-          </li>
-        </ul>
-        <p>Portioner:{{ selectedMeal.portions }}</p>
-      </div>
-      <p>recept ID: {{ $route.params.receptId }}</p>
-      <img :src="`src/assets/receptsBilder/${selectedMeal.image}`" />
-      <h2>{{ selectedMeal.title }}</h2>
-      <p>{{ selectedMeal.description }}</p>
+          <h3>Ingredienser:</h3>
+          <ul>
+            <li v-for="ingredient in ingredients" :key="ingredient.id">
+              {{ ingredient }}
+            </li>
+          </ul>
 
-      <h3>Ingredienser:</h3>
-      <ul>
-        <li v-for="ingredient in ingredients" :key="ingredient.id">
-          {{ ingredient }}
-        </li>
-      </ul>
+          <h3>Gör så här:</h3>
 
-      <h3>Gör så här:</h3>
+          <ol>
+            <li v-for="instruction in instructions" :key="instruction.id">
+              {{ instruction.text }}
+            </li>
+          </ol>
+        </div>
+        <div class="buttons">
+          <!-- without @click passing direct via route-link -->
+          <router-link
+            name="default"
+            :to="'/recepts/' + selectedReceptId + '/steps'"
+          >
+            <BButton variant="outline-secondary" @click="handleClick"
+              >Play Recept ▶️</BButton
+            >
+          </router-link>
 
-      <ol>
-        <li v-for="instruction in instructions" :key="instruction.id">
-          {{ instruction.text }}
-        </li>
-      </ol>
+          <router-link name="default" :to="'/recepts/'">
+            <BButton variant="outline-primary" @click="handleClick"
+              >View All Recepts
+            </BButton>
+          </router-link>
+        </div>
+      </article>
 
-      <!-- without @click passing direct via route-link -->
-      <router-link
-        name="default"
-        :to="'/recepts/' + selectedReceptId + '/steps'"
-      >
-        <BButton variant="outline-secondary" @click="handleClick"
-          >Play Recept ▶️</BButton
-        >
-      </router-link>
-
-      <router-link name="default" :to="'/recepts/'">
-        <BButton variant="outline-primary" @click="handleClick"
-          >View All Recepts
-        </BButton>
-      </router-link>
       <EggTimer />
     </div>
 
@@ -146,12 +168,149 @@
 </template>
 
 <style scoped>
-  img {
-    max-height: 200px;
+  .container-drake {
+    max-width: 80%;
+    margin: auto;
   }
   .flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+  .spaceText {
+    padding-left: 3rem;
+  }
+
+  .receptTitle {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .recept-info {
+    display: inline;
+    max-width: 70%;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: auto;
+    border: 4px solid white;
+    font-size: 1.2rem;
+  }
+
+  /* Originally from www.webinterfacelab.com/snippets/notepad */
+
+  .cover-image {
+    min-height: 13rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 12.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .container-notepad,
+  .container-notepad:before,
+  .container-notepad:after {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(#f6abca 1px, transparent 1px),
+      -webkit-linear-gradient(#f6abca 1px, transparent 1px),
+      -webkit-linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-image: -moz-linear-gradient(#f6abca 1px, transparent 1px),
+      -moz-linear-gradient(#f6abca 1px, transparent 1px),
+      -moz-linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-image: -o-linear-gradient(#f6abca 1px, transparent 1px),
+      -o-linear-gradient(#f6abca 1px, transparent 1px),
+      -o-linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-image: linear-gradient(#f6abca 1px, transparent 1px),
+      linear-gradient(#f6abca 1px, transparent 1px),
+      linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-size: 1px 1px, 1px 1px, 23px 23px;
+    background-repeat: repeat-y, repeat-y, repeat;
+    background-position: 22px 0, 24px 0, 0 50px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15),
+      0 0 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .container-notepad {
+    position: relative;
+    /* margin: 0 auto 3.75rem auto; */
+    margin: auto;
+    padding: 2rem 9%;
+    max-width: 100%;
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    color: #333;
+  }
+
+  .container-notepad p,
+  .container-notepad blockquote {
+    margin-bottom: 1.56rem;
+  }
+
+  .container-notepad :last-child {
+    margin-bottom: 0;
+  }
+
+  .container-notepad:before,
+  .container-notepad:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    left: 0.3rem;
+    right: 0.3rem;
+    margin-top: -0.12rem;
+    max-height: 0.25rem;
+    background-size: 1px 1px, 1px 1px, 0 0;
+  }
+
+  .container-notepad:before {
+    z-index: -2;
+    left: 0.375rem;
+    right: 0.375rem;
+    height: 0.375rem;
+    background-color: #eee;
+  }
+
+  .notepad-heading:before,
+  .notepad-heading:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 1px;
+    right: 1px;
+    height: 0;
+    border-top: 1px dashed #617c90;
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .img-container {
+      height: 22rem;
+    }
+    .container-notepad {
+      max-width: 80%;
+      line-height: 1.8rem;
+    }
+    .recept-info {
+      max-width: 80%;
+      border-radius: 20px;
+      padding: 1rem;
+      margin: auto;
+      border: 4px solid white;
+      font-size: 1.2rem;
+    }
   }
 </style>
