@@ -1,35 +1,35 @@
 <!-- Pratbubbla till draken på förstasidan (intro) -->
 <script setup>
-import { ref, watch } from "vue";
-const input = ref(false),
-  name = ref(null);
+  import { ref, watch } from 'vue'
+  const input = ref(false),
+    name = ref(null)
 
-// if-sats som kollar om det finns ett värde lagrat i localStorage och sparar det i name.value
-if (localStorage.getItem("name") !== null) {
-  input.value = true;
-  name.value = localStorage.getItem("name");
-}
-
-function sendName() {
-  if (name.value === null) {
-    name.value = "kompis";
+  // if-sats som kollar om det finns ett värde lagrat i localStorage och sparar det i name.value
+  if (localStorage.getItem('name') !== null) {
+    input.value = true
+    name.value = localStorage.getItem('name')
   }
-  input.value = true;
-}
 
-// när input-värdet ändras så lagras name.value i localStorage
-watch(input, () => {
-  localStorage.setItem("name", name.value);
-});
+  function sendName() {
+    if (name.value === null) {
+      name.value = 'kompis'
+    }
+    input.value = true
+  }
 
-// Funktion för att starta tal-syntesen
-function speak(text) {
-  console.log("speaking text");
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "sv-SE"; // Ställer in språket till svenska
-  speechSynthesis.speak(utterance);
-}
-speak();
+  // när input-värdet ändras så lagras name.value i localStorage
+  watch(input, () => {
+    localStorage.setItem('name', name.value)
+  })
+
+  // Funktion för att starta tal-syntesen
+  function speak(text) {
+    console.log('speaking text')
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.lang = 'sv-SE' // Ställer in språket till svenska
+    speechSynthesis.speak(utterance)
+  }
+  speak()
 </script>
 
 <template>
@@ -38,58 +38,65 @@ speak();
     <div v-if="input === false">
       Hej, välkommen till mitt kök! Här kan vi laga mat tillsammans som riktiga
       kockar och ha kul på vägen. Men vi börjar med ditt namn. Vad heter du?
-      <input v-model="name" type="text" />
-      <input @click="sendName" type="button" value="Skicka" />
+      <b-form-input
+        class="inputs"
+        v-model="name"
+        placeholder="Skriv in ditt namn"
+      />
+      <BButton class="inputs" @click="sendName" variant="success"
+        >Skicka</BButton
+      >
     </div>
     <div v-else>
       Välkommen {{ name }}! Är du redo för en spännande dag i köket? Nu kör vi!
       <div>
-        <input
+        <BButton
+          class="inputs"
           @click="$router.push('recepts')"
-          type="button"
-          value="Gå till recepten!"
-        />
+          variant="success"
+          >Gå till recepten!</BButton
+        >
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-input {
-  margin-top: 0.5em;
-}
+  .inputs {
+    margin: 0.5em auto 0;
+  }
 
-.bubble {
-  position: relative;
-  font-family: sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  margin: auto;
-  max-width: 90vw;
-  background: #fff;
-  border-radius: 40px;
-  padding: 24px;
-  text-align: center;
-  color: #000;
-}
+  .bubble {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 1em auto;
+    max-width: 700px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+  }
 
-.bubble-bottom-left:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  right: 30px;
-  bottom: -24px;
+  .bubble-bottom-left:before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    right: 30px;
+    bottom: -24px;
 
-  /*the border expands from left to right designing a triangle */
-  border-left: 24px solid #fff;
-  /*the border expands from right to left designing a transparent triangle */
-  /*setting the angle of the pin */
-  border-right: 25px solid transparent;
-  /*the border expands from the top to the bottom designing a   triangle */
-  border-top: 12px solid #fff;
-  /*the border expands from the bottom to the top designing a transparent triangle */
-  /*setting the width of the pin */
-  border-bottom: 20px solid transparent;
-}
+    /*the border expands from left to right designing a triangle */
+    border-left: 24px solid #fff;
+    /*the border expands from right to left designing a transparent triangle */
+    /*setting the angle of the pin */
+    border-right: 25px solid transparent;
+    /*the border expands from the top to the bottom designing a   triangle */
+    border-top: 12px solid #fff;
+    /*the border expands from the bottom to the top designing a transparent triangle */
+    /*setting the width of the pin */
+    border-bottom: 20px solid transparent;
+  }
 </style>

@@ -64,11 +64,10 @@
   h1 {
     color: #219c56;
     margin-left: 0.5em;
-    margin-top: 0.5em;
-    font-size: 3rem;
+    margin-top: 20px;
+    font-size: 4em;
     /** Text shadowing */
     color: #219c56;
-    font-size: 4rem;
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
       0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
       0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
@@ -81,6 +80,7 @@
     justify-content: space-between;
     flex-flow: row;
     align-items: center;
+    z-index: 6;
   }
 
   .logo {
@@ -88,8 +88,8 @@
   }
 
   .divider {
-    margin-top: 2em;
-    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     height: 1px;
     width: 180px;
     background-color: white;
@@ -132,7 +132,7 @@
 
   /* Menykortet där alla länkar står */
   .menuToggle span {
-    position: relative;
+    /* position: relative; */
     display: block;
     width: 33px;
     height: 4px;
@@ -181,7 +181,7 @@
     position: absolute;
     width: 300px;
     padding: 50px;
-    padding-top: 125px;
+    padding-top: 100px;
     background: #219c56;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -190,7 +190,7 @@
   }
 
   .menuItem li {
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 22px;
   }
 
@@ -215,5 +215,11 @@
 
   .menu--right .menuItem li a:hover {
     padding-left: 5px;
+  }
+
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 10vw;
+    }
   }
 </style>

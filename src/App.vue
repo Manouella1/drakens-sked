@@ -2,13 +2,11 @@
   import NavBarMenu from './components/NavBar.vue'
   import ScrollToTopButton from './components/ScrollToTopButton.vue' // kan tas bort
   import Footer from './components/Footer.vue'
-  import ContactForm from '../src/views/contactview.vue'
   export default {
     components: {
       NavBarMenu,
       ScrollToTopButton, //kan tas bort när man inte vill ha knapp på alla sidor
-      Footer,
-      ContactForm,
+      Footer
     }
   }
 </script>
@@ -18,7 +16,7 @@
     <ScrollToTopButton />
 
     <!-- Here print the content of the pages on the DOM -the routes -->
-    <router-view class="test" />
+    <router-view />
 
     <!-- Footer is after the router view as this one print the content of the pages -->
 
@@ -27,12 +25,8 @@
 </template>
 
 <style scoped>
-  .test {
-    flex-grow: 1;
-  }
   .appContainer {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
   }
 </style>

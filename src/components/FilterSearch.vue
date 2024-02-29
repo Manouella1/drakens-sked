@@ -253,9 +253,10 @@
   }
 
   .title {
-    font-family: 'Aladin', cursive;
+    font-family: 'Luckiest Guy', cursive;
     font-size: 1.5em;
     font-weight: bold;
+    letter-spacing: 1px;
   }
 
   #results {
