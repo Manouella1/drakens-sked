@@ -14,7 +14,7 @@
   <img src="../assets/bilder/drake-visar.png" alt="" />
 </template>
 
-<style scopep lang="scss">
+<style scoped lang="scss">
   @import url('https://fonts.googleapis.com/css?family=Dongle');
 
   #Text {

@@ -1,21 +1,28 @@
 <script setup>
-  import { ref } from 'vue'
   import ChatBubble from './ChatBubble.vue'
 </script>
 
 <template>
-  <div class="gloves">
-    <img
-      class="kitchengloves"
-      src="../assets/bilder/kitchenglovespng.png"
-      alt=""
-    />
+  <div class="container">
+    <div class="gloves">
+      <img
+        class="kitchengloves"
+        src="../assets/bilder/kitchenglovespng.png"
+        alt=""
+      />
+    </div>
+    <ChatBubble />
+    <img class="drake" src="../assets/bilder/drake-clear-kitchen.png" alt="" />
   </div>
-  <ChatBubble></ChatBubble>
-  <img class="drake" src="../assets/bilder/drake-clear-kitchen.png" alt="" />
 </template>
 
 <style scoped>
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
   .gloves {
     /* display: flex;
   justify-content: center;
@@ -28,7 +35,7 @@
   }
   .drake {
     border-image-repeat: no-repeat;
-    margin: 0;
-    max-width: 100vw;
+    max-width: 960px;
+    width: 90%;
   }
 </style>

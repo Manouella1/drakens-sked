@@ -40,7 +40,8 @@ export default {
       this.isFavorite = !this.isFavorite
 
       // Hämta alla favoritrecept från localStorage
-      let favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || []
+      let favorites =
+        JSON.parse(localStorage.getItem('favoriteRecipes')) || []
 
       // Kontrollera om receptet redan finns i favoriter
       const index = favorites.findIndex((recipe) => recipe.id === this.id)
@@ -97,17 +98,12 @@ export default {
     </div>
 
     <div class="flex">
-      <!-- time -->
       <p>{{ prepTime }}</p>
-
-      <!-- we still need to add iton the json file -->
       <p>
         {{ iconColor }} <span>{{ iconImage }} </span>
       </p>
-      <!-- Nivå  -->
       <p>{{ level }}</p>
     </div>
-
     <div>
       <h1>{{ title }}</h1>
 
@@ -244,25 +240,19 @@ h1 {
     0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
 }
 
-/* Green lighter */
 .notepad-heading {
   position: relative;
   margin: 0 -23px 14px -35px;
   height: 38px;
-  background: #5eba4b;
+  background: #219c56;
   border-radius: 2px 2px 0 0;
-  background-image: -webkit-linear-gradient(top, #5eba4b, #1f6526);
-  background-image: -moz-linear-gradient(top, #5eba4b, #1f6526);
-  background-image: -o-linear-gradient(top, #5eba4b, #1f6526);
-  background-image: linear-gradient(to bottom, #5eba4b, #1f6526);
-  -webkit-box-shadow: inset 0 1px #3b7f3d, 0 2px 1px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
-  box-shadow: inset 0 1px #3b7f3d, 0 2px 1px rgba(0, 0, 0, 0.4),
+  background-image: #219c56;
+  box-shadow: inset 0 1px #219c56, 0 2px 1px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(0, 0, 0, 0.5), 0 1px #000;
 }
 
 .notepad-heading>h1 {
-  font-family: 'Aladin', cursive;
+  letter-spacing: 3px;
   line-height: 36px;
   font-size: 22px;
   color: #fff;
