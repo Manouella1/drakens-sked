@@ -31,12 +31,13 @@
     background-color: #219c56;
     color: white;
     display: flex;
-    min-height: 100px;
+    min-height: 30px;
     justify-content: space-evenly;
     padding: 1em;
     max-height: 10%;
     width: 100%;
     /* position: absolute; */
+    font-size: 1rem;
   }
 
   #button {
