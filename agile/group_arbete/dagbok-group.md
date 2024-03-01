@@ -4,13 +4,19 @@
 
 ---
 
+# SPRINT 0: Plannering / group Kontrakt / Trello/ User stories /Pith / Box
+
+#### Scrum role: Maja
+
+---
+
 # SPRINT 1:
+
+#### Scrum role: Vanessa
 
 ---
 
 ## Mondagen 19/02
-
-#### Scrum role:
 
 ### Första gruppen Team JSON fil
 
@@ -42,8 +48,6 @@ Vi ska prata om vad vi ska göra, fler ytterligare komponenter att göra.
 ---
 
 ## Tisdag den 20/02
-
-#### Scrum role:
 
 ### Grupp 1 - Filter 🗄️ 📁
 
@@ -90,8 +94,6 @@ Vi är glada över att ha fått tydliga uppgifter att fokusera på och arbeta me
 
 ## Onsdag den 21/02
 
-#### Scrum role:
-
 ## Maja
 
 - Filter, löst! 🥳
@@ -112,8 +114,6 @@ Vi är glada över att ha fått tydliga uppgifter att fokusera på och arbeta me
 ---
 
 ### Torsdag den 22/02
-
-#### Scrum role:
 
 ## Dags Arbete:
 
@@ -174,8 +174,6 @@ Vi är engagerade i att göra en framgångsrik presentation och att förmedla fr
 
 ### Fredag 23/02 Feb
 
-#### Scrum role:
-
 #### Vigan
 
 - Formulär
@@ -212,12 +210,20 @@ Vi är engagerade i att göra en framgångsrik presentation och att förmedla fr
 - Utseendet på alla specifika recept
 - Återanvända komponent --> lika & enkelt (Maja & Vanessa)
 
-### Feedback Lärarna: In process!!
-
----
+### Feedback Jerry
 
 ---
 
 # SPRINT 2:
+
+#### Scrum role: Ursula
+
+---
+
+---
+
+# SPRINT 3:
+
+#### Scrum role: Vigan
 
 ---
