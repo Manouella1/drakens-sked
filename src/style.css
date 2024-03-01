@@ -39,6 +39,7 @@ body {
   background-image: url('./assets/bilder/bakgrund.jpg');
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 /* Title drakens sked */

@@ -8,7 +8,7 @@
   }
 </script>
 <template>
-  <footer>
+  <footer class="fixed-bottom">
     <div class="text-center">
       <b> &copy; Site created by {{ footerText }}</b>
       || Om ni har frågor eller funderingar -
@@ -20,6 +20,13 @@
 </template>
 <style>
   footer {
+    /* align-items: center;
+    background-color: #219c56;
+    color: white;
+    display: flex;
+    min-height: 100px;
+    justify-content: space-evenly;
+    padding: 1em; */
     align-items: center;
     background-color: #219c56;
     color: white;
@@ -27,6 +34,9 @@
     min-height: 100px;
     justify-content: space-evenly;
     padding: 1em;
+    max-height: 10%;
+    width: 100%;
+    /* position: absolute; */
   }
 
   #button {
