@@ -90,7 +90,9 @@
     <!-- Button to turn the pages on mobile -->
     <!-- <button class="turn-page-button" @click="turnPage">Previous Page</button> -->
 
-    <BButton variant="outline-primary" @click="goBack">Go back recept</BButton>
+    <BButton variant="outline-primary" @click="goBack"
+      >Gå tillbaka till recept</BButton
+    >
   </main>
 </template>
 
