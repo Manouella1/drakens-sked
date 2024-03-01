@@ -86,8 +86,8 @@
 
 <template>
   <main class="container">
-    <WelcomeUser class="container-drake" />
     <div v-if="showReceptView">
+      <WelcomeUser class="container-drake" />
       <article class="container-notepad">
         <div class="img-container">
           <img

@@ -61,10 +61,15 @@
 
 <template>
   <main class="container">
-    <h1>
-      Gör så här: (Tap in to the text inside the step page to move the pages)
-    </h1>
-
+    <header>
+      <h1>
+        Gör så här:
+        <span class="sub-text"
+          >-- Tryck på texten inne på stegsidan för att navigera mellan
+          sidorna--</span
+        >
+      </h1>
+    </header>
     <div class="container-book">
       <!-- div space to show the half of the book -->
       <div class="half"></div>
@@ -105,6 +110,13 @@
     list-style: none;
   }
 
+  .sub-text {
+    font-size: 1rem;
+  }
+  header {
+    margin-bottom: 2rem;
+  }
+
   /* Book layout idea taken from CodePen : https://codepen.io/ml394/pen/LBjqBE */
 
   .container-book {
@@ -112,6 +124,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    font-size: 1.5rem;
   }
   .half:nth-child(1) {
     justify-self: right;
@@ -126,14 +139,15 @@
     margin: auto;
     position: absolute;
     /* position on the dom */
-    top: 17rem;
-    left: 50%;
+    top: 30%;
+    left: 45%;
     /* size page */
-    width: 320px;
-    height: 480px;
+    width: 20rem;
+    height: 30rem;
     border: 1px solid black;
-    padding: 24px;
+    padding: 2.6rem;
     transition: transform 2s;
+    font-size: 1rem;
   }
 
   .page.left h2,
@@ -169,22 +183,15 @@
       grid-template-columns: 1fr;
     }
 
-    /* .turn-page-button {
-      display: block;
-      margin-top: 10px;
-    } */
-
     .page {
       /* position on the dom */
-      top: 25rem;
-
+      top: 19rem;
       left: 3.5rem;
       /* size page */
-      width: 300px;
-      height: 480px;
-      border: 1px solid black;
-      padding: 24px;
-      transition: transform 2s;
+      width: 18.75rem;
+      height: 30rem;
+      padding: 1.2rem;
+      font-size: 1.2rem;
     }
     .page.left {
       /* adjust space between page rightand page left */
@@ -192,6 +199,23 @@
     }
     main {
       margin-bottom: 40rem;
+    }
+  }
+  @media (min-width: 2000px) {
+    .page {
+      /* position on the dom */
+      top: 29rem;
+      left: 45%;
+      /* size page */
+      width: 28.75rem;
+      height: 40rem;
+      font-size: 1.5rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    .sub-text {
+      font-size: 1.5rem;
     }
   }
 </style>
