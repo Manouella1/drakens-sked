@@ -82,7 +82,6 @@
               <img :src="`src/assets/stepsBilder/${instruction.image}`" />
               <p>{{ instruction.text }}</p>
 
-              <!-- HERE IS WHAT I WANT TO IMPLEMENT V-if for teh video -->
               <a
                 v-if="instruction.video"
                 :href="instruction.video"
