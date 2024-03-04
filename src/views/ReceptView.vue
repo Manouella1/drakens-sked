@@ -69,8 +69,6 @@
             this.handleClick()
             console.log('inside fwd browser')
           }
-
-          // if on step always is v-if is always false
         }
       }
     },
