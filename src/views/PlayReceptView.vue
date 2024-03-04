@@ -75,25 +75,26 @@
       <div class="half"></div>
 
       <ul>
-        <!-- Reference for develop later -->
-        <!-- {{
-      instructions[1].text
-    }} -->
         <div class="half">
           <li v-for="instruction in instructions" :key="instruction.step">
             <div class="page right">
               <h2>step: {{ instruction.step }}</h2>
               <img :src="`src/assets/stepsBilder/${instruction.image}`" />
               <p>{{ instruction.text }}</p>
-              <a :href="instruction.video" target="_blank">Watch Video</a>
+
+              <!-- HERE IS WHAT I WANT TO IMPLEMENT V-if for teh video -->
+              <a
+                v-if="instruction.video"
+                :href="instruction.video"
+                target="_blank"
+                >Watch Video</a
+              >
               <!-- {{ instruction.video }} -->
             </div>
           </li>
         </div>
       </ul>
     </div>
-    <!-- Button to turn the pages on mobile -->
-    <!-- <button class="turn-page-button" @click="turnPage">Previous Page</button> -->
 
     <BButton variant="outline-primary" @click="goBack"
       >Gå tillbaka till recept</BButton
@@ -216,6 +217,10 @@
     }
     .sub-text {
       font-size: 1.5rem;
+    }
+    .page.left {
+      /* adjust space between page rightand page left */
+      transform: rotateY(179deg) translateX(510px);
     }
   }
 </style>

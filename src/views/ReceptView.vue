@@ -107,9 +107,9 @@
             </div>
             <div>
               <p>
-                PrepTime:{{ selectedMeal.prepTime
+                PrepTime: {{ selectedMeal.prepTime
                 }}<span class="spaceText"
-                  >CookTime:{{ selectedMeal.cookTime }}</span
+                  >CookTime: {{ selectedMeal.cookTime }}</span
                 >
               </p>
             </div>
@@ -121,7 +121,7 @@
                 </li>
               </ul>
             </div>
-            <p>Portioner:{{ selectedMeal.portions }}</p>
+            <p>Portioner: {{ selectedMeal.portions }}</p>
           </div>
         </div>
         <div class="content-text">
