@@ -780,18 +780,18 @@
         {
           "step": 1,
           "text": "Blend banana, berries, and yogurt until smooth.",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg",
+          "image": "id16_step1.jpg",
           "video": "https://www.youtube.com/watch?v=UZl4WhGiJYo"
         },
         {
           "step": 2,
           "text": "Pour the smoothie into a bowl.",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id16_step2.webp"
         },
         {
           "step": 3,
           "text": "Top with your choice of toppings.",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id16_step3.jpg"
         }
       ],
       "level": "Mellan",
@@ -821,33 +821,33 @@
         {
           "step": 1,
           "text": "Hacka löken",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg",
+          "image": "id18_step2.jpg",
           "video": "https://www.youtube.com/watch?v=Rcz1KSR-DIA"
         },
         {
           "step": 2,
           "text": "Skär morötter och potatisar i bitar",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id17_step2.jpg"
         },
         {
           "step": 3,
           "text": "Stek köttfärsen och löken i en kastrull tills köttfärsen är genomstekt",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id17_step3.jpg"
         },
         {
           "step": 4,
           "text": "Tillsätt morötter, potatisar, krossade tomater och buljong",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id18_step4.jpg"
         },
         {
           "step": 5,
           "text": "Låt koka under lock i ca 20 minuter eller tills grönsakerna är mjuka",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id17_step5.jpg"
         },
         {
           "step": 6,
           "text": "Smaka av med salt och peppar",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id17_step6.jpeg"
         }
       ],
       "level": "Avancerad",
@@ -877,33 +877,33 @@
         {
           "step": 1,
           "text": "Koka pastan enligt anvisningarna på förpackningen",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg",
+          "image": "id18_step1.png",
           "video": "https://www.youtube.com/watch?v=I-Okp7QsyhQ"
         },
         {
           "step": 2,
           "text": "Stek lök och vitlök i olja tills de är mjuka",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id18_step2.jpg"
         },
         {
           "step": 3,
           "text": "Tillsätt köttfärsen och stek tills den är genomstekt",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id18_step3.jpg"
         },
         {
           "step": 4,
           "text": "Tillsätt krossade tomater och låt sjuda i några minuter",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id18_step4.jpg"
         },
         {
           "step": 5,
           "text": "Krydda med oregano, salt och peppar",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id18_step5.jpeg"
         },
         {
           "step": 6,
           "text": "Servera köttfärssåsen över den kokta pastan och strö över riven ost",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id18_step6.png"
         }
       ],
       "level": "Lätt",
