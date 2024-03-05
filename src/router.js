@@ -10,59 +10,77 @@ import GamesView from './views/GamesView.vue'
 import HomeView from './views/HomeView.vue'
 import PlayReceptView from './views/PlayReceptView.vue'
 import MyFavoriteReceptsView from './views/MyFavoriteReceptsView.vue'
+import QuizView from './views/QuizView.vue'
+import IntroQuizView from './views/IntroQuizView.vue'
+import PlayDemoView from './views/PlayDemoView.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
     {
+      component: PlayDemoView,
+      path: '/recepts/:id/:step',
+      name: 'Demo'
+    },
+    {
       component: Intro,
       path: '/intro',
-      name: 'Intro',
+      name: 'Intro'
     },
     {
       component: InfoView,
       path: '/information',
-      name: 'Info',
+      name: 'Info'
     },
     {
       component: ContactView,
       path: '/contact',
-      name: 'Contact',
+      name: 'Contact'
     },
     {
       component: AboutView,
       path: '/about',
-      name: 'About',
+      name: 'About'
     },
     {
       component: GamesView,
       path: '/games',
-      name: 'Games',
+      name: 'Games'
     },
     {
       component: MyFavoriteReceptsView,
       path: '/myrecepts',
-      name: 'MyFavoriteRecepts',
+      name: 'MyFavoriteRecepts'
     },
     {
       component: ReceptView,
       path: '/recepts/:receptId', // Dynamic page ':receptId'
       name: 'Recept',
       children: [
-        { path: ':step', component: PlayReceptView, name: 'PlayReceptView' },
-      ],
+        { path: ':step', component: PlayReceptView, name: 'PlayReceptView' }
+      ]
+    },
+    {
+      component: QuizView,
+      path: '/games/quiz',
+      name: 'Quiz'
+    },
+    {
+      component: IntroQuizView,
+      path: '/games/intro-quiz',
+      name: 'IntroQuiz'
     },
 
     {
       component: AllReceptsView,
       path: '/recepts',
-      name: 'Recepts',
+      name: 'Recepts'
     },
 
     {
       component: HomeView,
       path: '/',
-      name: 'Home',
-    },
-  ],
+      name: 'Home'
+    }
+  ]
 })

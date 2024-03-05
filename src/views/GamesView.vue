@@ -1,3 +1,4 @@
+
 <script>
   import MemoryGame from '../components/Memory.vue'
 
@@ -14,12 +15,15 @@
     <h1 id="Text">Vilket spel ska vi spela?</h1>
     <div>
       <button class="bubble-gum">Memory</button>
-      <button class="bubble-gum">Quiz</button>
+
+      <router-link to="/games/intro-quiz">
+        <button class="bubble-gum">Quiz</button>
+      </router-link>
     </div>
   </div>
   <img src="../assets/bilder/drake-visar.png" alt="" />
 
-  <h1>Memory game</h1>
+  Memory game test:
   <MemoryGame />
 </template>
 
