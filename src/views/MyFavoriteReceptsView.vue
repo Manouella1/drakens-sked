@@ -77,15 +77,10 @@ export default {
 </script>
 
 <style scoped>
+h1,
 p {
   font-weight: bold;
   text-align: center;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 200px;
 }
 
 .confirmation {
@@ -131,12 +126,26 @@ button:hover {
   transform: translateX(-50%);
 }
 
-@media (min-width: 600px) {
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+
+.flex {
+  padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+@media (max-width: 800px) {
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
   }
 }
 </style>
