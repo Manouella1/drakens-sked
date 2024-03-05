@@ -30,12 +30,14 @@
     margin-bottom: 2em;
   }
   .kitchengloves {
-    max-width: 20vw;
+    display: none;
+    max-width: 100px;
     margin-left: 2.5em;
   }
   .drake {
     border-image-repeat: no-repeat;
-    max-width: 960px;
+    margin-bottom: 0;
+    max-width: 500px;
     width: 90%;
   }
 </style>

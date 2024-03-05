@@ -19,14 +19,14 @@
     <router-view />
 
     <!-- Footer is after the router view as this one print the content of the pages -->
-
-    <Footer />
   </div>
+  <Footer />
 </template>
 
 <style scoped>
   .appContainer {
     display: flex;
     flex-direction: column;
+    min-height: 89vh;
   }
 </style>
