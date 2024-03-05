@@ -269,18 +269,18 @@
         {
           "step": 1,
           "text": "Lägg alla ingredienser i en mixer",
-          "image": "mixing-ingredients-step.jpg",
+          "image": "id16_step1.jpg",
           "video": "https://www.youtube.com/watch?v=3v-r-Vdq3_o"
         },
         {
           "step": 2,
           "text": "Mixa tills smoothien är jämn och krämig",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id6_step2.jpg"
         },
         {
           "step": 3,
           "text": "Tillsätt honung efter smak om önskas",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id6_step3.jpg"
         }
       ],
 
@@ -315,48 +315,48 @@
         {
           "step": 1,
           "text": "Bryn köttfärsen tills den är genomstekt",
-          "image": "mixing-ingredients-step.jpg",
+          "image": "id7_step1.jpg",
           "video": "https://www.youtube.com/watch?v=aCA_b1ku1dA"
         },
         {
           "step": 2,
           "text": "Tillsätt tacokryddmix och vatten enligt förpackningen",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id17_step3.jpg"
         },
         {
           "step": 3,
           "text": "Tillsätt lök, paprika och majs",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id7_step3.jpg"
         },
         {
           "step": 4,
           "text": "Låt sjuda i några minuter",
-          "image": "showing-how-to-turn.jpg"
+          "image": "id7_step4.jpg"
         },
         {
           "step": 5,
           "text": "Vispa ägg, mjölk, grädde, salt och peppar i en skål",
-          "image": "mixed-berry-pancake.jpg"
+          "image": "pancakes-liquid-dough-preparing-hand.jpg"
         },
         {
           "step": 6,
           "text": "Smörj en pajform och lägg i köttfärsblandningen",
-          "image": "mixed-berry-pancake.jpg"
+          "image": "id7_step6.jpg"
         },
         {
           "step": 7,
           "text": "Häll över äggstanningen",
-          "image": "mixed-berry-pancake.jpg"
+          "image": "id7_step7.jpg"
         },
         {
           "step": 8,
           "text": "Strö över riven ost",
-          "image": "mixed-berry-pancake.jpg"
+          "image": "id7_step8.jpg"
         },
         {
           "step": 9,
           "text": "Grädda i ugnen på 200°C i ca 25 minuter tills pajen stelnat och fått fin färg",
-          "image": "mixed-berry-pancake.jpg"
+          "image": "id7_step9.jpg"
         }
       ],
       "level": "Avancerad",
