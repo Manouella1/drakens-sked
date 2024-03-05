@@ -1,12 +1,6 @@
 
 <script>
-  import MemoryGame from '../components/Memory.vue'
 
-  export default {
-    components: {
-      MemoryGame
-    }
-  }
 </script>
 
 <template>
@@ -14,17 +8,30 @@
   <div class="bubble bubble-bottom-left">
     <h1 id="Text">Vilket spel ska vi spela?</h1>
     <div>
-      <button class="bubble-gum">Memory</button>
 
-      <router-link to="/games/intro-quiz">
-        <button class="bubble-gum">Quiz</button>
-      </router-link>
+      <router-link
+            name="default"
+            :to="'/games/memory'"
+          >
+          <button class="bubble-gum">Memory
+
+      </button>
+          </router-link>
+
+          <router-link
+            name="default"
+            :to="'/games/intro-quiz'"
+          >
+          <button class="bubble-gum">Quiz</button>
+          </router-link>
+
+
+
     </div>
   </div>
   <img src="../assets/bilder/drake-visar.png" alt="" />
 
-  Memory game test:
-  <MemoryGame />
+
 </template>
 
 <style scoped lang="scss">
