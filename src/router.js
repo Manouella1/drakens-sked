@@ -16,21 +16,13 @@ import IntroQuizView from './views/IntroQuizView.vue'
 import PlayDemoView from './views/PlayDemoView.vue'
 import MemoryGameView from './views/MemoryGameView.vue'
 
-
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
-
-
     {
       component: MemoryGameView,
       path: '/games/memory',
       name: 'Memory'
-    },
-    {
-      component: PlayDemoView,
-      path: '/recepts/:id/:step',
-      name: 'Demo'
     },
 
     // {

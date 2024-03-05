@@ -20,10 +20,6 @@
       next()
     },
 
-    // just to check if works
-    // created() {
-    //   console.log('created', this.receptId, this.step)
-    // },
     mounted() {
       console.log('mounted', this.receptId, this.step) // for testing
       this.setupPageInteraction()
@@ -31,8 +27,8 @@
     methods: {
       goBack() {
         this.$router.go(-1) // uses the router to go back
-        // this.$emit('handlePlayReceptBack', (this.showReceptView = true))
-        this.$emit('handlePlayReceptBack') // Not working
+
+        this.$emit('handlePlayReceptBack')
       },
       setupPageInteraction() {
         let $index = 0
@@ -88,7 +84,6 @@
                 target="_blank"
                 >Watch Video</a
               >
-              <!-- {{ instruction.video }} -->
             </div>
           </li>
         </div>
@@ -156,8 +151,6 @@
   }
   .page.left {
     transform: rotateY(179deg) translateX(370px);
-    /* background-image: url('./assets/bilder/drake-hej.png'); */
-    /* color: transparent; */
   }
   .page.left img,
   .page.left a {
@@ -204,7 +197,7 @@
   @media (min-width: 2000px) {
     .page {
       /* position on the dom */
-      top: 29rem;
+      top: 25rem;
       left: 45%;
       /* size page */
       width: 28.75rem;

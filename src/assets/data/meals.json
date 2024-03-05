@@ -120,38 +120,38 @@
         {
           "step": 1,
           "text": "Skär kycklingfilén i bitar",
-          "image": "mixing-ingredients-step.jpg",
+          "image": "id10_step1.jpg",
           "video": "https://www.youtube.com/watch?v=J3etcy2kkto"
         },
         {
           "step": 2,
           "text": "Blanda ströbröd, paprikapulver, vitlökspulver, salt och peppar i en skål",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "mixing-ingredients-step.jpg"
         },
         {
           "step": 3,
           "text": "Vispa ägget i en annan skål",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id11_step2.jpg"
         },
         {
           "step": 4,
           "text": "Doppa kycklingbitarna i ägget och sedan i ströbrödsblandningen tills de är täckta",
-          "image": "showing-how-to-turn.jpg"
+          "image": "id3_step4.jpg"
         },
         {
           "step": 5,
           "text": "Stek kycklingnuggetsen i olja tills de är gyllenbruna och genomstekta",
-          "image": "mixed-berry-pancake.jpg"
+          "image": "id3_step5.jpg"
         },
         {
           "step": 6,
           "text": "Skär morötter, gurka och selleri i stavar",
-          "image": "mixed-berry-pancake.jpg"
+          "image": "id3_step6.jpg"
         },
         {
           "step": 7,
           "text": "Blanda yoghurt med önskade kryddor som dipp",
-          "image": "mixed-berry-pancake.jpg"
+          "image": "id3_step7.jpg"
         }
       ],
       "level": "Mellan",
@@ -183,33 +183,33 @@
         {
           "step": 1,
           "text": "Koka pastan enligt anvisningarna på förpackningen",
-          "image": "mixing-ingredients-step.jpg",
+          "image": "id18_step1.png",
           "video": "https://www.youtube.com/watch?v=rPy-WRAdHC4"
         },
         {
           "step": 2,
           "text": "Stek lök och vitlök i smör tills de är mjuka",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id10_step3.jpg"
         },
         {
           "step": 3,
           "text": "Tillsätt köttfärsen och stek tills den är genomstekt",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id7_step1.jpg"
         },
         {
           "step": 4,
           "text": "Tillsätt krossade tomater och grädde, låt sjuda i några minuter, Smaka av med salt och peppar",
-          "image": "showing-how-to-turn.jpg"
+          "image": "id4_step4.jpg"
         },
         {
           "step": 5,
           "text": "Blanda pastan med köttfärssåsen och lägg i en ugnsform. Strö över riven ost",
-          "image": "mixed-berry-pancake.jpg"
+          "image": "id4_step5.jpg"
         },
         {
           "step": 6,
           "text": "Gratinera i ugnen tills osten är smält och gyllenbrun",
-          "image": "mixed-berry-pancake.jpg"
+          "image": "id5_step6.jpg"
         }
       ],
       "level": "Avancerad",
@@ -231,18 +231,18 @@
         {
           "step": 1,
           "text": "Bred smör på en sida av varje brödskiva",
-          "image": "mixing-ingredients-step.jpg",
+          "image": "id5_step1.jpg",
           "video": "https://www.youtube.com/watch?v=NhuqAwu_vgQ"
         },
         {
           "step": 2,
           "text": "Lägg en ostskiva mellan två brödskivor, med smörsidan utåt",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id5_step2.jpg"
         },
         {
           "step": 3,
           "text": "Grilla smörgåsarna i en stekpanna eller smörgåsjärn tills osten smälter och smörgåsarna är gyllenbruna",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id5_step3.jpg"
         }
       ],
       "level": "Lätt",
