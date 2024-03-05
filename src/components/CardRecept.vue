@@ -15,9 +15,14 @@ export default {
   data() {
     return {
       showConfirmation: false,
-      isFavorite: false, // Boolean för att spåra om receptet är en favorit
+      isFavorite: false, // Initialisera som falskt som standard
       confirmationMessage: '' // Meddelande för bekräftelse
     }
+  },
+  created() {
+    // Kontrollera om receptet är i favoriserad o uppdatera isFavorite därefter (behåller den ifylld)
+    const favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
+    this.isFavorite = favorites.some(recipe => recipe.id === this.id);
   },
   methods: {
     enlargeImage(event) {

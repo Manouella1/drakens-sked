@@ -69,9 +69,14 @@
             this.handleClick()
             console.log('inside fwd browser')
           }
-
-          // if on step always is v-if is always false
         }
+      }
+    },
+    mounted() {
+      // Check if the current route corresponds to PlayReceptView
+      if (this.$route.name === 'PlayReceptView') {
+        this.handleClick()
+        // console.log('inside page load or reload')
       }
     }
   }
@@ -79,8 +84,8 @@
 
 <template>
   <main class="container">
-    <WelcomeUser class="container-drake" />
     <div v-if="showReceptView">
+      <WelcomeUser class="container-drake" />
       <article class="container-notepad">
         <div class="img-container">
           <img
@@ -100,9 +105,9 @@
             </div>
             <div>
               <p>
-                PrepTime:{{ selectedMeal.prepTime
+                PrepTime: {{ selectedMeal.prepTime
                 }}<span class="spaceText"
-                  >CookTime:{{ selectedMeal.cookTime }}</span
+                  >CookTime: {{ selectedMeal.cookTime }}</span
                 >
               </p>
             </div>
@@ -114,7 +119,7 @@
                 </li>
               </ul>
             </div>
-            <p>Portioner:{{ selectedMeal.portions }}</p>
+            <p>Portioner: {{ selectedMeal.portions }}</p>
           </div>
         </div>
         <div class="content-text">
@@ -143,7 +148,7 @@
             :to="'/recepts/' + selectedReceptId + '/steps'"
           >
             <BButton variant="outline-secondary" @click="handleClick"
-              >Play Recept ▶️</BButton
+              >Spela recept ▶️</BButton
             >
           </router-link>
 
@@ -157,7 +162,7 @@
 
           <router-link name="default" :to="'/recepts/'">
             <BButton variant="outline-primary" @click="handleClick"
-              >View All Recepts
+              >Visa alla recept
             </BButton>
           </router-link>
         </div>
@@ -302,6 +307,7 @@
   .buttons {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 1.5rem;
   }
 
   @media only screen and (min-width: 768px) {

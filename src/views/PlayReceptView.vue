@@ -61,36 +61,43 @@
 
 <template>
   <main class="container">
-    <h1>
-      Gör så här: (Tap in to the text inside the step page to move the pages)
-    </h1>
-
+    <header>
+      <h1>
+        Gör så här:
+        <span class="sub-text"
+          >-- Tryck på bilder inne på stegsidan för att navigera mellan
+          sidorna--</span
+        >
+      </h1>
+    </header>
     <div class="container-book">
       <!-- div space to show the half of the book -->
       <div class="half"></div>
 
       <ul>
-        <!-- Reference for develop later -->
-        <!-- {{
-      instructions[1].text
-    }} -->
         <div class="half">
           <li v-for="instruction in instructions" :key="instruction.step">
             <div class="page right">
               <h2>step: {{ instruction.step }}</h2>
               <img :src="`src/assets/stepsBilder/${instruction.image}`" />
               <p>{{ instruction.text }}</p>
-              <a :href="instruction.video" target="_blank">Watch Video</a>
+
+              <a
+                v-if="instruction.video"
+                :href="instruction.video"
+                target="_blank"
+                >Watch Video</a
+              >
               <!-- {{ instruction.video }} -->
             </div>
           </li>
         </div>
       </ul>
     </div>
-    <!-- Button to turn the pages on mobile -->
-    <!-- <button class="turn-page-button" @click="turnPage">Previous Page</button> -->
 
-    <BButton variant="outline-primary" @click="goBack">Go back recept</BButton>
+    <BButton variant="outline-primary" @click="goBack"
+      >Gå tillbaka till recept</BButton
+    >
   </main>
 </template>
 
@@ -103,6 +110,13 @@
     list-style: none;
   }
 
+  .sub-text {
+    font-size: 1rem;
+  }
+  header {
+    margin-bottom: 2rem;
+  }
+
   /* Book layout idea taken from CodePen : https://codepen.io/ml394/pen/LBjqBE */
 
   .container-book {
@@ -110,6 +124,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    font-size: 1.5rem;
   }
   .half:nth-child(1) {
     justify-self: right;
@@ -124,14 +139,15 @@
     margin: auto;
     position: absolute;
     /* position on the dom */
-    top: 17rem;
-    left: 50%;
+    top: 30%;
+    left: 45%;
     /* size page */
-    width: 320px;
-    height: 480px;
+    width: 20rem;
+    height: 30rem;
     border: 1px solid black;
-    padding: 24px;
+    padding: 2.6rem;
     transition: transform 2s;
+    font-size: 1rem;
   }
 
   .page.left h2,
@@ -167,22 +183,15 @@
       grid-template-columns: 1fr;
     }
 
-    /* .turn-page-button {
-      display: block;
-      margin-top: 10px;
-    } */
-
     .page {
       /* position on the dom */
-      top: 25rem;
-
+      top: 19rem;
       left: 3.5rem;
       /* size page */
-      width: 300px;
-      height: 480px;
-      border: 1px solid black;
-      padding: 24px;
-      transition: transform 2s;
+      width: 18.75rem;
+      height: 30rem;
+      padding: 1.2rem;
+      font-size: 1.2rem;
     }
     .page.left {
       /* adjust space between page rightand page left */
@@ -190,6 +199,27 @@
     }
     main {
       margin-bottom: 40rem;
+    }
+  }
+  @media (min-width: 2000px) {
+    .page {
+      /* position on the dom */
+      top: 29rem;
+      left: 45%;
+      /* size page */
+      width: 28.75rem;
+      height: 40rem;
+      font-size: 1.5rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    .sub-text {
+      font-size: 1.5rem;
+    }
+    .page.left {
+      /* adjust space between page rightand page left */
+      transform: rotateY(179deg) translateX(510px);
     }
   }
 </style>

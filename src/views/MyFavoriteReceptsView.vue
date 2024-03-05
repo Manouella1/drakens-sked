@@ -48,7 +48,7 @@ export default {
   methods: {
     // länkar till recepten
     selectRecept(mealId) {
-      // Navigate to ReceptView with the selected mealId
+      // Navigera till ReceptView med selected mealId
       this.$router.push({ name: 'Recept', params: { receptId: mealId } })
     },
     loadFavoriteRecipes() {
@@ -57,17 +57,17 @@ export default {
       this.favoriteRecipes = favorites
     },
     removeFromFavorites(recipeId) {
-      // Remove the recipe from the favoriteRecipes array
+      // Tar bort recipe från favoriteRecipes array
       this.favoriteRecipes = this.favoriteRecipes.filter(recipe => recipe.id !== recipeId);
 
-      // Update localStorage in the background
+      // Upgradera localStorage i bakgrunden
       localStorage.setItem('favoriteRecipes', JSON.stringify(this.favoriteRecipes));
 
-      // Show confirmation message
+      // Visa confirmation meddelande
       this.confirmationMessage = 'Receptet har tagits bort från dina favoriter!';
       this.showConfirmation = true;
 
-      // Hide confirmation message after 3 seconds
+      // Göm confirmation meddelande ef 3 sec
       setTimeout(() => {
         this.showConfirmation = false;
       }, 3000);
@@ -77,15 +77,10 @@ export default {
 </script>
 
 <style scoped>
+h1,
 p {
   font-weight: bold;
   text-align: center;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 200px;
 }
 
 .confirmation {
@@ -131,12 +126,26 @@ button:hover {
   transform: translateX(-50%);
 }
 
-@media (min-width: 600px) {
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+
+.flex {
+  padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+@media (max-width: 800px) {
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
   }
 }
 </style>

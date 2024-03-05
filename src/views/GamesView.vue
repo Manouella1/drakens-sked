@@ -1,5 +1,11 @@
-<script setup>
-  // Här presenterar vi våra spel
+<script>
+  import MemoryGame from '../components/Memory.vue'
+
+  export default {
+    components: {
+      MemoryGame
+    }
+  }
 </script>
 
 <template>
@@ -15,6 +21,9 @@
     </div>
   </div>
   <img src="../assets/bilder/drake-visar.png" alt="" />
+
+  Memory game test:
+  <MemoryGame />
 </template>
 
 <style scoped lang="scss">

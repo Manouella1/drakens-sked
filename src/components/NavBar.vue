@@ -43,13 +43,13 @@
             </router-link>
           </li>
           <div class="divider"></div>
-          <li><router-link to="/recepts">Hem</router-link></li>
-          <li><router-link to="/information">Information</router-link></li>
           <li><router-link to="/intro">Intro</router-link></li>
-          <li><router-link to="/myrecepts">Mina recept</router-link></li>
+          <li><router-link to="/recepts">Alla recept</router-link></li>
+          <li><router-link to="/myrecepts">Favoritrecept</router-link></li>
           <li><router-link to="/games">Spel</router-link></li>
-          <li><router-link to="/contact">Kontakt</router-link></li>
+          <li><router-link to="/information">Information</router-link></li>
           <li><router-link to="/about">Om oss</router-link></li>
+          <li><router-link to="/contact">Kontakt</router-link></li>
         </ul>
       </div>
     </nav>
@@ -97,8 +97,8 @@
 
   .menuToggle {
     display: block;
-    position: relative;
-    top: 50px;
+    margin-right: 0.5em;
+    margin-top: 20px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -120,7 +120,6 @@
     width: 40px;
     height: 32px;
     position: absolute;
-    top: -7px;
     cursor: pointer;
     opacity: 0;
     /* hide this */
@@ -132,7 +131,6 @@
 
   /* Menykortet där alla länkar står */
   .menuToggle span {
-    /* position: relative; */
     display: block;
     width: 33px;
     height: 4px;
@@ -143,9 +141,6 @@
     z-index: 1;
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-
-    /* CHECK IS NOT CORRECT!! */
-    /* background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; */
   }
 
   .menuToggle span:first-child {
@@ -195,16 +190,15 @@
   }
 
   .menu--right .menuToggle {
-    position: fixed;
     right: 0;
   }
 
   .menu--right .menuToggle input {
-    right: 50px;
+    margin-right: 3em;
   }
 
   .menu--right .menuToggle span {
-    right: 50px;
+    margin-right: 3em;
   }
 
   .menu--right .menuItem {
@@ -220,6 +214,14 @@
   @media (max-width: 700px) {
     h1 {
       font-size: 10vw;
+    }
+
+    .menu--right .menuToggle input {
+      margin-right: 1em;
+    }
+
+    .menu--right .menuToggle span {
+      margin-right: 1em;
     }
   }
 </style>
