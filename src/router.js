@@ -12,16 +12,16 @@ import PlayReceptView from './views/PlayReceptView.vue'
 import MyFavoriteReceptsView from './views/MyFavoriteReceptsView.vue'
 import QuizView from './views/QuizView.vue'
 import IntroQuizView from './views/IntroQuizView.vue'
-import PlayDemoView from './views/PlayDemoView.vue'
+// import PlayDemoView from './views/PlayDemoView.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
-    {
-      component: PlayDemoView,
-      path: '/recepts/:id/:step',
-      name: 'Demo'
-    },
+    // {
+    //   component: PlayDemoView,
+    //   path: '/recepts/:id/:step',
+    //   name: 'Demo'
+    // },
     {
       component: Intro,
       path: '/intro',
