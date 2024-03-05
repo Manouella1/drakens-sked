@@ -147,6 +147,14 @@
             >
           </router-link>
 
+          <!--DEMO KNAPP-->
+          <router-link
+            name="default"
+            :to="'/recepts/' + selectedReceptId + '/1'"
+          >
+            <BButton variant="success">Play Demo ▶️</BButton>
+          </router-link>
+
           <router-link name="default" :to="'/recepts/'">
             <BButton variant="outline-primary" @click="handleClick"
               >View All Recepts

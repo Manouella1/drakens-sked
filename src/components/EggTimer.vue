@@ -69,7 +69,7 @@
   })
 </script>
 <template>
-  <h1>hellooo</h1>
+  <h1>Behöver du en timer?</h1>
   <img
     @click="modal = true"
     src="../assets/bilder/klocka.png"
