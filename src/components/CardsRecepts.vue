@@ -54,6 +54,10 @@
 </template>
 
 <style scoped>
+  h1 {
+    text-align: center;
+    margin: 2rem 0;
+  }
   @media (min-width: 600px) {
     .flex {
       display: flex;
@@ -63,10 +67,6 @@
     }
     .content {
       text-align: center;
-    }
-
-    .content h1 {
-      margin: 1.5rem 0;
     }
   }
 </style>
