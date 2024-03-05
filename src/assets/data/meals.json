@@ -606,23 +606,23 @@
         {
           "step": 1,
           "text": "Blanda yoghurt, havregryn, mixad frukt och honung i en skål",
-          "image": "id13_step1.jpg",
+          "image": "id12_step1.jpg",
           "video": "https://www.youtube.com/watch?v=BKFfIPk9n5U"
         },
         {
           "step": 2,
           "text": "Forma små bollar av smeten",
-          "image": "id13_step2.jpg"
+          "image": "id12_step2.jpg"
         },
         {
           "step": 3,
           "text": "Rulla bollarna i kokosflingor",
-          "image": "id13_step3.jpg"
+          "image": "id12_step3.jpg"
         },
         {
           "step": 4,
           "text": "Förvara i kylskåp i minst 30 minuter innan servering",
-          "image": "id13_step4.jpg"
+          "image": "id12_step4.jpg"
         }
       ],
       "level": "Mellan",
@@ -655,12 +655,12 @@
         {
           "step": 3,
           "text": "Koka korven enligt anvisningarna på förpackningen",
-          "image": "id14_step3.jpg"
+          "image": "id13_step3.jpg"
         },
         {
           "step": 4,
           "text": "Servera korven med mos",
-          "image": "id14_step4.jpg"
+          "image": "id1_step4.jpg"
         }
       ],
       "level": "Lätt",
