@@ -606,23 +606,23 @@
         {
           "step": 1,
           "text": "Blanda yoghurt, havregryn, mixad frukt och honung i en skål",
-          "image": "pancakes-liquid-dough-preparing-hand.jpgg",
+          "image": "id13_step1.jpg",
           "video": "https://www.youtube.com/watch?v=BKFfIPk9n5U"
         },
         {
           "step": 2,
           "text": "Forma små bollar av smeten",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id13_step2.jpg"
         },
         {
           "step": 3,
           "text": "Rulla bollarna i kokosflingor",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id13_step3.jpg"
         },
         {
           "step": 4,
           "text": "Förvara i kylskåp i minst 30 minuter innan servering",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id13_step4.jpg"
         }
       ],
       "level": "Mellan",
@@ -644,23 +644,23 @@
         {
           "step": 1,
           "text": "Koka potatisen tills den är mjuk",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg",
+          "image": "id19_step1.png",
           "video": "https://www.youtube.com/watch?v=qqizDj33A48"
         },
         {
           "step": 2,
           "text": "Mosa potatisen och blanda med smör och mjölk till önskad konsistens",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id19_step2.jpg"
         },
         {
           "step": 3,
           "text": "Koka korven enligt anvisningarna på förpackningen",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id14_step3.jpg"
         },
         {
           "step": 4,
           "text": "Servera korven med mos",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id14_step4.jpg"
         }
       ],
       "level": "Lätt",
@@ -685,13 +685,13 @@
         {
           "step": 1,
           "text": "Skär frukten i bitar och lägg i en skål",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg",
+          "image": "id14_step1.jpg",
           "video": "https://www.youtube.com/watch?v=FYSsjY7HcxE"
         },
         {
           "step": 2,
           "text": "Häll vaniljsås över frukten",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id14_step2.jpg"
         }
       ],
       "level": "Lätt",
@@ -732,27 +732,27 @@
         {
           "step": 3,
           "text": "Stek löken och korven i en stekpanna tills de är gyllenbruna",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id15_step2.jpg"
         },
         {
           "step": 4,
           "text": "Tillsätt krossade tomater och låt sjuda i några minuter",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id18_step4.jpg"
         },
         {
           "step": 5,
           "text": "Tillsätt grädde och kryddor, låt sjuda i ca 10 minuter",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id15_step5.jpg"
         },
         {
           "step": 6,
           "text": "Koka ris enligt anvisningarna på förpackningen",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id15_step6.jpg"
         },
         {
           "step": 7,
           "text": "Servera korv stroganoff med ris",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id15_step7.jpg"
         }
       ],
       "level": "Mellan",

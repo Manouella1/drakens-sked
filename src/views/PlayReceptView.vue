@@ -65,7 +65,7 @@
       <h1>
         Gör så här:
         <span class="sub-text"
-          >-- Tryck på texten inne på stegsidan för att navigera mellan
+          >-- Tryck på bilder inne på stegsidan för att navigera mellan
           sidorna--</span
         >
       </h1>
