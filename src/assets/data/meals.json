@@ -385,7 +385,7 @@
         {
           "step": 1,
           "text": "Mosa bananerna i en skål.",
-          "image": "mixing-ingredients-step.jpg",
+          "image": "id8_step1.jpg",
           "video": "https://www.youtube.com/watch?v=k8ZZf0eTql4"
         },
         {
@@ -396,7 +396,7 @@
         {
           "step": 3,
           "text": "Värm upp smör eller olja i en stekpanna på medelhög värme.",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id8_step3.jpg"
         },
         {
           "step": 4,
@@ -428,23 +428,23 @@
         {
           "step": 1,
           "text": "Rulla ut pizzadegen och skär ut små rundlar",
-          "image": "mixing-ingredients-step.jpg",
+          "image": "id9_step1.jpg",
           "video": "https://www.youtube.com/watch?v=p9Iuq7i5QPw"
         },
         {
           "step": 2,
           "text": "Bred tomatsås på varje rundel",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id9_step2.jpg"
         },
         {
           "step": 3,
           "text": "Strö över riven ost och lägg på önskade pålägg",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id9_step3.jpg"
         },
         {
           "step": 4,
           "text": "Grädda i ugnen enligt anvisningarna på pizzadegen tills pizzorna är gyllenbruna och osten smält",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id9_step4.jpg"
         }
       ],
       "level": "Mellan",
@@ -476,48 +476,48 @@
         {
           "step": 1,
           "text": "Skär kycklingfilén i bitar",
-          "image": "kycklinggryta_step1.jpg",
+          "image": "id10_step1.jpg",
           "video": "https://www.youtube.com/watch?v=KiMYHWzgBiE"
         },
         {
           "step": 2,
           "text": "Stek kycklingen i smör tills den är genomstekt",
-          "image": "kycklinggryta_step2.jpg"
+          "image": "id10_step2.jpg"
         },
         {
           "step": 3,
           "text": "Tillsätt hackad lök och vitlök och låt steka tills löken är mjuk",
-          "image": "kycklinggryta_step3.jpg"
+          "image": "id10_step3.jpg"
         },
         {
           "step": 4,
           "text": "Tillsätt paprika och zucchini och låt steka i några minuter",
-          "image": "kycklinggryta_step4.jpg"
+          "image": "id10_step4.jpg"
         },
         {
           "step": 5,
           "text": "Häll i krossade tomater och grädde",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id10_step5.jpg"
         },
         {
           "step": 6,
           "text": "Krydda efter smak med paprikapulver, oregano, salt och peppar",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id10_step6.jpg"
         },
         {
           "step": 7,
           "text": "Låt sjuda i ca 15-20 minuter",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id10_step7.jpg"
         },
         {
           "step": 8,
           "text": "Koka ris enligt anvisningarna på förpackningen",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id15_step6.jpg"
         },
         {
           "step": 9,
           "text": "Servera kycklinggrytan med ris",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id10_step8.jpg"
         }
       ],
       "level": "Avancerad",
@@ -547,38 +547,38 @@
         {
           "step": 1,
           "text": "Hacka tomat, paprika och lök",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg",
+          "image": "id11_step1.jpg",
           "video": "https://www.youtube.com/watch?v=GrAaIvgl8kg"
         },
         {
           "step": 2,
           "text": "Vispa äggen i en skål och blanda med salt och peppar",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id11_step2.jpg"
         },
         {
           "step": 3,
           "text": "Smält smör i en stekpanna på medelvärme",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id11_step3.jpg"
         },
         {
           "step": 4,
           "text": "Häll äggsmeten i stekpannan",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id11_step4.jpg"
         },
         {
           "step": 5,
           "text": "Strö över hackade grönsaker och riven ost",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id11_step5.jpg"
         },
         {
           "step": 6,
           "text": "Stek tills omeletten är genomstekt och osten smält",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id11_step6.jpg"
         },
         {
           "step": 7,
           "text": "Vik omeletten dubbel och servera",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id11_step7.jpg"
         }
       ],
       "level": "Lätt",
