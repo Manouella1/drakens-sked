@@ -36,7 +36,7 @@
         <span></span>
         <span></span>
         <span></span>
-        <ul class="menuItem">
+        <ul v-if="isChecked" class="menuItem">
           <li>
             <router-link to="/recepts">
               <img class="logo" src="../assets/bilder/head.png" alt="logo" />
@@ -80,7 +80,7 @@
     justify-content: space-between;
     flex-flow: row;
     align-items: center;
-    z-index: 6;
+    z-index: 20;
   }
 
   .logo {
@@ -97,6 +97,7 @@
 
   .menuToggle {
     display: block;
+    position: relative;
     margin-right: 0.5em;
     margin-top: 20px;
     z-index: 1;
@@ -120,6 +121,8 @@
     width: 40px;
     height: 32px;
     position: absolute;
+    /* top: -7px; */
+
     cursor: pointer;
     opacity: 0;
     /* hide this */
@@ -131,6 +134,7 @@
 
   /* Menykortet där alla länkar står */
   .menuToggle span {
+    position: relative;
     display: block;
     width: 33px;
     height: 4px;
@@ -190,20 +194,23 @@
   }
 
   .menu--right .menuToggle {
+    /* position: fixed; */
     right: 0;
   }
 
   .menu--right .menuToggle input {
+    /* right: 50px; */
     margin-right: 3em;
   }
 
   .menu--right .menuToggle span {
+    /* right: 50px; */
     margin-right: 3em;
   }
 
   .menu--right .menuItem {
     right: 0;
-    margin: -100px 0 0 0;
+    margin: -100px -10px 0 0;
     transform: translate(100%, 0);
   }
 

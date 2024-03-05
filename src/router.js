@@ -12,11 +12,27 @@ import PlayReceptView from './views/PlayReceptView.vue'
 import MyFavoriteReceptsView from './views/MyFavoriteReceptsView.vue'
 import QuizView from './views/QuizView.vue'
 import IntroQuizView from './views/IntroQuizView.vue'
-// import PlayDemoView from './views/PlayDemoView.vue'
+
+import PlayDemoView from './views/PlayDemoView.vue'
+import MemoryGameView from './views/MemoryGameView.vue'
+
 
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
+
+
+    {
+      component: MemoryGameView,
+      path: '/games/memory',
+      name: 'Memory'
+    },
+    {
+      component: PlayDemoView,
+      path: '/recepts/:id/:step',
+      name: 'Demo'
+    },
+
     // {
     //   component: PlayDemoView,
     //   path: '/recepts/:id/:step',

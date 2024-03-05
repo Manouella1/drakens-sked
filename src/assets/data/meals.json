@@ -385,7 +385,7 @@
         {
           "step": 1,
           "text": "Mosa bananerna i en skål.",
-          "image": "mixing-ingredients-step.jpg",
+          "image": "id8_step1.jpg",
           "video": "https://www.youtube.com/watch?v=k8ZZf0eTql4"
         },
         {
@@ -396,7 +396,7 @@
         {
           "step": 3,
           "text": "Värm upp smör eller olja i en stekpanna på medelhög värme.",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id8_step3.jpg"
         },
         {
           "step": 4,
@@ -428,23 +428,23 @@
         {
           "step": 1,
           "text": "Rulla ut pizzadegen och skär ut små rundlar",
-          "image": "mixing-ingredients-step.jpg",
+          "image": "id9_step1.jpg",
           "video": "https://www.youtube.com/watch?v=p9Iuq7i5QPw"
         },
         {
           "step": 2,
           "text": "Bred tomatsås på varje rundel",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id9_step2.jpg"
         },
         {
           "step": 3,
           "text": "Strö över riven ost och lägg på önskade pålägg",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id9_step3.jpg"
         },
         {
           "step": 4,
           "text": "Grädda i ugnen enligt anvisningarna på pizzadegen tills pizzorna är gyllenbruna och osten smält",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id9_step4.jpg"
         }
       ],
       "level": "Mellan",

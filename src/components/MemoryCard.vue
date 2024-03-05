@@ -23,7 +23,7 @@ export default {
     @click="handleClick"
   >
     <div class="card-inner">
-      <div class="card-front"></div>
+      <div class="card-front" />
       <div class="card-back">{{ card.value }}</div>
       <div v-if="card.matched" class="match-text">Match</div>
     </div>

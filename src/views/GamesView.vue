@@ -1,29 +1,19 @@
-<script>
-  import MemoryGame from '../components/Memory.vue'
-
-  export default {
-    components: {
-      MemoryGame
-    }
-  }
-</script>
+<script></script>
 
 <template>
   <div />
   <div class="bubble bubble-bottom-left">
     <h1 id="Text">Vilket spel ska vi spela?</h1>
     <div>
-      <BButton variant="success">Memory</BButton>
-
+      <router-link name="default" :to="'/games/memory'">
+        <BButton variant="success">Memory</BButton>
+      </router-link>
       <router-link to="/games/intro-quiz">
         <BButton class="button" variant="success">Quiz</BButton>
       </router-link>
     </div>
   </div>
   <img src="../assets/bilder/drake-visar.png" alt="" />
-
-  Memory game test:
-  <MemoryGame />
 </template>
 
 <style scoped lang="scss">
