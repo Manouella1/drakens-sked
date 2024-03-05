@@ -28,8 +28,16 @@
     const utterance = new SpeechSynthesisUtterance(text)
     utterance.lang = 'sv-SE' // Ställer in språket till svenska
     speechSynthesis.speak(utterance)
+    // utterance.speak('hej')
   }
-  speak()
+  if (name.value === null) {
+    speak(`Hej välkommen till mitt kök! Här kan vi laga mat tillsammans som riktiga
+      kockar och ha kul på vägen. Men vi börjar med ditt namn. Vad heter du?`)
+  } else {
+    speak(
+      `Välkommen ${name.value}! Är du redo för en spännande dag i köket? Nu kör vi!?`
+    )
+  }
 </script>
 
 <template>

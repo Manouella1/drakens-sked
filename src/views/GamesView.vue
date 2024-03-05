@@ -1,4 +1,3 @@
-
 <script>
   import MemoryGame from '../components/Memory.vue'
 
@@ -14,10 +13,10 @@
   <div class="bubble bubble-bottom-left">
     <h1 id="Text">Vilket spel ska vi spela?</h1>
     <div>
-      <button class="bubble-gum">Memory</button>
+      <BButton variant="success">Memory</BButton>
 
       <router-link to="/games/intro-quiz">
-        <button class="bubble-gum">Quiz</button>
+        <BButton class="button" variant="success">Quiz</BButton>
       </router-link>
     </div>
   </div>
@@ -29,6 +28,10 @@
 
 <style scoped lang="scss">
   @import url('https://fonts.googleapis.com/css?family=Dongle');
+
+  .button {
+    margin: 20px;
+  }
 
   #Text {
     color: #219c56;

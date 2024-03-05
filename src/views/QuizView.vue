@@ -282,7 +282,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
   .draken {
-    width: 20%;
+    width: 70%;
   }
 
   /* Chat bubble */
