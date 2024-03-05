@@ -24,6 +24,14 @@ export default createRouter({
       path: '/games/memory',
       name: 'Memory'
     },
+<<<<<<< HEAD
+=======
+    // {
+    //   component: PlayDemoView,
+    //   path: '/recepts/:id/:step',
+    //   name: 'Demo'
+    // },
+>>>>>>> f08926435762288a878cadc899a34e63151f1d7f
 
     // {
     //   component: PlayDemoView,
