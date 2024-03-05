@@ -1,4 +1,5 @@
 <script>
+  import MemoryGame from './views/GamesView.vue'
   import NavBarMenu from './components/NavBar.vue'
   import ScrollToTopButton from './components/ScrollToTopButton.vue' // kan tas bort
   import Footer from './components/Footer.vue'
@@ -6,7 +7,9 @@
     components: {
       NavBarMenu,
       ScrollToTopButton, //kan tas bort när man inte vill ha knapp på alla sidor
-      Footer
+      Footer,
+      MemoryGame,
+
     }
   }
 </script>
@@ -14,6 +17,8 @@
   <div class="appContainer">
     <NavBarMenu />
     <ScrollToTopButton />
+    <MemoryGame />
+    <!-- ta bort denna -->
 
     <!-- Here print the content of the pages on the DOM -the routes -->
     <router-view />
