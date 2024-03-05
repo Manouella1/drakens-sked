@@ -19,7 +19,7 @@
   </div>
   <img src="../assets/bilder/drake-visar.png" alt="" />
 
-  Memory game test:
+  <h1>Memory game</h1>
   <MemoryGame />
 </template>
 

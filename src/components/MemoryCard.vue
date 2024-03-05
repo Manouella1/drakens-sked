@@ -31,23 +31,6 @@ export default {
 </template>
 
 
-<script>
-export default {
-  name: 'MemoryCard',
-  props: {
-    card: {
-      type: Object,
-      required: true
-    }
-  },
-  methods: {
-    handleClick() {
-      this.$emit('click')
-    }
-  }
-}
-</script>
-
 <style scoped>
 .card {
   width: 100px;
