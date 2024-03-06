@@ -289,7 +289,11 @@
   @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
   .draken {
-    width: 70%;
+    width: 30%;
+    position: fixed;
+    z-index: 20;
+    bottom: 25px;
+    right: 25px;
   }
 
   /* Chat bubble */
@@ -340,7 +344,7 @@
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-    width: 400px;
+    width: 370px;
     font-family: 'Patrick Hand';
   }
   .post-it {

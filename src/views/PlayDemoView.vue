@@ -5,50 +5,48 @@
 
   const route = useRoute()
   const router = useRouter()
-  const recipe = ref(null)
-  const step = ref(null)
-  const currentStep = ref(null)
-  const Image = ref(null)
-  const Video = ref(false)
+  const recipe = ref(null) // Hela receptobjektet
+  const step = ref(null) // Steg i route.params
+  const currentStep = ref(null) // Nuvarande steg i receptet med instruktioner osv
+  const Image = ref(null) // Bild från nuvarande steg
+  const Video = ref(false) // Om video finns
 
+  // Hämtar nuvarande recept från route.params och sparar i variabeln recipe
   GetId(Number(route.params.id))
-  // Number(route.params.step))
   function GetId(id) {
     for (let j = 0; j < meals.recipes.length; j++) {
       if (meals.recipes[j].id === id) {
         recipe.value = meals.recipes[j]
-        console.log(recipe.value)
       }
     }
   }
 
+  // Hämtar nuvarande steg från route.params och sparar nuvarande steg i currentStep och
+  // behandlar bild och om video finns
   step.value = Number(route.params.step)
   GetSteps(step.value)
-
   function GetSteps(step) {
     for (let j = 0; j < recipe.value.instructions.length; j++) {
       if (recipe.value.instructions[j].step === step) {
-        console.log('steg: ' + recipe.value.instructions[j].step)
-        console.log(recipe.value.instructions[j].text)
         currentStep.value = recipe.value.instructions[j]
-        console.log('hallå?' + currentStep.value.text)
         Image.value = recipe.value.instructions[j].image
-        console.log('image?', Image.value)
         Video.value = false
         if (
           currentStep.value.video !== null &&
           currentStep.value.video !== undefined
         ) {
           Video.value = true
-          console.log(currentStep.value.video)
         }
       }
     }
   }
+
+  // Funktion för att lämna PlayDemo och gå tillbaka till receptet
   function GoBack() {
     router.push(`/recepts/${recipe.value.id}`)
   }
 
+  // Watch som håller koll på när step ändrar sig
   watch(
     () => step.value,
     () => {
@@ -58,7 +56,6 @@
   )
 </script>
 <template>
-  hej
   <BButton variant="success" @click="GoBack">X</BButton>
   <BButton variant="success" @click="step--" :disabled="step <= 1">{{
     step
