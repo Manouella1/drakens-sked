@@ -46,63 +46,54 @@
         }
       },
 
-      methods: {
-        shuffleCards() {
-          this.cards = [...this.mainCards] // Starta om kort till mainCards
-          for (let i = this.cards.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1))
-            ;[this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]]
-          }
-        },
-        flipCard(index) {
-          if (this.flippedCards.length < 2 && !this.cards[index].flipped) {
-            this.cards[index].flipped = true
-            this.flippedCards.push(index)
+      flipCard(index) {
+        if (this.flippedCards.length < 2 && !this.cards[index].flipped) {
+          this.cards[index].flipped = true
+          this.flippedCards.push(index)
 
-            if (this.flippedCards.length === 2) {
-              this.checkMatch()
-            }
+          if (this.flippedCards.length === 2) {
+            this.checkMatch()
           }
-        },
-        checkMatch() {
-          const [index1, index2] = this.flippedCards
-          if (this.cards[index1].value === this.cards[index2].value) {
-            setTimeout(() => {
-              this.cards[index1].matched = true
-              this.cards[index2].matched = true
-            }, 500)
-          } else {
-            setTimeout(() => {
-              this.cards[index1].flipped = false
-              this.cards[index2].flipped = false
-            }, 500)
-          }
-          this.totalTry++
-
-          this.flippedCards = []
-        },
-        restartGame() {
-          this.cards.forEach((card) => {
-            card.flipped = false
-            card.matched = false
-          })
-
-          this.flippedCards = []
-          this.shuffleCards()
-          this.totalTry = 0
         }
       },
+      checkMatch() {
+        const [index1, index2] = this.flippedCards
+        if (this.cards[index1].value === this.cards[index2].value) {
+          setTimeout(() => {
+            this.cards[index1].matched = true
+            this.cards[index2].matched = true
+          }, 500)
+        } else {
+          setTimeout(() => {
+            this.cards[index1].flipped = false
+            this.cards[index2].flipped = false
+          }, 500)
+        }
+        this.totalTry++
 
-      mounted() {
+        this.flippedCards = []
+      },
+      restartGame() {
+        this.cards.forEach((card) => {
+          card.flipped = false
+          card.matched = false
+        })
+
+        this.flippedCards = []
         this.shuffleCards()
-      },
-      computed: {
-        isGameComplete() {
-          return (
-            this.mainCards.length ===
-            this.mainCards.filter((card) => card.matched).length
-          )
-        }
+        this.totalTry = 0
+      }
+    },
+
+    mounted() {
+      this.shuffleCards()
+    },
+    computed: {
+      isGameComplete() {
+        return (
+          this.mainCards.length ===
+          this.mainCards.filter((card) => card.matched).length
+        )
       }
     }
   }
