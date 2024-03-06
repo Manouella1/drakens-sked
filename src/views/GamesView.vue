@@ -2,15 +2,15 @@
 
 <template>
   <div class="container">
-    <div class="space"></div>
+    <div class="space" />
     <div class="bubble bubble-bottom-left">
       <h1 id="Text">Vilket spel ska vi spela?</h1>
       <div>
         <router-link name="default" :to="'/games/memory'">
-          <BButton variant="success">Memory</BButton>
+          <a href="/"><button class="bn29">Memory</button></a>
         </router-link>
         <router-link to="/games/intro-quiz">
-          <BButton class="button" variant="success">Quiz</BButton>
+          <a href="/"><button class="bn29">Quiz</button></a>
         </router-link>
       </div>
     </div>
@@ -26,7 +26,7 @@
   }
 
   #Text {
-    color: #219c56;
+    color: #ee4f7a;
     padding: 0.5em;
   }
 
@@ -109,7 +109,65 @@
     /*setting the width of the pin */
     border-bottom: 20px solid transparent;
   }
+  /***************** KNAPP *********** */
+  .bn29 {
+    border: none;
+    padding: 0.8em 2.5em;
+    outline: none;
+    color: white;
+    font-style: 1.2em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+    margin: 20px;
+  }
 
+  .bn29:before,
+  .bn29:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 105%;
+    height: 105%;
+    content: '';
+    z-index: -2;
+    background-size: 400% 400%;
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+  }
+
+  .bn29:before {
+    -webkit-filter: blur(7px);
+    filter: blur(7px);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-animation: pulse 10s infinite ease;
+    animation: pulse 10s infinite ease;
+  }
+
+  .bn29:after {
+    -webkit-filter: blur(0.3px);
+    filter: blur(0.3px);
+  }
+
+  .bn29:hover:before {
+    width: 115%;
+    height: 115%;
+  }
   @media (max-width: 500px) {
     #Text {
       padding: 0;
