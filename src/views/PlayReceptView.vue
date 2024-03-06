@@ -65,10 +65,10 @@
           sidorna--</span
         >
       </h1>
-      <div>
+      <div class="gif-draken">
         <img
-          class="img-fluid"
-          src="src/assets/drake-animationV2.gif"
+          class="img-fluid resizable-gif"
+          src="../assets/drake-animationV2.gif"
           alt="animation Drake"
         />
       </div>
@@ -104,7 +104,17 @@
 </template>
 
 <style scoped>
-  img {
+  .gif-draken {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .resizable-gif {
+    width: 200px;
+    height: auto;
+  }
+
+  .half img {
     max-height: 200px;
   }
 
@@ -142,7 +152,7 @@
     position: absolute;
     /* position on the dom */
     top: 30%;
-    left: 45%;
+    left: 48.5%;
     /* size page */
     width: 20rem;
     height: 30rem;
@@ -157,7 +167,7 @@
     color: transparent;
   }
   .page.left {
-    transform: rotateY(179deg) translateX(370px);
+    transform: rotateY(179deg) translateX(340px);
   }
   .page.left img,
   .page.left a {
@@ -200,12 +210,15 @@
     main {
       margin-bottom: 40rem;
     }
+    .gif-draken {
+      display: none;
+    }
   }
   @media (min-width: 2000px) {
     .page {
       /* position on the dom */
       top: 25rem;
-      left: 45%;
+      left: 55%;
       /* size page */
       width: 28.75rem;
       height: 40rem;
@@ -219,7 +232,7 @@
     }
     .page.left {
       /* adjust space between page rightand page left */
-      transform: rotateY(179deg) translateX(510px);
+      transform: rotateY(179deg) translateX(500px);
     }
   }
 </style>
