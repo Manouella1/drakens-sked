@@ -1,19 +1,21 @@
 <script></script>
 
 <template>
-  <div />
-  <div class="bubble bubble-bottom-left">
-    <h1 id="Text">Vilket spel ska vi spela?</h1>
-    <div>
-      <router-link name="default" :to="'/games/memory'">
-        <BButton variant="success">Memory</BButton>
-      </router-link>
-      <router-link to="/games/intro-quiz">
-        <BButton class="button" variant="success">Quiz</BButton>
-      </router-link>
+  <div class="container">
+    <div class="space"></div>
+    <div class="bubble bubble-bottom-left">
+      <h1 id="Text">Vilket spel ska vi spela?</h1>
+      <div>
+        <router-link name="default" :to="'/games/memory'">
+          <BButton variant="success">Memory</BButton>
+        </router-link>
+        <router-link to="/games/intro-quiz">
+          <BButton class="button" variant="success">Quiz</BButton>
+        </router-link>
+      </div>
     </div>
+    <img src="../assets/bilder/drake-visar.png" alt="" />
   </div>
-  <img src="../assets/bilder/drake-visar.png" alt="" />
 </template>
 
 <style scoped lang="scss">
@@ -25,10 +27,27 @@
 
   #Text {
     color: #219c56;
+    padding: 0.5em;
   }
 
-  div {
-    margin-bottom: 30px;
+  // div {
+  //   margin-bottom: 30px;
+  // }
+
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 77vh;
+  }
+
+  .space {
+    flex-grow: 1;
+  }
+
+  img {
+    width: 90%;
+    max-width: 500px;
   }
 
   /* Knapp styles*/
@@ -66,7 +85,7 @@
     max-width: 100vw;
     background: #fff;
     border-radius: 40px;
-    padding: 50px;
+    padding: 1em;
     text-align: center;
     color: #000;
   }
@@ -89,5 +108,11 @@
     /*the border expands from the bottom to the top designing a transparent triangle */
     /*setting the width of the pin */
     border-bottom: 20px solid transparent;
+  }
+
+  @media (max-width: 500px) {
+    #Text {
+      padding: 0;
+    }
   }
 </style>
