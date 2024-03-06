@@ -105,16 +105,6 @@
 </template>
 
 <style scoped>
-  .gif-draken {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
-  .resizable-gif {
-    width: 200px;
-    height: auto;
-  }
-
   .half img {
     max-height: 200px;
   }
@@ -215,8 +205,8 @@
     main {
       margin-bottom: 40rem;
     }
-    .gif-draken {
-      display: none;
+    .page.left {
+      background-image: none;
     }
   }
   @media (min-width: 2000px) {
