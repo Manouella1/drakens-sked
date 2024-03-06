@@ -3,6 +3,8 @@
   import { ref, watch } from 'vue'
   const input = ref(false),
     name = ref(null)
+  const isChecked = ref(false) // Checkbox ljud knappen
+  const isSpeaking = ref(true)
 
   // if-sats som kollar om det finns ett värde lagrat i localStorage och sparar det i name.value
   if (localStorage.getItem('name') !== null) {
@@ -22,21 +24,44 @@
     localStorage.setItem('name', name.value)
   })
 
-  // Funktion för att starta tal-syntesen
-  function speak(text) {
-    console.log('speaking text')
-    const utterance = new SpeechSynthesisUtterance(text)
-    utterance.lang = 'sv-SE' // Ställer in språket till svenska
-    speechSynthesis.speak(utterance)
-    // utterance.speak('hej')
+  //********************************************************************** */
+  //************** */ ALLA FUNKTIONER NEDANFÖR ÄR FÖR TALANDET *****************
+  //******************************************************************** */
+  // if-sats som kollar om det finns ett värde lagrat i localStorage och sparar det i name.value
+
+  function toggleSpeech() {
+    isSpeaking.value = !isSpeaking.value // Växlar talstatus
+    if (isSpeaking.value) {
+      // Startar tal baserat på namnvärdet
+      speakText()
+    } else {
+      speechSynthesis.cancel() // Stoppar allt tal
+    }
   }
-  if (name.value === null) {
-    speak(`Hej välkommen till mitt kök! Här kan vi laga mat tillsammans som riktiga
-      kockar och ha kul på vägen. Men vi börjar med ditt namn. Vad heter du?`)
-  } else {
-    speak(
-      `Välkommen ${name.value}! Är du redo för en spännande dag i köket? Nu kör vi!?`
-    )
+
+  function speakText() {
+    const text =
+      name.value === null
+        ? `Hej välkommen till mitt kök! Här kan vi laga mat tillsammans som riktiga
+      kockar och ha kul på vägen. Men vi börjar med ditt namn. Vad heter du?`
+        : `Välkommen ${name.value}! Är du redo för en spännande dag i köket? Nu kör vi!?`
+
+    speak(text)
+  }
+
+  function speak(text) {
+    if (isSpeaking.value) {
+      // Kontrollerar om tal är aktiverat innan det startar
+      console.log('speaking text')
+      const utterance = new SpeechSynthesisUtterance(text)
+      utterance.lang = 'sv-SE'
+      speechSynthesis.speak(utterance)
+    }
+  }
+
+  // Startar tal automatiskt baserat på namnvärdet vid inladdning
+  if (name.value === null || name.value) {
+    speakText()
   }
 </script>
 
