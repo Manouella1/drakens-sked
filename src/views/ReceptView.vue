@@ -147,21 +147,21 @@
             name="default"
             :to="'/recepts/' + selectedReceptId + '/steps'"
           >
-            <BButton variant="outline-secondary" @click="handleClick"
+            <BButton variant="success" @click="handleClick"
               >Spela recept ▶️</BButton
             >
           </router-link>
 
           <!--DEMO KNAPP-->
-          <router-link
+          <!-- <router-link
             name="default"
             :to="'/recepts/' + selectedReceptId + '/1'"
           >
             <BButton variant="success">Play Demo ▶️</BButton>
-          </router-link>
+          </router-link> -->
 
           <router-link name="default" :to="'/recepts/'">
-            <BButton variant="outline-primary" @click="handleClick"
+            <BButton variant="outline-success" @click="handleClick"
               >Visa alla recept
             </BButton>
           </router-link>

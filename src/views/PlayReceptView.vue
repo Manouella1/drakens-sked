@@ -100,9 +100,7 @@
       </ul>
     </div>
 
-    <BButton variant="variant-succes" @click="goBack"
-      >Gå tillbaka till recept</BButton
-    >
+    <BButton variant="success" @click="goBack">Gå tillbaka till recept</BButton>
   </main>
 </template>
 
