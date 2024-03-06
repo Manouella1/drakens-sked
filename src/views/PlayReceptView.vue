@@ -82,7 +82,10 @@
           <li v-for="instruction in instructions" :key="instruction.step">
             <div class="page right">
               <h2>step: {{ instruction.step }}</h2>
-              <img :src="`src/assets/stepsBilder/${instruction.image}`" />
+              <img
+                class="img-recept"
+                :src="`src/assets/stepsBilder/${instruction.image}`"
+              />
               <p>{{ instruction.text }}</p>
 
               <a
@@ -168,15 +171,12 @@
   }
   .page.left {
     transform: rotateY(179deg) translateX(340px);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-image: url(../assets/drake-animationV2.gif);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center center;
   }
-  .page.left img,
+  .page.left .img-recept,
   .page.left a {
     display: none;
   }
