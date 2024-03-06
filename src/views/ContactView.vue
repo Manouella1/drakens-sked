@@ -1,24 +1,26 @@
 <script>
-export default {
-  data() {
-    return {
-      name: '',
-      email: '',
-      message: ''
-    }
-  },
-  methods: {
-    handleSubmit() {
-      console.log('Name:', this.name)
-      console.log('Email:', this.email)
-      console.log('Message:', this.message)
+  import WelcomeUser from '../components/WelcomeUser.vue'
+  export default {
+    data() {
+      return {
+        name: '',
+        email: '',
+        message: ''
+      }
+    },
+    methods: {
+      handleSubmit() {
+        console.log('Name:', this.name)
+        console.log('Email:', this.email)
+        console.log('Message:', this.message)
+      }
     }
   }
-}
 </script>
 
 <template>
   <div class="container">
+    <WelcomeUser />
     <h1>KONTAKTA OSS</h1>
     <div class="contact-form">
       <form @submit.prevent="handleSubmit">
@@ -41,76 +43,76 @@ export default {
 </template>
 
 <style scoped>
-h1 {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
 
-.contact-form {
-  width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-}
-
-input[type='text'],
-input[type='email'],
-textarea {
-  width: 100%;
-  padding: 8px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-@media (max-width: 600px) {
   .contact-form {
-    width: 90%;
-    /* Justera bredden för att passa skärmen */
-    max-width: 100%;
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
   }
 
   label {
-    font-size: 16px;
-    /* Öka textstorleken */
+    display: block;
+    font-weight: bold;
   }
 
   input[type='text'],
   input[type='email'],
   textarea {
-    font-size: 14px;
-    /* Öka textstorleken */
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
   }
 
   button {
-    font-size: 16px;
-    /* Öka textstorleken */
-    padding: 12px 24px;
-    /* Justera knappens storlek */
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
   }
-}
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 600px) {
+    .contact-form {
+      width: 90%;
+      /* Justera bredden för att passa skärmen */
+      max-width: 100%;
+    }
+
+    label {
+      font-size: 16px;
+      /* Öka textstorleken */
+    }
+
+    input[type='text'],
+    input[type='email'],
+    textarea {
+      font-size: 14px;
+      /* Öka textstorleken */
+    }
+
+    button {
+      font-size: 16px;
+      /* Öka textstorleken */
+      padding: 12px 24px;
+      /* Justera knappens storlek */
+    }
+  }
 </style>
