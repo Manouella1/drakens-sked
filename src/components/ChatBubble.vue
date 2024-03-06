@@ -46,7 +46,6 @@
     name.value === null
       ? `Hej välkommen till mitt kök! Här kan vi laga mat tillsammans som riktiga kockar och ha kul på vägen. Men vi börjar med ditt namn. Vad heter du?`
       : `Välkommen ${name.value}! Är du redo för en spännande dag i köket? Nu kör vi!?`
-  speak(`${initialText}`)
   // Funktion för att växla tal-syntesen när man trycker på ljud ikonen
   function toggleSpeech() {
     console.log('Toggle Speech Called', {
@@ -74,7 +73,7 @@
   }
   const isChecked = ref(false)
   // Bevakar ändringar i 'name' och kör 'speak' med lämplig text
-  speak(`hej ${initialText}`)
+  speak(initialText)
 </script>
 
 <template>
