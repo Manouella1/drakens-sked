@@ -12,22 +12,28 @@ export default {
       flippedCards: [],
       totalTry: 0,
       mainCards: [
-        { id: 1, value: '🎠', matched: false, flipped: false },
-        { id: 2, value: '🎠', matched: false, flipped: false },
-        { id: 3, value: '🦁', matched: false, flipped: false },
-        { id: 4, value: '🦁', matched: false, flipped: false },
-        { id: 5, value: '🍓', matched: false, flipped: false },
-        { id: 6, value: '🍓', matched: false, flipped: false },
-        { id: 7, value: '🎈', matched: false, flipped: false },
-        { id: 8, value: '🎈', matched: false, flipped: false },
-        { id: 9, value: '🐶', matched: false, flipped: false },
-        { id: 10, value: '🐶', matched: false, flipped: false },
-        { id: 11, value: '🍌', matched: false, flipped: false },
-        { id: 12, value: '🍌', matched: false, flipped: false },
-        { id: 13, value: '🍎', matched: false, flipped: false },
-        { id: 14, value: '🍎', matched: false, flipped: false },
-        { id: 15, value: '🍉', matched: false, flipped: false },
-        { id: 16, value: '🍉', matched: false, flipped: false }
+        { id: 1, value: '🥦', matched: false, flipped: false },
+        { id: 2, value: '🥦', matched: false, flipped: false },
+        { id: 3, value: '🥬', matched: false, flipped: false },
+        { id: 4, value: '🥬', matched: false, flipped: false },
+        { id: 5, value: '🌭', matched: false, flipped: false },
+        { id: 6, value: '🌭', matched: false, flipped: false },
+        { id: 7, value: '🥪', matched: false, flipped: false },
+        { id: 8, value: '🥪', matched: false, flipped: false },
+        { id: 9, value: '🧀', matched: false, flipped: false },
+        { id: 10, value: '🧀', matched: false, flipped: false },
+        { id: 11, value: '🥗', matched: false, flipped: false },
+        { id: 12, value: '🥗', matched: false, flipped: false },
+        { id: 13, value: '🍅', matched: false, flipped: false },
+        { id: 14, value: '🍅', matched: false, flipped: false },
+        { id: 15, value: '🥕', matched: false, flipped: false },
+        { id: 16, value: '🥕', matched: false, flipped: false },
+        // { id: 17, value: '🥚', matched: false, flipped: false },
+        // { id: 18, value: '🥚', matched: false, flipped: false },
+        // { id: 19, value: '🥒', matched: false, flipped: false },
+        // { id: 20, value: '🥒', matched: false, flipped: false }
+
+
         // Lägga till fler rader om vi vill fylla sidan mer.
       ]
     }
@@ -38,7 +44,7 @@ export default {
       this.cards = [...this.mainCards] // Starta om kort till mainCards
       for (let i = this.cards.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1))
-        ;[this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]]
+          ;[this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]]
       }
     },
     flipCard(index) {
@@ -94,24 +100,17 @@ export default {
 }
 </script>
 
-
 <template>
   <div class="memory-game">
-    <div class="try">Antal  : {{ totalTry }}</div>
+    <div class="try">Antal : {{ totalTry }}</div>
     <div v-if="isGameComplete" class="game-complete-message">Bra spelat</div>
     <div class="cards-grid">
-      <MemoryCard
-        v-for="(card, index) in cards"
-        :key="index"
-        :card="card"
-        @click="flipCard(index)"
-      />
+      <MemoryCard v-for="(card, index) in cards" :key="index" :card="card" @click="flipCard(index)" />
     </div>
 
     <button @click="restartGame" class="style-btn">Starta om</button>
   </div>
 </template>
-
 
 <style scoped>
 .memory-game {
@@ -132,7 +131,7 @@ export default {
 .card {
   width: 100px;
   height: 100px;
-  background-color: lightblue;
+  background-color: rgb(81, 230, 12);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,9 +143,6 @@ export default {
   transform: rotateY(180deg);
 }
 
-/* .matched {
-  visibility: hidden;
-} */
 
 .game-complete-message {
   text-align: center;
@@ -170,5 +166,30 @@ export default {
   text-transform: uppercase;
   letter-spacing: 5px;
   margin: 20px 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.memory-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .card {
+    width: 120px;
+    height: 120px;
+  }
+.memory-game {
+  height: 100vh
+  }
 }
 </style>

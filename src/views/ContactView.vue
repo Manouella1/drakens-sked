@@ -1,5 +1,4 @@
 <script>
-  import WelcomeUser from '../components/WelcomeUser.vue'
   export default {
     data() {
       return {
@@ -19,8 +18,8 @@
 </script>
 
 <template>
+<div class="textdrake"><Infotext /> <img class="drake" src="../assets/bilder/drake-vinkar-halv.png" /></div>
   <div class="container">
-    <WelcomeUser />
     <h1>KONTAKTA OSS</h1>
     <div class="contact-form">
       <form @submit.prevent="handleSubmit">
@@ -43,6 +42,12 @@
 </template>
 
 <style scoped>
+.textdrake {
+  text-align: center;
+}
+.drake:hover {
+  transform: rotate(5deg);
+}
   h1 {
     text-align: center;
     margin-top: 50px;
@@ -88,6 +93,23 @@
   button:hover {
     background-color: #0056b3;
   }
+
+  .container {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 20px;
+  border: 30px;
+  background-color: #219c56;
+  color: white;
+  border-radius: 50px;
+  padding: 20px;
+  max-width: 700px;
+}
+
+.drake {
+  height: 200px;
+  align-content: center;
+}
 
   @media (max-width: 600px) {
     .contact-form {

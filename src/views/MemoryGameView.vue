@@ -4,14 +4,20 @@
 export default {
   components: {
     MemoryGame
+  },
+ methods: {
+   goBack (){
+    this.$router.push({ name: 'Games' }) // Navigera tillbaka till Games-view
+   },
   }
 }
 </script>
 
 <template>
+<button @:click="goBack" class="goBack">Tillbaka till Spel</button>
 <div class="container">
 <h1>Memory Spel</h1>
-<p>Spela Memory där du ska hitta 2 likadana kort för att få en matchning.<br>Hitta 2 likadana kort och försök slå ditt rekord med färre klick.</p>
+<p>Spela Memory där du ska hitta 2 likadana kort för att få en matchning.<br />Hitta 2 likadana kort och försök slå ditt rekord med färre klick.</p>
 </div>
 <div class="container2">
 <MemoryGame />
@@ -26,6 +32,7 @@ export default {
   p {
     color: white;
     text-align: center;
+    margin: 0;
   }
   .container {
   display: inline-block;
@@ -35,26 +42,17 @@ export default {
   color: white;
   border-radius: 50px;
   padding: 20px;
-  max-width: 700px;
+  max-width: vh;
 }
 .container2 {
   margin-bottom: 0px;
 }
-@media (max-width: 600px) {
-    .container {
-      font-size: 1em;
-      font-weight: normal;
-    }
-
-    .filter {
-      flex-direction: column;
-      margin: 0;
-    }
-  }
-  @media (min-width: 375px) {
-    .container {
-      font-size: 1em;
-      font-weight: normal;
-    }
-  }
+.goBack {
+  width: 150px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  color: rgb(252, 252, 252);
+  background-color: rgb(25, 177, 25);
+  margin-left: 30px;
+}
 </style>
