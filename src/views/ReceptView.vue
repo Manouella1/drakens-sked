@@ -165,10 +165,11 @@
               >Visa alla recept
             </BButton>
           </router-link>
+          <div style="margin-top: 2em">
+            <EggTimer />
+          </div>
         </div>
       </article>
-
-      <EggTimer />
     </div>
 
     <!-- Here we can send the information of the json and the event communicate between Recept and PlayRecept to activate the visibility of the v-if -->

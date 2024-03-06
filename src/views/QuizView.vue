@@ -180,31 +180,38 @@
     }
   }
 
-  // Bild animationer när sidan laddas
-  ;(function () {
-    window.onload = () => {
+  // Bild animationer när sidan laddas, skrollas, eller resizar skärmen för att ge känsla av att "köket skakar"
+  function ShakeKitchen() {
+    window.onload = function () {
+      // Din befintliga logik för att hantera scroll, resize, och den initiala animationen
       const obj = document.querySelector('#gallery')
       const time = 10000
+
       function animStart() {
-        if (obj.classList.contains('active') == false) {
+        if (!obj.classList.contains('active')) {
           obj.classList.add('active')
           setTimeout(() => {
             animEnd()
           }, time)
         }
       }
+
       function animEnd() {
         obj.classList.remove('active')
-        obj.offsetWidth
+        // Denna rad tvingar en reflow. alltså att sidan laddas om (endast flr styling purpose, inte bäst för prestanda om det är tunga grejer som ska laddas)
+        void obj.offsetWidth
       }
-      document.addEventListener('scroll', function () {
-        // scroll or scrollend
-        animStart()
-      })
+
+      window.onscroll = animStart
+
+      // Lägg till lyssnare för 'resize'
       window.addEventListener('resize', animStart)
+
+      // Kalla på animStart för att köra animationen initialt vid laddning
       animStart()
     }
-  })()
+  }
+  ShakeKitchen()
 </script>
 
 <template>
