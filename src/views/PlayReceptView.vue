@@ -65,6 +65,13 @@
           sidorna--</span
         >
       </h1>
+      <div>
+        <img
+          class="img-fluid"
+          src="src/assets/drake-animationV2.gif"
+          alt="animation Drake"
+        />
+      </div>
     </header>
     <div class="container-book">
       <!-- div space to show the half of the book -->
