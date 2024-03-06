@@ -51,7 +51,7 @@
     }
   }
   // Startar tal automatiskt baserat på namnvärdet vid inladdning
-  if (name.value === null || name.value) {
+  if (name.value === null || name.value !== null) {
     speakText()
   }
 </script>
