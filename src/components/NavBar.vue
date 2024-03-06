@@ -142,7 +142,7 @@
     position: relative;
     background-color: #219c56;
     border-radius: 3px;
-    z-index: 1;
+    z-index: 20;
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
