@@ -65,13 +65,13 @@
           sidorna--</span
         >
       </h1>
-      <div class="gif-draken">
+      <!-- <div class="gif-draken">
         <img
           class="img-fluid resizable-gif"
           src="../assets/drake-animationV2.gif"
           alt="animation Drake"
         />
-      </div>
+      </div> -->
     </header>
     <div class="container-book">
       <!-- div space to show the half of the book -->
@@ -168,6 +168,13 @@
   }
   .page.left {
     transform: rotateY(179deg) translateX(340px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/drake-animationV2.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .page.left img,
   .page.left a {
