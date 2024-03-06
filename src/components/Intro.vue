@@ -21,12 +21,14 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    min-height: 82vh;
   }
 
   .gloves {
     /* display: flex;
   justify-content: center;
   align-items: center; */
+    flex-grow: 1;
     margin-bottom: 2em;
   }
   .kitchengloves {
