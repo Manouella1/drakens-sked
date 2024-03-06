@@ -235,7 +235,18 @@
         <label
           v-for="(option, index) in getCurrentQuestion.options"
           :key="index"
-          class="`option ${ getCurrentQuestion.selected == index ? index == getCurrentQuestion.answer ? 'correct' : 'wrong' : '' } ${ getCurrentQuestion.selected != null && index != getCurrentQuestion.selected ? 'disabled' : '' }`"
+          :class="`option ${
+            getCurrentQuestion.selected == index
+              ? index == getCurrentQuestion.answer
+                ? 'correct'
+                : 'wrong'
+              : ''
+          } ${
+            getCurrentQuestion.selected != null &&
+            index != getCurrentQuestion.selected
+              ? 'disabled'
+              : ''
+          }`"
         >
           <!-- :value = index får vi från vår v-for loop -->
 
@@ -451,6 +462,18 @@
   /* CHECKED STYLES */
   [type='radio']:checked + .radioImg {
     outline: 6px solid blue;
+  }
+
+  .correct {
+    background-color: green;
+    outline: 8px solid green;
+    border-radius: 8px;
+  }
+
+  .wrong {
+    background-color: red;
+    outline: 8px solid red;
+    border-radius: 8px;
   }
 
   /*label {
