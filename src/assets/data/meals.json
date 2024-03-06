@@ -61,33 +61,33 @@
         {
           "step": 1,
           "text": "Blanda köttfärs, ägg, ströbröd, mjölk, salt och peppar i en skål",
-          "image": "mixing-ingredients-step.jpg",
+          "image": "id2_step1.jpg",
           "video": "https://www.youtube.com/watch?v=ZX2feYAPQYU"
         },
         {
           "step": 2,
           "text": "Forma små bollar av smeten",
-          "image": "pancakes-liquid-dough-preparing-hand.jpg"
+          "image": "id2_step2.jpg"
         },
         {
           "step": 3,
           "text": "Stek köttbullarna i smör tills de är genomstekta",
-          "image": "mixing-ingredients-for-dough.jpg"
+          "image": "id2_step3.jpg"
         },
         {
           "step": 4,
           "text": "Skala och koka potatisen",
-          "image": "showing-how-to-turn.jpg"
+          "image": "id2_step4.jpg"
         },
         {
           "step": 5,
           "text": "Mosa potatisen och blanda med mjölk och smör till önskad konsistens",
-          "image": "mixed-berry-pancake.jpg"
+          "image": "id19_step2.jpg"
         },
         {
           "step": 6,
           "text": "Servera köttbullarna med potatismos",
-          "image": "showing-how-to-turn.jpg"
+          "image": "id2_step6.jpg"
         }
       ],
       "level": "Lätt",
