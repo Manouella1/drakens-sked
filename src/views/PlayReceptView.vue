@@ -81,7 +81,7 @@
         <div class="half">
           <li v-for="instruction in instructions" :key="instruction.step">
             <div class="page right">
-              <h2>step: {{ instruction.step }}</h2>
+              <h2>Steg: {{ instruction.step }}</h2>
               <img
                 class="img-recept"
                 :src="`src/assets/stepsBilder/${instruction.image}`"
@@ -100,7 +100,7 @@
       </ul>
     </div>
 
-    <BButton variant="outline-primary" @click="goBack"
+    <BButton variant="variant-succes" @click="goBack"
       >Gå tillbaka till recept</BButton
     >
   </main>
