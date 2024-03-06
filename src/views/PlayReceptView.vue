@@ -20,10 +20,6 @@
       next()
     },
 
-    // just to check if works
-    // created() {
-    //   console.log('created', this.receptId, this.step)
-    // },
     mounted() {
       console.log('mounted', this.receptId, this.step) // for testing
       this.setupPageInteraction()
@@ -31,8 +27,8 @@
     methods: {
       goBack() {
         this.$router.go(-1) // uses the router to go back
-        // this.$emit('handlePlayReceptBack', (this.showReceptView = true))
-        this.$emit('handlePlayReceptBack') // Not working
+
+        this.$emit('handlePlayReceptBack')
       },
       setupPageInteraction() {
         let $index = 0
@@ -69,6 +65,13 @@
           sidorna--</span
         >
       </h1>
+      <!-- <div class="gif-draken">
+        <img
+          class="img-fluid resizable-gif"
+          src="../assets/drake-animationV2.gif"
+          alt="animation Drake"
+        />
+      </div> -->
     </header>
     <div class="container-book">
       <!-- div space to show the half of the book -->
@@ -78,8 +81,11 @@
         <div class="half">
           <li v-for="instruction in instructions" :key="instruction.step">
             <div class="page right">
-              <h2>step: {{ instruction.step }}</h2>
-              <img :src="`src/assets/stepsBilder/${instruction.image}`" />
+              <h2>Steg: {{ instruction.step }}</h2>
+              <img
+                class="img-recept"
+                :src="`src/assets/stepsBilder/${instruction.image}`"
+              />
               <p>{{ instruction.text }}</p>
 
               <a
@@ -88,21 +94,18 @@
                 target="_blank"
                 >Watch Video</a
               >
-              <!-- {{ instruction.video }} -->
             </div>
           </li>
         </div>
       </ul>
     </div>
 
-    <BButton variant="outline-primary" @click="goBack"
-      >Gå tillbaka till recept</BButton
-    >
+    <BButton variant="success" @click="goBack">Gå tillbaka till recept</BButton>
   </main>
 </template>
 
 <style scoped>
-  img {
+  .half img {
     max-height: 200px;
   }
 
@@ -140,7 +143,7 @@
     position: absolute;
     /* position on the dom */
     top: 30%;
-    left: 45%;
+    left: 48.5%;
     /* size page */
     width: 20rem;
     height: 30rem;
@@ -155,11 +158,13 @@
     color: transparent;
   }
   .page.left {
-    transform: rotateY(179deg) translateX(370px);
-    /* background-image: url('./assets/bilder/drake-hej.png'); */
-    /* color: transparent; */
+    transform: rotateY(179deg) translateX(340px);
+    background-image: url(../assets/drake-animationV2.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
-  .page.left img,
+  .page.left .img-recept,
   .page.left a {
     display: none;
   }
@@ -200,12 +205,15 @@
     main {
       margin-bottom: 40rem;
     }
+    .page.left {
+      background-image: none;
+    }
   }
   @media (min-width: 2000px) {
     .page {
       /* position on the dom */
-      top: 29rem;
-      left: 45%;
+      top: 25rem;
+      left: 55%;
       /* size page */
       width: 28.75rem;
       height: 40rem;
@@ -219,7 +227,7 @@
     }
     .page.left {
       /* adjust space between page rightand page left */
-      transform: rotateY(179deg) translateX(510px);
+      transform: rotateY(179deg) translateX(500px);
     }
   }
 </style>

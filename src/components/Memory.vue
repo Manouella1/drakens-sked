@@ -97,7 +97,7 @@ export default {
 
 <template>
   <div class="memory-game">
-    <div class="try">Antal försök : {{ totalTry }}</div>
+    <div class="try">Antal  : {{ totalTry }}</div>
     <div v-if="isGameComplete" class="game-complete-message">Bra spelat</div>
     <div class="cards-grid">
       <MemoryCard
@@ -160,7 +160,7 @@ export default {
   border-radius: 5px;
   padding: 6px 10px;
   border: none;
-  background-color: indianred;
+  background-color: rgb(53, 151, 51);
   color: white;
   margin-top: 20px;
 }

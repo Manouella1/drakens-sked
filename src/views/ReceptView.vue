@@ -62,12 +62,12 @@
           // Check if the current route corresponds to Recept/id
           if (to.name === 'Recept' && to.params.receptId) {
             this.handlePlayReceptBack()
-            console.log('inside back browser')
+            // console.log('inside back browser')
           }
           // Check if the current route corresponds to steps
           if (to.name === 'PlayReceptView') {
             this.handleClick()
-            console.log('inside fwd browser')
+            // console.log('inside fwd browser')
           }
         }
       }
@@ -147,21 +147,21 @@
             name="default"
             :to="'/recepts/' + selectedReceptId + '/steps'"
           >
-            <BButton variant="outline-secondary" @click="handleClick"
+            <BButton variant="success" @click="handleClick"
               >Spela recept ▶️</BButton
             >
           </router-link>
 
           <!--DEMO KNAPP-->
-          <router-link
+          <!-- <router-link
             name="default"
             :to="'/recepts/' + selectedReceptId + '/1'"
           >
             <BButton variant="success">Play Demo ▶️</BButton>
-          </router-link>
+          </router-link> -->
 
           <router-link name="default" :to="'/recepts/'">
-            <BButton variant="outline-primary" @click="handleClick"
+            <BButton variant="outline-success" @click="handleClick"
               >Visa alla recept
             </BButton>
           </router-link>
@@ -202,10 +202,8 @@
   .recept-info {
     display: inline;
     max-width: 70%;
-    border-radius: 20px;
     padding: 1rem;
     margin: auto;
-    border: 4px solid white;
     font-size: 1.2rem;
   }
 
