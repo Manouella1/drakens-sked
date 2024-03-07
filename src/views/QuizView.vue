@@ -352,6 +352,7 @@
     text-align: center;
     color: #000;
     margin-top: 5em;
+    margin-bottom: 3em;
   }
 
   .bubble-bottom-left:before {

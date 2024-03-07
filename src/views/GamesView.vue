@@ -60,7 +60,7 @@
   .space {
     flex-grow: 1;
   }
-
+  // hej
   img {
     width: 90%;
     max-width: 500px;
