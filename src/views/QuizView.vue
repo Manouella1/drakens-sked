@@ -272,39 +272,67 @@
     </div>
 
     <!-- disabled attribut för om vi inte har en fråga vald så kan vi inte gå vidare -->
-
-    <button @click="NextQuestion" :disabled="!getCurrentQuestion.selected">
-      {{
-        // Om vi är på sista frågan = slut annars kollar vi om getCurrentQuestion är null och om det är null = 'välj ett svar', annars kan man klicka på nästa fråga.
-        getCurrentQuestion.index == questions.length - 1
-          ? 'Avsluta Quiz'
-          : getCurrentQuestion.selected == null
-          ? 'Välj ett svar'
-          : 'Nästa fråga'
-      }}
-    </button>
+    <div class="button-container">
+      <button
+        class="bn29"
+        @click="NextQuestion"
+        :disabled="!getCurrentQuestion.selected"
+      >
+        {{
+          // Om vi är på sista frågan = slut annars kollar vi om getCurrentQuestion är null och om det är null = 'välj ett svar', annars kan man klicka på nästa fråga.
+          getCurrentQuestion.index == questions.length - 1
+            ? 'Avsluta Quiz'
+            : getCurrentQuestion.selected == null
+            ? 'Välj ett svar'
+            : 'Nästa fråga'
+        }}
+      </button>
+    </div>
   </section>
 
   <section v-else>
     <div class="bubble bubble-bottom-left">
       <h3>Du har svarat på alla frågor!</h3>
-      <p>Du fick {{ score }}/{{ questions.length }} poäng.</p>
+      <p id="message">Du fick {{ score }}/{{ questions.length }} poäng.</p>
+      <router-link to="/games/intro-quiz">
+        <button class="bn29" id="bnEnd">Kör igen!</button></router-link
+      >
+      <router-link to="/games">
+        <button class="bn29" id="bnEnd">Spel menyn</button></router-link
+      >
     </div>
   </section>
-
+  <!-- <img
+    id="KitchenGloves"
+    src="../assets/bilder/kitchenglovespng.png"
+    alt="Kitchen gloves"
+  /> -->
   <img class="draken" :src="currentImage" alt="Draken" />
 </template>
 
 <style lang="scss" scoped>
   /* Importerar in en google font 'Patrick Hand' */
   @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+  h3 {
+    font-family: 'Patrick Hand';
+  }
+  /* #KitchenGloves {
+  //   max-width: 40%;
+  }*/
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .draken {
     width: 30%;
     position: fixed;
-    z-index: 20;
     bottom: 25px;
     right: 25px;
+    animation: swing 2s ease infinite alternate;
+    --angle: -9deg;
+    z-index: 2;
   }
 
   /* Chat bubble */
@@ -314,12 +342,15 @@
     font-size: 18px;
     line-height: 24px;
     margin: 1em auto;
+    margin-right: 1em;
     max-width: 700px;
+    max-height: 300px;
     background: #fff;
     border-radius: 40px;
     padding: 24px;
     text-align: center;
     color: #000;
+    margin-top: 5em;
   }
 
   .bubble-bottom-left:before {
@@ -355,12 +386,12 @@
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-    width: 370px;
+    width: 360px;
     font-family: 'Patrick Hand';
   }
   .post-it {
     display: table;
-    margin: 5em auto 0;
+    margin: 6.3em auto 1em;
   }
   .taped {
     /* display: table-cell;*/
@@ -438,7 +469,112 @@
   }
 
   h1 {
-    margin: auto;
+    position: absolute;
+    margin-top: 20px;
+
+    --k: 0;
+    place-self: center;
+    background: linear-gradient(
+      100deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font: 900 clamp(0.875em, 7.25vw, 5em) 'Luckiest Guy';
+    filter: url(#f);
+    text-align: center;
+    text-transform: uppercase;
+    /* needs support for animating custom properties */
+    /* Firefox not quite there yet, but it's coming */
+    animation: k 4s linear infinite;
+  }
+
+  @keyframes k {
+    to {
+      --k: 1;
+    }
+  }
+
+  @keyframes k {
+    to {
+      --k: 1;
+    }
+  }
+  #bnEnd {
+    margin-bottom: 13px;
+  }
+
+  .bn29 {
+    border: none;
+    padding: 0.8em 2.5em;
+    outline: none;
+    color: white;
+    font-style: 1.2em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 20px;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+    margin-top: 2.6em; /* DESKTOP VIEW */
+    margin-bottom: 20em;
+    margin-right: 1em;
+    font-size: 1.7em;
+    font-family: 'Patrick Hand';
+    letter-spacing: 2px;
+  }
+
+  .bn29:before,
+  .bn29:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 105%;
+    height: 105%;
+    content: '';
+    z-index: -2;
+    background-size: 400% 400%;
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+  }
+
+  .bn29:before {
+    -webkit-filter: blur(7px);
+    filter: blur(7px);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-animation: pulse 10s infinite ease;
+    animation: pulse 10s infinite ease;
+  }
+
+  .bn29:after {
+    -webkit-filter: blur(0.3px);
+    filter: blur(0.3px);
+  }
+
+  .bn29:hover:before {
+    width: 115%;
+    height: 115%;
   }
 
   /****** Styles för radioknapparna *******/
@@ -460,13 +596,13 @@
   }
 
   /* CHECKED STYLES */
-  [type='radio']:checked + .radioImg {
-    outline: 6px solid blue;
-  }
+  /* [type='radio']:checked + .radioImg {
+    //   outline: 6px solid blue;
+    // }*/
 
   .correct {
     background-color: green;
-    outline: 8px solid green;
+    outline: 10px solid green;
     border-radius: 8px;
   }
 
@@ -477,8 +613,8 @@
   }
 
   /*label {
-      max-width: 20%;
-    } */
+        max-width: 20%;
+      } */
 
   .radioImg {
     cursor: pointer;
@@ -508,7 +644,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-    max-width: 100vw;
+    max-width: 83vw; /* DESKTOP VIEW */
     padding: 20px;
     -webkit-perspective: 0;
     perspective: 0;
@@ -678,9 +814,80 @@
     font-size: 1.1rem;
   }
 
-  @media (min-width: 800px) {
+  /************************* */
+  /************** * MOBIL ANPASSAT ******************
+  ***************************************/
+  @media (min-width: 486px) and (max-width: 873px) {
+    .draken {
+      width: 60%;
+      margin-right: -6em;
+    }
+  }
+  @media (min-width: 350px) and (max-width: 785px) {
+    .draken {
+      width: 60%;
+      margin-right: -5.4em;
+    }
     #gallery {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+    }
+    #gallery figure {
+      padding: 0.5em;
+    }
+    h1 {
+      margin-top: 3em;
+      font-size: 2em;
+    }
+    figure figcaption {
+      font-size: 1em;
+    }
+    .bn29 {
+      margin-top: 0.2em;
+      margin-bottom: 3em;
+      padding: 0.2em 2em;
+    }
+  }
+
+  @media (min-width: 785px) and (max-width: 1030px) {
+    h1 {
+      margin-top: 1.5em;
+      margin-bottom: 1em;
+    }
+    .draken {
+      width: 40%;
+      margin-right: -6em;
+    }
+    figure figcaption {
+      font-size: 1.3em;
+    }
+  }
+  @media (min-width: 1030px) and (max-width: 1106px) {
+    h1 {
+      margin-top: 1.3em;
+      margin-bottom: 1em;
+    }
+    .post-it {
+      margin: 7em auto 1em;
+    }
+  }
+
+  @media (min-width: 639px) and (max-width: 819px) {
+    .draken {
+      animation: swing 2s ease infinite alternate;
+      --angle: -9deg;
+      width: 40%;
+      z-index: 20;
+      bottom: 2.5em;
+      margin-right: -6em;
+    }
+  }
+
+  @media (min-width: 441px) and (max-width: 639px) {
+    .draken {
+      width: 50%;
+      z-index: 20;
+      bottom: 4em;
+      margin-right: -2.8em;
     }
   }
 </style>
