@@ -300,13 +300,14 @@
       <router-link to="/games">
         <button class="bn29" id="bnEnd">Spel menyn</button></router-link
       >
+      <!-- <img
+        id="KitchenGloves"
+        src="../assets/bilder/kitchenglovespng.png"
+        alt="Kitchen gloves"
+      /> -->
     </div>
   </section>
-  <!-- <img
-    id="KitchenGloves"
-    src="../assets/bilder/kitchenglovespng.png"
-    alt="Kitchen gloves"
-  /> -->
+
   <img class="draken" :src="currentImage" alt="Draken" />
 </template>
 
@@ -317,7 +318,7 @@
     font-family: 'Patrick Hand';
   }
   /* #KitchenGloves {
-  //   max-width: 40%;
+    max-width: 40%;
   }*/
   .button-container {
     display: flex;
