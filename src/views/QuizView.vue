@@ -343,7 +343,7 @@
     font-size: 18px;
     line-height: 24px;
     margin: 1em auto;
-    margin-right: 1em;
+
     max-width: 700px;
     max-height: 300px;
     background: #fff;
