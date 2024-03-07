@@ -165,9 +165,9 @@
               >Visa alla recept
             </BButton>
           </router-link>
-          <div style="margin-top: 2em">
-            <EggTimer />
-          </div>
+        </div>
+        <div class="egg-timer">
+          <EggTimer />
         </div>
       </article>
     </div>
@@ -182,6 +182,9 @@
 </template>
 
 <style scoped>
+  .egg-timer {
+    margin-top: 2.5em;
+  }
   .container-drake {
     max-width: 80%;
     margin: auto;
@@ -197,7 +200,7 @@
 
   .receptTitle {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .recept-info {
     display: inline;

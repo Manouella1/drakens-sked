@@ -65,13 +65,6 @@
           sidorna--</span
         >
       </h1>
-      <!-- <div class="gif-draken">
-        <img
-          class="img-fluid resizable-gif"
-          src="../assets/drake-animationV2.gif"
-          alt="animation Drake"
-        />
-      </div> -->
     </header>
     <div class="container-book">
       <!-- div space to show the half of the book -->
@@ -207,6 +200,17 @@
     }
     .page.left {
       background-image: none;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .page {
+      /* position on the dom */
+      top: 24%;
+      left: 46%;
+      /* size page */
+      width: 20rem;
+      height: 30rem;
     }
   }
   @media (min-width: 2000px) {
