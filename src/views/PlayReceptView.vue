@@ -21,7 +21,7 @@
     },
 
     mounted() {
-      console.log('mounted', this.receptId, this.step) // for testing
+      // console.log('mounted', this.receptId, this.step) // for testing
       this.setupPageInteraction()
     },
     methods: {

@@ -18,9 +18,6 @@
     },
     methods: {
       selectRecept(mealId) {
-        // Emit an event with the selected meal ID
-        // this.$emit('selectRecept', meal)
-        console.log('Selected Meal ID:', mealId)
         // Navigate to ReceptView with the selected mealId
         this.$router.push({ name: 'Recept', params: { receptId: mealId } })
       }
@@ -45,10 +42,7 @@
         :iconColor="meal.iconColor"
         :iconImage="meal.iconImage"
         @selectRecept="selectRecept"
-      >
-        <!-- THIS WAS INSIDE THE CARD RECEPT CAUSING ERROR IN TERMINAL: IS NOT DEFINED ON INSTANCE -->
-        <!-- @addToFavorites="addToFavorites" -->
-      </CardRecept>
+      />
     </div>
   </div>
 </template>

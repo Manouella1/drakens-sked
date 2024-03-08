@@ -3,10 +3,6 @@
   import CardsRecepts from '../components/CardsRecepts.vue'
   import FilterSearch from '../components/FilterSearch.vue'
   import WelcomeUser from '../components/WelcomeUser.vue'
-  // import meals from '../assets/data/meals.json'
-
-  // console.log(meals.recipes)
-  // console.log(meals.recipes[0].image)
 
   export default {
     components: {
@@ -14,14 +10,6 @@
       FilterSearch,
       WelcomeUser
     }
-    // created() {
-    //   this.meals = meals.recipes
-    // },
-    // data() {
-    //   return {
-    //     meals: [],
-    //   }
-    // },
   }
 </script>
 

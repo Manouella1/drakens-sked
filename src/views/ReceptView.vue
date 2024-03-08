@@ -255,7 +255,6 @@
 
   .container-notepad {
     position: relative;
-    /* margin: 0 auto 3.75rem auto; */
     margin: auto;
     padding: 2rem 9%;
     max-width: 100%;
