@@ -63,11 +63,11 @@ export default {
       // Upgradera localStorage i bakgrunden
       localStorage.setItem('favoriteRecipes', JSON.stringify(this.favoriteRecipes));
 
-      // Visa confirmation meddelande
+      // Visa konfirmation meddelande
       this.confirmationMessage = 'Receptet har tagits bort från dina favoriter!';
       this.showConfirmation = true;
 
-      // Göm confirmation meddelande ef 3 sec
+      // Göm konfirmation meddelande ef 3 sec
       setTimeout(() => {
         this.showConfirmation = false;
       }, 3000);
@@ -86,15 +86,11 @@ p {
 .confirmation {
   color: green;
   font-size: 20px;
-  /* Större storlek för texten */
   font-weight: bold;
-  /* Fet text */
   text-align: center;
-  /* Centrerad text */
   display: block;
   /* Gör elementet till en blocknivå för att centrera det horisontellt */
   margin-top: 10px;
-  /* Lite mellanrum från övriga innehållet */
 }
 
 button {
@@ -125,7 +121,6 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
 }
-
 
 .flex {
   padding-bottom: 40px;
