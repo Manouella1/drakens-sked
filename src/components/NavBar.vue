@@ -33,16 +33,17 @@
     <nav class="menu--right" role="navigation">
       <div class="menuToggle">
         <input type="checkbox" v-model="isChecked" />
-        <span></span>
-        <span></span>
-        <span></span>
+        <span />
+        <span />
+        <span />
+
         <ul v-if="isChecked" class="menuItem">
           <li>
             <router-link to="/recepts">
               <img class="logo" src="../assets/bilder/head.png" alt="logo" />
             </router-link>
           </li>
-          <div class="divider"></div>
+          <div class="divider" />
           <li><router-link to="/intro">Intro</router-link></li>
           <li><router-link to="/recepts">Alla recept</router-link></li>
           <li><router-link to="/myrecepts">Favoritrecept</router-link></li>
@@ -57,6 +58,10 @@
 </template>
 
 <style scoped>
+  input {
+    width: 40px;
+  }
+
   a {
     text-decoration: none;
   }

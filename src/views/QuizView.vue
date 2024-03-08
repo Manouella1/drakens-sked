@@ -327,7 +327,7 @@
   }
 
   .draken {
-    width: 30%;
+    width: 20%;
     position: fixed;
     bottom: 25px;
     right: 25px;
