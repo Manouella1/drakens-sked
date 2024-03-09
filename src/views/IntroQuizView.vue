@@ -33,7 +33,7 @@
 <template>
   <div class="container">
     <h1>Quiz</h1>
-    <h2 id="h2">Introduktion till näringsämnen</h2>
+    <h2>Introduktion till näringsämnen</h2>
     <div class="bubble bubble-bottom-left" v-if="showInfo">
       <!-- Info om frågorna som kommer -->
       <h3>Proteiner - Byggklossar 💪🏼</h3>
@@ -65,21 +65,14 @@
       <p>
         Tänk dig att fibrer är som din kropps egna städhjälp. De hjälper till
         att hålla din mage glad och frisk genom att rensa ut allt skräp som
-        samlas därinne. Det är lite som att använda en sopkvast för att hålla
-        ditt rum rent, men för din mage. Fibrer gör att du känner dig mätt
-        längre och håller dina magresor mjuka och regelbundna.
+        samlas därinne. Fibrer gör att du känner dig mätt längre och håller dina
+        magresor mjuka och regelbundna.
       </p>
 
       <p>
         Du kan hitta dessa superhjältefibrer i saker som helkornsbröd,
         havregryn, frön, frukter som äpplen och bananer, och även i grönsaker
         som morötter och broccoli.
-      </p>
-
-      <p>
-        Så, tänk på fibrer som din kropps bästa vän för att hålla saker rena och
-        röra sig smidigt. Glöm inte att dricka mycket vatten när du äter mycket
-        fibrer! Det hjälper till att hålla allt i gång precis som det ska.
       </p>
 
       <h3 id="Text">Känner du dig redo?</h3>
@@ -92,7 +85,8 @@
 
     <div class="bubble bubble-bottom-left" v-if="showSecondText">
       <div class="space" />
-      <p>Det här kommer gå galant! 🤩</p>
+      <p class="goodLuck">Det här kommer gå galant! 🤩</p>
+      <p class="goodLuck">Lycka till! 👍</p>
     </div>
 
     <img :src="currentImage" alt="Draken" />
@@ -109,11 +103,26 @@
   .space {
     flex-grow: 1;
   }
-  #h2 {
-    font-size: 2em;
+  h3 {
+    font-family: 'Patrick Hand';
   }
-  h1,
+
+  p {
+    font-family: 'Yomogi', 'Patrick Hand';
+    font-size: 25px;
+  }
+
+  .goodLuck {
+    font-family: 'Patrick Hand';
+  }
+
   h2 {
+    color: #ee4f7a;
+    font-size: 2em;
+    font-family: 'Luckiest Guy';
+    text-align: center;
+  }
+  h1 {
     --k: 0;
     place-self: center;
     background: linear-gradient(
@@ -160,14 +169,14 @@
     margin-top: 10px;
 
     position: relative;
-    font-family: 'Patrick Hand';
+
     font-size: 18px;
     line-height: 24px;
     margin: auto;
     max-width: 100vw;
     background: #fff;
     border-radius: 40px;
-    padding: 50px;
+    padding: 20px;
     text-align: center;
     color: #000;
   }
@@ -192,7 +201,7 @@
     border-bottom: 20px solid transparent;
   }
   h3 {
-    font-size: 2.2em;
+    font-size: 1.5em;
   }
   .bn29 {
     border: none;
@@ -203,15 +212,9 @@
     position: relative;
     z-index: 1;
     cursor: pointer;
-    border-radius: 20px;
     background: none;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
-    margin-top: 2.6em; /* DESKTOP VIEW */
-    margin: auto;
-    margin-top: 1em;
-    font-size: 1.7em;
-    font-family: 'Patrick Hand';
-    letter-spacing: 2px;
+    margin-top: 0.5em;
   }
 
   .bn29:before,

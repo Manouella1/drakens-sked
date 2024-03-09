@@ -111,8 +111,10 @@
         @click="flipCard(index)"
       />
     </div>
-
-    <button @click="restartGame" class="style-btn">Starta om</button>
+    <div class="buttonRow">
+      <button class="bn29" @click="goBack">Tillbaka till Spel</button>
+      <button @click="restartGame" class="bn29">Starta om</button>
+    </div>
   </div>
 </template>
 
@@ -135,7 +137,7 @@
   .card {
     width: 100px;
     height: 100px;
-    background-color: rgb(81, 230, 12);
+    background-color: #219c56ee;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,14 +157,14 @@
     color: green;
   }
 
-  .style-btn {
+  /* .style-btn {
     border-radius: 5px;
     padding: 6px 10px;
     border: none;
     background-color: rgb(53, 151, 51);
     color: white;
     margin-top: 20px;
-  }
+  } */
 
   .try {
     font-weight: bold;
@@ -170,7 +172,74 @@
     letter-spacing: 5px;
     margin: 20px 0px;
   }
+  /* Button styles */
+  .buttonRow {
+    text-align: center;
+    margin-bottom: 2em;
+  }
 
+  .bn29 {
+    border: none;
+    padding: 0.6em 2em;
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    outline: none;
+    color: white;
+    font-style: 1.2em;
+    font-family: 'Patrick Hand';
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+  }
+
+  .bn29:before,
+  .bn29:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 105%;
+    height: 105%;
+    content: '';
+    z-index: -2;
+    background-size: 400% 400%;
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+  }
+
+  .bn29:before {
+    -webkit-filter: blur(7px);
+    filter: blur(7px);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-animation: pulse 10s infinite ease;
+    animation: pulse 10s infinite ease;
+  }
+
+  .bn29:after {
+    -webkit-filter: blur(0.3px);
+    filter: blur(0.3px);
+  }
+
+  .bn29:hover:before {
+    width: 115%;
+    height: 115%;
+  }
   @media screen and (max-width: 600px) {
     .card {
       width: 65px;
@@ -183,7 +252,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
     overflow: hidden;
   }
   @media screen and (min-width: 900px) {

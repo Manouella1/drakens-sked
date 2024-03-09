@@ -1,5 +1,9 @@
 <script>
+  import EggTimer from '../components/EggTimer.vue'
   export default {
+    components: {
+      EggTimer
+    },
     props: {
       instructions: {
         type: Array,
@@ -68,7 +72,7 @@
     </header>
     <div class="container-book">
       <!-- div space to show the half of the book -->
-      <div class="half"></div>
+      <div class="half" />
 
       <ul>
         <div class="half">
@@ -95,9 +99,13 @@
 
     <BButton variant="success" @click="goBack">Gå tillbaka till recept</BButton>
   </main>
+  <EggTimer class="EggTimer" />
 </template>
 
 <style scoped>
+  .EggTimer {
+    margin: auto;
+  }
   .half img {
     max-height: 200px;
   }

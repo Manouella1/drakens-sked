@@ -32,11 +32,10 @@
     </router-link>
     <nav class="menu--right" role="navigation">
       <div class="menuToggle">
-        <input type="checkbox" v-model="isChecked" />
+        <input class="HamburgerMenu" type="checkbox" v-model="isChecked" />
         <span />
         <span />
         <span />
-
         <ul v-if="isChecked" class="menuItem">
           <li>
             <router-link to="/recepts">
@@ -58,8 +57,9 @@
 </template>
 
 <style scoped>
-  input {
-    width: 40px;
+  /* Försökte fixa input klicket som blockeras av span elementen genom att sätta Z-index.. verkar inte funka och vet inte vad som gör att det blev så*/
+  .HamburgerMenu {
+    z-index: 300;
   }
 
   a {

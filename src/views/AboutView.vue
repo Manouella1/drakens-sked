@@ -25,22 +25,11 @@
           arbete strävar vi efter att skapa en positiv och inkluderande miljö
           där barn kan utforska, lära sig och framför allt ha kul i köket.
         </p>
-        <h2>Vårt Team</h2>
-        <p>
-          Vi är en mångsidig grupp av engagerade studenter från olika bakgrunder
-          och discipliner, men med en gemensam passion för matlagning och
-          pedagogik. Vårt team består av blivande kockar, lärare, och kreativa
-          själar som alla delar en önskan att göra skillnad genom matlagning.
-        </p>
+
         <h2>Varför Välja Oss?</h2>
         <ul>
           <li>
-            <strong>Studentdriven Innovation:</strong> Som en grupp studenter
-            strävar vi ständigt efter att utforska nya idéer och metoder för att
-            göra matlagning roligare och mer lärorik för barn.
-          </li>
-          <li>
-            <strong>Kreativa och Anpassningsbara Recept:</strong> Våra recept är
+            <strong>Kreativa och anpassningsbara recept:</strong> Våra recept är
             utformade med barns behov och intressen i åtanke, vilket gör dem
             både roliga och enkla att följa.
           </li>

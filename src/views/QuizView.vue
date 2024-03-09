@@ -55,7 +55,7 @@
     },
 
     {
-      question: 'Vad är fett?',
+      question: 'Välj det som innehåller främst fett?',
       answer: 1,
       options: [
         {
@@ -79,7 +79,7 @@
     },
 
     {
-      question: 'Vad är fibrer?',
+      question: 'Välj det som innehåller främst fibrer?',
       answer: 2,
       options: [
         {
@@ -103,7 +103,7 @@
     },
 
     {
-      question: 'Vad är protein?',
+      question: 'Välj det som innehåller främst protein?',
       answer: 3,
       options: [
         {
@@ -182,7 +182,7 @@
 
   // Bild animationer när sidan laddas, skrollas, eller resizar skärmen för att ge känsla av att "köket skakar"
   function ShakeKitchen() {
-    window.onload = function () {
+    window.onclick = function () {
       // Din befintliga logik för att hantera scroll, resize, och den initiala animationen
       const obj = document.querySelector('#gallery')
       const time = 10000
@@ -203,6 +203,8 @@
       }
 
       window.onscroll = animStart
+      window.onclick = animStart
+      window.ontouchend = animStart
 
       // Lägg till lyssnare för 'resize'
       window.addEventListener('resize', animStart)
@@ -211,6 +213,7 @@
       animStart()
     }
   }
+
   ShakeKitchen()
 </script>
 
@@ -317,9 +320,7 @@
   h3 {
     font-family: 'Patrick Hand';
   }
-  /* #KitchenGloves {
-    max-width: 40%;
-  }*/
+
   .button-container {
     display: flex;
     justify-content: center;
@@ -414,7 +415,7 @@
     -moz-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
   }
-
+  /*
   .note {
     -webkit-box-shadow: #ddd 0px 1px 2px;
     position: relative;
@@ -433,6 +434,7 @@
     transform: rotate(2deg);
     width: 250px;
     font-family: 'The Girl Next Door', cursive; /*originally with brain flower font*/
+  /*
     font-size: 1em;
   }
   .note:after {
@@ -449,6 +451,7 @@
     -moz-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
   }
+  */
 
   /***** Note Content *****/
 
@@ -821,14 +824,14 @@
   ***************************************/
   @media (min-width: 486px) and (max-width: 873px) {
     .draken {
-      width: 60%;
+      width: 50%;
       margin-right: -6em;
     }
   }
   @media (min-width: 350px) and (max-width: 785px) {
     .draken {
-      width: 60%;
-      margin-right: -5.4em;
+      width: 40%;
+      margin-right: -5.5em;
     }
     #gallery {
       grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
@@ -856,8 +859,8 @@
       margin-bottom: 1em;
     }
     .draken {
-      width: 40%;
-      margin-right: -6em;
+      width: 30%;
+      margin-right: -5.2em;
     }
     figure figcaption {
       font-size: 1.3em;
@@ -877,19 +880,19 @@
     .draken {
       animation: swing 2s ease infinite alternate;
       --angle: -9deg;
-      width: 40%;
+      width: 30%;
       z-index: 20;
       bottom: 2.5em;
-      margin-right: -6em;
+      margin-right: -5em;
     }
   }
 
-  @media (min-width: 441px) and (max-width: 639px) {
+  /*@media (min-width: 441px) and (max-width: 639px) {
     .draken {
-      width: 50%;
+      width: 40%;
       z-index: 20;
       bottom: 4em;
-      margin-right: -2.8em;
+      margin-right: -5.5em;
     }
-  }
+  }*/
 </style>
