@@ -152,6 +152,8 @@
     border-radius: 20px;
     padding: 1em;
     margin-top: 0.5em;
+    max-width: 20em;
+    margin: auto;
   }
   .v-if {
     width: 8rem;
@@ -170,7 +172,7 @@
   .bn29 {
     border: none;
     padding: 2px 10px;
-    margin: 7px;
+    margin: 8px;
     font-size: 19px;
     outline: none;
     color: white;

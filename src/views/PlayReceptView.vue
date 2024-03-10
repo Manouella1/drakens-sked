@@ -99,7 +99,9 @@
 
     <BButton variant="success" @click="goBack">Gå tillbaka till recept</BButton>
   </main>
-  <EggTimer class="EggTimer" />
+  <div class="EggTimer">
+    <EggTimer class="EggTimer" />
+  </div>
 </template>
 
 <style scoped>
@@ -240,6 +242,15 @@
     .page.left {
       /* adjust space between page rightand page left */
       transform: rotateY(179deg) translateX(500px);
+    }
+  }
+  .EggTimer {
+    margin-bottom: 1em;
+  }
+  @media (min-width: 601px) {
+    .EggTimer {
+      margin-top: 29em;
+      margin-bottom: 1em;
     }
   }
 </style>
