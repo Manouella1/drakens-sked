@@ -2,6 +2,8 @@
   // Quiz om Kolhydrater, fett, protein, fibrer.
 
   import { ref, computed } from 'vue'
+
+  // Drakens raktioner
   import Disappointed from '../assets/bilder/drake-besviken.png'
   import ThumbsUp from '../assets/bilder/drake-thumbs-up.png'
   import Draken from '../assets/bilder/drake.png'
@@ -14,8 +16,6 @@
   import cake from '../assets/quizBilder/cake.png'
   import candy from '../assets/quizBilder/candy.png'
   import chilli from '../assets/quizBilder/chilli.png'
-  // import chocolate from '../assets/quizBilder/chocolate.png'
-  // import cookie from '../assets/quizBilder/cookie.png'
   import cottonCandy from '../assets/quizBilder/cotton-candy.png'
   import egg from '../assets/quizBilder/egg.png'
   import gurka from '../assets/quizBilder/gurka.png'
@@ -28,27 +28,27 @@
 
   const currentImage = ref(Draken)
 
-  // En array med objekt som innehåller frågorna
+  // En array med objekt som innehåller frågorna, Options (svars-alternativ) arrayen innehåller objekt med text och bild.
   const questions = ref([
     {
       question: 'Välj det som innehåller främst kolhydrater?',
-      answer: 0, //index till rätt svar i answers-arrayn
+      answer: 0, //index till rätt svar i options-arrayn
       options: [
         {
           text: 'Bröd',
-          image: bread // image source for correct answer
+          image: bread
         },
         {
           text: 'Chilli',
-          image: chilli // image source for incorrect option
+          image: chilli
         },
         {
           text: 'Ägg & Bacon',
-          image: egg // image source for incorrect option
+          image: egg
         },
         {
           text: 'Korv',
-          image: korv // image source for incorrect option
+          image: korv
         }
       ],
       selected: null // Här samlas svaren  som användaren har valt
@@ -60,19 +60,19 @@
       options: [
         {
           text: 'Broccoli',
-          image: broccoli // image source for correct answer
+          image: broccoli
         },
         {
           text: 'Smör',
-          image: butter // image source for incorrect option
+          image: butter
         },
         {
           text: 'Kiwi.',
-          image: kiwi // image source for incorrect option
+          image: kiwi
         },
         {
           text: 'Gurka',
-          image: gurka // image source for incorrect option
+          image: gurka
         }
       ],
       selected: null // Här samlas svaren  som användaren har valt
@@ -84,19 +84,19 @@
       options: [
         {
           text: 'Glass',
-          image: icecream // image source for correct answer
+          image: icecream
         },
         {
           text: 'Blomma',
-          image: blomma // image source for incorrect option
+          image: blomma
         },
         {
           text: 'Havregryn fullkorn',
-          image: havregryn // image source for incorrect option
+          image: havregryn
         },
         {
           text: 'Sockervadd',
-          image: cottonCandy // image source for incorrect option
+          image: cottonCandy
         }
       ],
       selected: null // Här samlas svaren  som användaren har valt
@@ -108,19 +108,19 @@
       options: [
         {
           text: 'Godis',
-          image: candy // image source for correct answer
+          image: candy
         },
         {
           text: 'Tårta',
-          image: cake // image source for incorrect option
+          image: cake
         },
         {
           text: 'Äpple',
-          image: apple // image source for incorrect option
+          image: apple
         },
         {
           text: 'Kött',
-          image: meat // image source for incorrect option
+          image: meat
         }
       ],
       selected: null // Här samlas svaren  som användaren har valt
@@ -303,11 +303,6 @@
       <router-link to="/games">
         <button class="bn29" id="bnEnd">Spel menyn</button></router-link
       >
-      <!-- <img
-        id="KitchenGloves"
-        src="../assets/bilder/kitchenglovespng.png"
-        alt="Kitchen gloves"
-      /> -->
     </div>
   </section>
 
@@ -415,43 +410,6 @@
     -moz-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
   }
-  /*
-  .note {
-    -webkit-box-shadow: #ddd 0px 1px 2px;
-    position: relative;
-    background-color: #f4f39e;
-    border-color: #dee184;
-    text-align: center;
-    margin: 1.5em auto;
-    padding: 1.5em 1em;
-    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-    -webkit-transform: rotate(2deg);
-    -moz-transform: rotate(2deg);
-    -o-transform: rotate(2deg);
-    -ms-transform: rotate(2deg);
-    transform: rotate(2deg);
-    width: 250px;
-    font-family: 'The Girl Next Door', cursive; /*originally with brain flower font*/
-  /*
-    font-size: 1em;
-  }
-  .note:after {
-    display: block;
-    content: '';
-    position: absolute;
-    width: 110px;
-    height: 30px;
-    top: -21px;
-    left: 30%;
-    border: 1px solid #fff;
-    background: rgba(254, 254, 254, 0.6);
-    -webkit-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0 3px rgba(0, 0, 0, 0.1);
-  }
-  */
 
   /***** Note Content *****/
 

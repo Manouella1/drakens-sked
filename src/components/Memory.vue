@@ -112,7 +112,9 @@
       />
     </div>
     <div class="buttonRow">
-      <button class="bn29" @click="goBack">Tillbaka till Spel</button>
+      <router-link to="/games">
+        <button class="bn29" @click="goBack">Tillbaka till Spel</button>
+      </router-link>
       <button @click="restartGame" class="bn29">Starta om</button>
     </div>
   </div>
