@@ -6,17 +6,17 @@
 
 # SPRINT 0: Plannering / group Kontrakt / Trello/ User stories /Pith / Box
 
-#### Scrum role: Maja
+#### Scrum role: Maja (4 dagar) / Manouella (2 dagar)
 
 ---
 
 # SPRINT 1:
 
-#### Scrum role: Vanessa
-
 ---
 
 ## Mondagen 19/02
+
+## Scrum role: Maja
 
 ### Första gruppen Team JSON fil
 
@@ -48,6 +48,8 @@ Vi ska prata om vad vi ska göra, fler ytterligare komponenter att göra.
 ---
 
 ## Tisdag den 20/02
+
+## Scrum role: Vanessa
 
 ### Grupp 1 - Filter 🗄️ 📁
 
@@ -94,6 +96,8 @@ Vi är glada över att ha fått tydliga uppgifter att fokusera på och arbeta me
 
 ## Onsdag den 21/02
 
+## Scrum role: Vanessa
+
 ## Maja
 
 - Filter, löst! 🥳
@@ -114,6 +118,8 @@ Vi är glada över att ha fått tydliga uppgifter att fokusera på och arbeta me
 ---
 
 ### Torsdag den 22/02
+
+## Scrum role: Vanessa
 
 ## Dags Arbete:
 
@@ -174,6 +180,8 @@ Vi är engagerade i att göra en framgångsrik presentation och att förmedla fr
 
 ### Fredag 23/02 Feb
 
+## Scrum role: Vanessa
+
 #### Vigan
 
 - Formulär
@@ -216,14 +224,149 @@ Vi är engagerade i att göra en framgångsrik presentation och att förmedla fr
 
 # SPRINT 2:
 
-#### Scrum role: Ursula
+---
+
+### Mondag 26/02 Feb
+
+## Scrum role: Ursula
+
+Idag hade vi en kort möte för att se vad var och en arbetar med och för att se vilka frågor vi kunde ställa till Jerry på morgondagens möte.
+
+## Andra saker att göra:
+
+- Möte! Vi behöver fatta beslut tillsammans.
+- Quiz/spel (efter att vi är klara med det vi gör).
+- Utseendet på alla recept/kort.
+- Utseendet på alla specifika recept.
+- Återanvända komponent --> lika och enkelt (Maja & Vanessa)
 
 ---
 
+### Tisdag 27/02 Feb
+
+## Scrum role: Ursula
+
+Vi har haft ett möte med Jerry och har omorganiserat uppgifterna så att alla kan bidra inom programmeringsdelen.
+
+## Ursula
+
+- Card Json klart ✅
+- Note layout på recept ✅
+
+## Manuella
+
+- Lägger till timmer ✅
+- Quiz + timmer?
+
+## Vanessa
+
+- Min scrolla knapp är borta Hittad!
+- Om oss Uppgraderad
+- Återanvända komponent från cards -> favorite (Kommer efter när cards är klar) ✅
+- Gör hjärtat visuellt blir if
+
 ---
 
-# SPRINT 3:
+### Onsdag 28/02 Feb
 
-#### Scrum role: Vigan
+## Scrum role: Ursula
+
+## Behöver diskutera utseendet på navigationsfältet:
+
+För tillfället verkar hamburgaren flyta runt i mobilvyn, och det känns som att vi behöver göra något åt det.
+
+## Problem med footern:
+
+Footern har fortfarande sitt eget liv och syns inte längst ner på vissa sidor.
+
+## Lösning för "Play-recept":
+
+Ska draken vara med och prata under uppspelningen av receptet?
+
+## Ändring av länkar i menyn:
+
+Vi kanske behöver döpa om länkarna i menyn, till exempel "Mina recept" till "Favoritrecept". Ska introduktionslänken vara kvar?
+
+Intro = Hem
+Hem = Köket / Hem
+Mina - = Mina recept / Favorit recept
+recept
+Information = Information
+Spel = Spel
+Kontakt = Kontakt
+Om oss = Om oss
 
 ---
+
+### Torsdag 29/02 Feb
+
+## Scrum role: Ursula
+
+Nuvarande fokus:
+
+1. Hämta annan information som kategori, ikoner och nivå på kortet.
+2. Se till att hjärtat på MyFavoriteReceptsView tar bort recepten.
+3. Gör så att hjärtat på kortet visar om det är ifyllt. Det bör vara möjligt att ta bort all kod från favoritrecept.
+4. Överväg att flytta all nödvändig kod till endast MyFavoriteReceptsView. Vet inte vad som är bäst. Nya rutter för spelsidan?
+5. Bilder och link till recepter
+6. Layout / footer alla Views.
+
+---
+
+### Fredag 01/03 Feb
+
+## Scrum role: Vigan
+
+### ursula:
+
+Uppdaterat PlayRecept nu genom att ändra positioner, storlek och texten till svenska. Jag har också fixat buggen med laddningen. Jag kommer inte att röra det mer, men ni behöver göra en pull för att undvika kollisioner med er nya komponent och allt jag har jobbat med idag.
+
+Leta efter bilder för att jobba med JSON, men behöver inte göra fler ändringar tills ni skapar andra element. Det kan vara nödvändigt att justera positioner för bokstöden som har en position absolut. I CSS finns en kommentar om ".page" om ni behöver justera något där.
+
+### Vigan:
+
+memory Spel.
+
+### Vanessa:
+
+Layout Intro / Favorite Recpts
+
+### Maja:
+
+Intro Drake chat bubble
+
+### Manouella:
+
+Quiz spel
+
+---
+
+### Mandåg 4/03 Feb
+
+## Scrum role: Vigan
+
+Vi har haft ett möte för att se var varje medlem i gruppen befinner sig och gå igenom hela projektet för att identifiera vilka delar som behöver justeras i layouten, osv.
+
+---
+
+### Tisdag 5/03 Feb
+
+## Scrum role: Vigan
+
+Projektgenomgång: Vi har träffats i skolan för handledning och för att se på vilka områden vi kan hjälpa varandra. Vi har stött på svårigheter vid implementeringen av memory-spelet. Vi diskuterar de sista ändringarna som vi kommer att göra i pr
+
+---
+
+### Onsdag 6/03 Feb
+
+## Scrum role: Vigan
+
+Projektgenomgång: Vi har träffats i skolan för handledning och för att se på vilka områden vi kan hjälpa varandra. Vi har stött på svårigheter vid implementeringen av memory-spelet. Vi diskuterar de sista ändringarna som vi kommer att göra i pr
+
+---
+
+### Torsdag 7/03 Feb
+
+## Final presentation
+
+Vi har fått feedback om vissa layoutaspekter som kan åtgärdas, men överlag var feedbacken mycket positiv från våra lärare.
