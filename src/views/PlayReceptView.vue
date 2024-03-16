@@ -106,8 +106,10 @@
 
 <style scoped>
   .EggTimer {
-    margin: auto;
+    margin-top: 29em;
+    margin-bottom: 1em;
   }
+
   .half img {
     max-height: 200px;
   }
@@ -187,6 +189,10 @@
 
   /* Media query for screens smaller than 600px (adjust the value as needed) */
   @media (max-width: 600px) {
+    .EggTimer {
+      margin: auto;
+      margin-bottom: 1em;
+    }
     .container-book {
       grid-template-columns: 1fr;
     }
@@ -214,6 +220,10 @@
   }
 
   @media (min-width: 1200px) {
+    .EggTimer {
+      margin-top: 30em;
+      margin-bottom: 1em;
+    }
     .page {
       /* position on the dom */
       top: 24%;
@@ -226,33 +236,30 @@
   @media (min-width: 2000px) {
     .page {
       /* position on the dom */
-      top: 25rem;
+      top: 15rem;
       left: 55%;
       /* size page */
       width: 28.75rem;
-      height: 40rem;
-      font-size: 1.5rem;
+      height: 36rem;
+      font-size: 1.2rem;
     }
     header h1 {
       font-size: 2.5rem;
     }
     .sub-text {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
     .page.left {
       /* adjust space between page rightand page left */
       transform: rotateY(179deg) translateX(500px);
     }
-  }
-  .EggTimer {
-    margin-bottom: 1em;
-  }
-
-  /* Får du detta nu */
-  @media (min-width: 601px) {
     .EggTimer {
-      margin-top: 29em;
+      margin-top: 37em;
       margin-bottom: 1em;
     }
   }
+
+  /* Får du detta nu
+  @media (min-width: 601px) {
+  } */
 </style>
