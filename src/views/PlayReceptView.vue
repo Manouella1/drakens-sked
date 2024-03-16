@@ -247,6 +247,8 @@
   .EggTimer {
     margin-bottom: 1em;
   }
+
+  /* Får du detta nu */
   @media (min-width: 601px) {
     .EggTimer {
       margin-top: 29em;
