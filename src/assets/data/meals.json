@@ -987,6 +987,62 @@
       "category": "Mellanmål",
       "nutrients": ["Protein", "Kolhydrater", "Vitaminer"],
       "description": "Fruktsmoothie med spenat är en näringsrik och uppfriskande mellanmålssmoothie som kombinerar söt frukt med frisk spenat för en hälsosam och läcker dryck som passar perfekt som en snabb energiboost när som helst på dagen."
+    },
+    {
+      "id": 21,
+      "title": "Brownie",
+      "image": "brownie.jpg",
+      "ingredients": [
+        "100 gram smör",
+        "200 gram mörk choklad",
+        "1 dl socker",
+        "2 ägg",
+        "2 dl vetemjöl",
+        "1 tsk vaniljsocker",
+        "En nypa salt"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "text": "Värm ugnen till 175 grader Celsius. Klä bakformen med bakplåtspapper.",
+          "image": "id20_step1.jpeg",
+          "video": "https://www.youtube.com/watch?v=IsQ3zvUJ-jo"
+        },
+        {
+          "step": 2,
+          "text": "Smälta choklad och smör: Bryt chokladen i mindre bitar. Lägg smör och choklad i en skål. Smält blandningen i mikrovågsugnen eller över vattenbad. Om du använder mikrovågsugn, värm i korta intervaller och rör om ofta för att undvika att det bränns.",
+          "image": "id20_step2.jpeg"
+        },
+        {
+          "step": 3,
+          "text": "Blanda de torra ingredienserna: I en annan stor skål, blanda ihop vetemjöl, vaniljsocker och en nypa salt.",
+          "image": "id20_step2.jpeg"
+        },
+        {
+          "step": 4,
+          "text": "Kombinera alla ingredienser: Häll den smälta choklad- och smörblandningen i skålen med de torra ingredienserna. Tillsätt socker och ägg.Rör om allt till en jämn smet med en sked eller en visp. Se till att barnen får vara med och röra!",
+          "image": "id20_step2.jpeg"
+        },
+        {
+          "step": 5,
+          "text": "Grädda brownies: Häll smeten i den förberedda formen och jämna till ytan. Grädda i mitten av ugnen i cirka 20 minuter. Brownien ska vara lite kladdig i mitten när den är klar.",
+          "image": "id20_step2.jpeg"
+        },
+        {
+          "step": 6,
+          "text": "Låt svalna och servera: Låt brownien svalna i formen. Skär upp i lagom stora bitar och servera. Låt barnen hjälpa till med att dekorera om de vill, kanske med lite strössel eller frukt.",
+          "image": "id20_step2.jpeg"
+        }
+      ],
+      "level": "Mellan",
+      "iconColor": "🟡",
+      "iconImage": "🔪",
+      "prepTime": "5 min",
+      "cookTime": "0 min",
+      "portions": "16",
+      "category": "Snacks",
+      "nutrients": ["Protein", "Kolhydrater", "Vitaminer"],
+      "description": "Enkelt Brownie Recept för Barn"
     }
   ]
 }
